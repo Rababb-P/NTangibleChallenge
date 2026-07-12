@@ -15,6 +15,12 @@ Play to your strengths. We picked this challenge because it has room for whateve
 
 **We want you to use AI.** But own what you ship: if we ask questions — performance tradeoffs, known limitations, why this approach over another — you need to be able to answer them.
 
+## The data
+
+Everything lives in [`data/`](data/) as JSON and CSV: one full season for a 16-athlete fastpitch team — Clutch Factor™ scores with 18 months of history per athlete, NTerpret™ mental profiles with quarterly snapshots, a 12-drill catalog with ~1,800 logged sessions, and a 24-game schedule.
+
+**Start with [`data/DATA.md`](data/DATA.md)** — it explains every file and field, the scales (Clutch Factor is 0–1000 with 750 as "the line"), the join keys, and how to regenerate or remix the season if your idea needs more.
+
 ## Sparks (not specs)
 
 You don't need to use any of these. They're here to show the *kind* of thing that gets us excited:
