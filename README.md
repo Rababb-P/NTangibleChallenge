@@ -6,7 +6,7 @@ Welcome to the NTangible intern challenge. This repo contains a fully working co
 
 ## Run the app (60 seconds)
 
-First, **fork this repo** (button top-right) — your fork is where you'll build. Then:
+First, **fork this repo** — your fork is where you'll build. Then:
 
 ```bash
 git clone <your-fork-url>
