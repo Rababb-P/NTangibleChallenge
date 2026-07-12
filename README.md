@@ -6,8 +6,6 @@ Welcome to the NTangible intern challenge. This repo contains a fully working co
 
 ## Run the app (60 seconds)
 
-You need Node 20+. That's it — no backend, no accounts, no API keys.
-
 First, **fork this repo** (button top-right) — your fork is where you'll build. Then:
 
 ```bash
