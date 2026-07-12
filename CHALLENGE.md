@@ -13,7 +13,7 @@ That's deliberately open. It could be:
 
 Play to your strengths. We picked this challenge because it has room for whatever you're best at — frontend craft, data storytelling, creative coding, product thinking.
 
-**We emphasize the use of AI.** But own what you ship: if we ask questions — performance tradeoffs, known limitations, why this approach over another — you need to be able to answer them.
+**We want you to use AI.** But own what you ship: if we ask questions — performance tradeoffs, known limitations, why this approach over another — you need to be able to answer them.
 
 ## Sparks (not specs)
 
