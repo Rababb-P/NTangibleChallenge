@@ -2,7 +2,7 @@
 
 Welcome to the NTangible intern challenge. This repo contains a fully working copy of **HOWie** — our mental-performance app for youth sports — running entirely on a bundled synthetic season of data, plus that same season as plain JSON/CSV files for you to build with.
 
-**Your mission is in [CHALLENGE.md](CHALLENGE.md).** Short version: build a fun, interactive way to experience this data. Any stack.
+**Your mission is in [CHALLENGE.md](CHALLENGE.md).** Short version: build an interactive way to experience this data. Any stack.
 
 ## Run the app (60 seconds)
 

@@ -2,7 +2,7 @@
 
 NTangible measures the *mental* side of athletic performance — the part the box score misses — and turns it into something athletes, parents, and coaches can actually use. You've got our app and a full season of data for one team.
 
-**Build a fun, interactive way to experience this data.**
+**Build an interactive way to experience this data.**
 
 That's deliberately open. It could be:
 
@@ -47,11 +47,11 @@ We'll do a share-out where everyone demos their build.
 
 | What | What we're asking |
 |---|---|
-| Creativity & fun | Did you make something we haven't seen before? Did you have fun making it? |
+| Creativity | Did you make something we haven't seen before? |
 | Insight | Did the data tell you something — and does your build let *us* see it too? |
 | Interactivity & craft | Does it feel good to use? Does it invite exploration? |
 | Communication | Can you show and tell it clearly? |
 
 Explicitly **not** judged: setup polish, stack choice, lines of code, hours spent.
 
-Questions at any point → [elliot@ntangible.co](mailto:elliot@ntangible.co). Have fun with it.
+Questions at any point → [elliot@ntangible.co](mailto:elliot@ntangible.co). We're excited to see what you build.
