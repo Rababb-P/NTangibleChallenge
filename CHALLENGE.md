@@ -52,11 +52,10 @@ There are stories deliberately hidden in this dataset. Finding one is worth more
 
 | What | What we're asking |
 |---|---|
-| Creativity | Did you make something we haven't seen before? |
-| Insight | Did the data tell you something — and does your build let *us* see it too? |
-| Interactivity & craft | Does it feel good to use? Does it invite exploration? |
+| Creativity & insights | Did you make something we haven't seen before? |
+| Insights | Did you find something that is actually useful? |
+| Full-implementation  | Is this something that we can add this to our app today? |
 | Communication | Can you show and tell it clearly? |
 
-Explicitly **not** judged: setup polish, stack choice, lines of code, hours spent.
 
 Questions at any point → [elliot@ntangible.co](mailto:elliot@ntangible.co). We're excited to see what you build.
