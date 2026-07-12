@@ -1,0 +1,1561 @@
+{
+  "generated_at": "2026-07-12",
+  "seed": 20260712,
+  "team": {
+    "team_id": "team_thunder_16u",
+    "name": "Alliance Fastpitch — Thunder 16U",
+    "org": "Alliance Fastpitch",
+    "season": "2025–26",
+    "record": "15–9"
+  },
+  "athletes": [
+    {
+      "id": "ath_harper",
+      "name": "Harper Vance",
+      "position": "P",
+      "jersey": 21,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Clutch",
+      "clutch_score": 828,
+      "alignment": 74,
+      "photo_url": null
+    },
+    {
+      "id": "ath_dani",
+      "name": "Dani Okafor",
+      "position": "C",
+      "jersey": 7,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Elite",
+      "clutch_score": 918,
+      "alignment": 38,
+      "photo_url": null
+    },
+    {
+      "id": "ath_reese",
+      "name": "Reese Calloway",
+      "position": "SS",
+      "jersey": 2,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Rising",
+      "clutch_score": 720,
+      "alignment": 66,
+      "photo_url": null
+    },
+    {
+      "id": "ath_marisol",
+      "name": "Marisol Duarte",
+      "position": "CF",
+      "jersey": 11,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Clutch",
+      "clutch_score": 781,
+      "alignment": 81,
+      "photo_url": null
+    },
+    {
+      "id": "ath_tati",
+      "name": "Tatiana Brooks",
+      "position": "1B",
+      "jersey": 24,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Clutch",
+      "clutch_score": 793,
+      "alignment": 71,
+      "photo_url": null
+    },
+    {
+      "id": "ath_kenzie",
+      "name": "Kenzie Moraes",
+      "position": "2B",
+      "jersey": 5,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Rising",
+      "clutch_score": 596,
+      "alignment": 52,
+      "photo_url": null
+    },
+    {
+      "id": "ath_priya",
+      "name": "Priya Raman",
+      "position": "3B",
+      "jersey": 14,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Clutch",
+      "clutch_score": 764,
+      "alignment": 88,
+      "photo_url": null
+    },
+    {
+      "id": "ath_sophia",
+      "name": "Sophia Lindqvist",
+      "position": "LF",
+      "jersey": 9,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Rising",
+      "clutch_score": 573,
+      "alignment": 45,
+      "photo_url": null
+    },
+    {
+      "id": "ath_ella",
+      "name": "Ella Whitfield",
+      "position": "RF",
+      "jersey": 3,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Rising",
+      "clutch_score": 705,
+      "alignment": 63,
+      "photo_url": null
+    },
+    {
+      "id": "ath_noa",
+      "name": "Noa Barros",
+      "position": "P",
+      "jersey": 17,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Rising",
+      "clutch_score": 662,
+      "alignment": 77,
+      "photo_url": null
+    },
+    {
+      "id": "ath_gabby",
+      "name": "Gabby Ashford",
+      "position": "UT",
+      "jersey": 8,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Developing",
+      "clutch_score": 488,
+      "alignment": 31,
+      "photo_url": null
+    },
+    {
+      "id": "ath_mika",
+      "name": "Mika Tanaka",
+      "position": "C",
+      "jersey": 12,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Rising",
+      "clutch_score": 641,
+      "alignment": 69,
+      "photo_url": null
+    },
+    {
+      "id": "ath_zoe",
+      "name": "Zoe Ferreira",
+      "position": "DP",
+      "jersey": 29,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Developing",
+      "clutch_score": 452,
+      "alignment": 58,
+      "photo_url": null
+    },
+    {
+      "id": "ath_adaeze",
+      "name": "Adaeze Nwosu",
+      "position": "CF",
+      "jersey": 6,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Elite",
+      "clutch_score": 902,
+      "alignment": 92,
+      "photo_url": null
+    },
+    {
+      "id": "ath_lena",
+      "name": "Lena Kovac",
+      "position": "SS",
+      "jersey": 4,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Developing",
+      "clutch_score": 470,
+      "alignment": 64,
+      "photo_url": null
+    },
+    {
+      "id": "ath_rowan",
+      "name": "Rowan McAllister",
+      "position": "P",
+      "jersey": 19,
+      "org": "Alliance Fastpitch",
+      "team_id": "team_thunder_16u",
+      "tier": "Clutch",
+      "clutch_score": 755,
+      "alignment": 47,
+      "photo_url": null
+    }
+  ],
+  "clutch": {
+    "ath_harper": {
+      "score": 828,
+      "tier": "Clutch",
+      "tier_label": "Clutch",
+      "tier_meaning": "Above the line — reliably rises in big moments.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 772
+        },
+        {
+          "date": "2026-04-01",
+          "score": 806
+        },
+        {
+          "date": "2026-06-01",
+          "score": 828
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_dani": {
+      "score": 918,
+      "tier": "Elite",
+      "tier_label": "Elite clutch",
+      "tier_meaning": "Top tier — performs under the highest pressure.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 908
+        },
+        {
+          "date": "2026-04-01",
+          "score": 917
+        },
+        {
+          "date": "2026-06-01",
+          "score": 918
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_reese": {
+      "score": 720,
+      "tier": "Rising",
+      "tier_label": "Rising",
+      "tier_meaning": "Developing — strong in spots, building consistency.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 575
+        },
+        {
+          "date": "2026-04-01",
+          "score": 704
+        },
+        {
+          "date": "2026-06-01",
+          "score": 720
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_marisol": {
+      "score": 781,
+      "tier": "Clutch",
+      "tier_label": "Clutch",
+      "tier_meaning": "Above the line — reliably rises in big moments.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 688
+        },
+        {
+          "date": "2026-04-01",
+          "score": 745
+        },
+        {
+          "date": "2026-06-01",
+          "score": 781
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_tati": {
+      "score": 793,
+      "tier": "Clutch",
+      "tier_label": "Clutch",
+      "tier_meaning": "Above the line — reliably rises in big moments.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 762
+        },
+        {
+          "date": "2026-04-01",
+          "score": 790
+        },
+        {
+          "date": "2026-06-01",
+          "score": 793
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_kenzie": {
+      "score": 596,
+      "tier": "Rising",
+      "tier_label": "Rising",
+      "tier_meaning": "Developing — strong in spots, building consistency.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 567
+        },
+        {
+          "date": "2026-04-01",
+          "score": 614
+        },
+        {
+          "date": "2026-06-01",
+          "score": 596
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_priya": {
+      "score": 764,
+      "tier": "Clutch",
+      "tier_label": "Clutch",
+      "tier_meaning": "Above the line — reliably rises in big moments.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 718
+        },
+        {
+          "date": "2026-04-01",
+          "score": 740
+        },
+        {
+          "date": "2026-06-01",
+          "score": 764
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_sophia": {
+      "score": 573,
+      "tier": "Rising",
+      "tier_label": "Rising",
+      "tier_meaning": "Developing — strong in spots, building consistency.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 561
+        },
+        {
+          "date": "2026-04-01",
+          "score": 575
+        },
+        {
+          "date": "2026-06-01",
+          "score": 573
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_ella": {
+      "score": 705,
+      "tier": "Rising",
+      "tier_label": "Rising",
+      "tier_meaning": "Developing — strong in spots, building consistency.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 565
+        },
+        {
+          "date": "2026-04-01",
+          "score": 687
+        },
+        {
+          "date": "2026-06-01",
+          "score": 705
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_noa": {
+      "score": 662,
+      "tier": "Rising",
+      "tier_label": "Rising",
+      "tier_meaning": "Developing — strong in spots, building consistency.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 559
+        },
+        {
+          "date": "2026-04-01",
+          "score": 608
+        },
+        {
+          "date": "2026-06-01",
+          "score": 662
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_gabby": {
+      "score": 488,
+      "tier": "Developing",
+      "tier_label": "Developing",
+      "tier_meaning": "Early — lots of upside to train into.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 492
+        },
+        {
+          "date": "2026-04-01",
+          "score": 488
+        },
+        {
+          "date": "2026-06-01",
+          "score": 488
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_mika": {
+      "score": 641,
+      "tier": "Rising",
+      "tier_label": "Rising",
+      "tier_meaning": "Developing — strong in spots, building consistency.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 572
+        },
+        {
+          "date": "2026-04-01",
+          "score": 627
+        },
+        {
+          "date": "2026-06-01",
+          "score": 641
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_zoe": {
+      "score": 452,
+      "tier": "Developing",
+      "tier_label": "Developing",
+      "tier_meaning": "Early — lots of upside to train into.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 443
+        },
+        {
+          "date": "2026-04-01",
+          "score": 456
+        },
+        {
+          "date": "2026-06-01",
+          "score": 452
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_adaeze": {
+      "score": 902,
+      "tier": "Elite",
+      "tier_label": "Elite clutch",
+      "tier_meaning": "Top tier — performs under the highest pressure.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 798
+        },
+        {
+          "date": "2026-04-01",
+          "score": 862
+        },
+        {
+          "date": "2026-06-01",
+          "score": 902
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_lena": {
+      "score": 470,
+      "tier": "Developing",
+      "tier_label": "Developing",
+      "tier_meaning": "Early — lots of upside to train into.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 562
+        },
+        {
+          "date": "2026-04-01",
+          "score": 530
+        },
+        {
+          "date": "2026-06-01",
+          "score": 470
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    },
+    "ath_rowan": {
+      "score": 755,
+      "tier": "Clutch",
+      "tier_label": "Clutch",
+      "tier_meaning": "Above the line — reliably rises in big moments.",
+      "threshold": 750,
+      "updated_at": "2026-06-01",
+      "history": [
+        {
+          "date": "2026-02-01",
+          "score": 732
+        },
+        {
+          "date": "2026-04-01",
+          "score": 742
+        },
+        {
+          "date": "2026-06-01",
+          "score": 755
+        }
+      ],
+      "retest": {
+        "eligible": false,
+        "on_cooldown": true,
+        "cycle_label": "You're set for this cycle.",
+        "fee": "$29",
+        "assessment_url": "https://assess.ntangible.co/clutch-factor"
+      }
+    }
+  },
+  "nterpret": {
+    "ath_harper": {
+      "headline": "How you process the game",
+      "summary": "Competitive drive is the edge; the growth lever is faster reset after mistakes.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 84,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 78,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 66,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 81,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 88,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Competitive drive",
+        "Composure under pressure"
+      ],
+      "growth_areas": [
+        "Faster reset after mistakes",
+        "Sustaining focus between innings"
+      ]
+    },
+    "ath_dani": {
+      "headline": "How you process the game",
+      "summary": "Competitive drive is the edge; the growth lever is sustaining focus between innings.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 88,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 58,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 74,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 90,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 91,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Competitive drive",
+        "Confidence in clutch counts"
+      ],
+      "growth_areas": [
+        "Sustaining focus between innings",
+        "Faster reset after mistakes"
+      ]
+    },
+    "ath_reese": {
+      "headline": "How you process the game",
+      "summary": "Competitive drive is the edge; the growth lever is faster reset after mistakes.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 72,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 70,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 61,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 68,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 74,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Competitive drive",
+        "Composure under pressure"
+      ],
+      "growth_areas": [
+        "Faster reset after mistakes",
+        "Trusting the swing in must-hit counts"
+      ]
+    },
+    "ath_marisol": {
+      "headline": "How you process the game",
+      "summary": "Pitch-to-pitch focus is the edge; the growth lever is faster reset after mistakes.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 80,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 83,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 72,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 74,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 77,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Pitch-to-pitch focus",
+        "Composure under pressure"
+      ],
+      "growth_areas": [
+        "Faster reset after mistakes",
+        "Trusting the swing in must-hit counts"
+      ]
+    },
+    "ath_tati": {
+      "headline": "How you process the game",
+      "summary": "Composure under pressure is the edge; the growth lever is faster reset after mistakes.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 81,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 76,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 70,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 78,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 72,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Composure under pressure",
+        "Confidence in clutch counts"
+      ],
+      "growth_areas": [
+        "Faster reset after mistakes",
+        "Channeling intensity into routine"
+      ]
+    },
+    "ath_kenzie": {
+      "headline": "How you process the game",
+      "summary": "Competitive drive is the edge; the growth lever is faster reset after mistakes.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 55,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 62,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 48,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 59,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 71,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Competitive drive",
+        "Pitch-to-pitch focus"
+      ],
+      "growth_areas": [
+        "Faster reset after mistakes",
+        "Staying settled in big innings"
+      ]
+    },
+    "ath_priya": {
+      "headline": "How you process the game",
+      "summary": "Pitch-to-pitch focus is the edge; the growth lever is faster reset after mistakes.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 78,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 81,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 69,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 73,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 75,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Pitch-to-pitch focus",
+        "Composure under pressure"
+      ],
+      "growth_areas": [
+        "Faster reset after mistakes",
+        "Trusting the swing in must-hit counts"
+      ]
+    },
+    "ath_sophia": {
+      "headline": "How you process the game",
+      "summary": "Quick resets after mistakes is the edge; the growth lever is channeling intensity into routine.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 58,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 54,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 60,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 57,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 52,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Quick resets after mistakes",
+        "Composure under pressure"
+      ],
+      "growth_areas": [
+        "Channeling intensity into routine",
+        "Sustaining focus between innings"
+      ]
+    },
+    "ath_ella": {
+      "headline": "How you process the game",
+      "summary": "Quick resets after mistakes is the edge; the growth lever is trusting the swing in must-hit counts.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 70,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 66,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 73,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 64,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 69,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Quick resets after mistakes",
+        "Composure under pressure"
+      ],
+      "growth_areas": [
+        "Trusting the swing in must-hit counts",
+        "Sustaining focus between innings"
+      ]
+    },
+    "ath_noa": {
+      "headline": "How you process the game",
+      "summary": "Competitive drive is the edge; the growth lever is faster reset after mistakes.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 67,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 71,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 58,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 62,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 73,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Competitive drive",
+        "Pitch-to-pitch focus"
+      ],
+      "growth_areas": [
+        "Faster reset after mistakes",
+        "Trusting the swing in must-hit counts"
+      ]
+    },
+    "ath_gabby": {
+      "headline": "How you process the game",
+      "summary": "Competitive drive is the edge; the growth lever is faster reset after mistakes.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 45,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 52,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 40,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 49,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 63,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Competitive drive",
+        "Pitch-to-pitch focus"
+      ],
+      "growth_areas": [
+        "Faster reset after mistakes",
+        "Staying settled in big innings"
+      ]
+    },
+    "ath_mika": {
+      "headline": "How you process the game",
+      "summary": "Competitive drive is the edge; the growth lever is faster reset after mistakes.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 66,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 60,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 57,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 63,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 70,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Competitive drive",
+        "Composure under pressure"
+      ],
+      "growth_areas": [
+        "Faster reset after mistakes",
+        "Sustaining focus between innings"
+      ]
+    },
+    "ath_zoe": {
+      "headline": "How you process the game",
+      "summary": "Quick resets after mistakes is the edge; the growth lever is trusting the swing in must-hit counts.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 48,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 45,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 52,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 44,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 50,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Quick resets after mistakes",
+        "Competitive drive"
+      ],
+      "growth_areas": [
+        "Trusting the swing in must-hit counts",
+        "Sustaining focus between innings"
+      ]
+    },
+    "ath_adaeze": {
+      "headline": "How you process the game",
+      "summary": "Quick resets after mistakes is the edge; the growth lever is trusting the swing in must-hit counts.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 86,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 88,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 90,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 84,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 89,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Quick resets after mistakes",
+        "Competitive drive"
+      ],
+      "growth_areas": [
+        "Trusting the swing in must-hit counts",
+        "Staying settled in big innings"
+      ]
+    },
+    "ath_lena": {
+      "headline": "How you process the game",
+      "summary": "Competitive drive is the edge; the growth lever is faster reset after mistakes.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 52,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 47,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 38,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 42,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 58,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Competitive drive",
+        "Composure under pressure"
+      ],
+      "growth_areas": [
+        "Faster reset after mistakes",
+        "Trusting the swing in must-hit counts"
+      ]
+    },
+    "ath_rowan": {
+      "headline": "How you process the game",
+      "summary": "Competitive drive is the edge; the growth lever is sustaining focus between innings.",
+      "domains": [
+        {
+          "key": "composure",
+          "name": "Composure",
+          "score": 74,
+          "summary": "How steady you stay when the moment gets big."
+        },
+        {
+          "key": "focus",
+          "name": "Focus",
+          "score": 61,
+          "summary": "How well you lock in pitch to pitch."
+        },
+        {
+          "key": "resilience",
+          "name": "Resilience",
+          "score": 66,
+          "summary": "How fast you bounce back after a mistake."
+        },
+        {
+          "key": "confidence",
+          "name": "Confidence",
+          "score": 70,
+          "summary": "How much you trust your game in big counts."
+        },
+        {
+          "key": "drive",
+          "name": "Competitive Drive",
+          "score": 79,
+          "summary": "How much you want the ball when it matters."
+        }
+      ],
+      "strengths": [
+        "Competitive drive",
+        "Composure under pressure"
+      ],
+      "growth_areas": [
+        "Sustaining focus between innings",
+        "Faster reset after mistakes"
+      ]
+    }
+  },
+  "drills": {
+    "rep_count": 12,
+    "drills": [
+      {
+        "id": "drill_reset",
+        "title": "10-Second Reset",
+        "axis": "resilience",
+        "duration_min": 3,
+        "description": "Train your edge: a between-pitch routine to clear the last play.",
+        "steps": [
+          "Step off",
+          "One breath in for 4, out for 6",
+          "Tap the bat, cue word",
+          "Re-enter the box"
+        ]
+      },
+      {
+        "id": "drill_box_breath",
+        "title": "Box Breathing",
+        "axis": "composure",
+        "duration_min": 4,
+        "description": "Lower arousal before high-leverage at-bats.",
+        "steps": [
+          "In 4",
+          "Hold 4",
+          "Out 4",
+          "Hold 4 (x4)"
+        ]
+      },
+      {
+        "id": "drill_anchor",
+        "title": "Anchor Routine",
+        "axis": "focus",
+        "duration_min": 5,
+        "description": "Tie focus to a physical cue so it returns on demand.",
+        "steps": []
+      },
+      {
+        "id": "drill_self_talk",
+        "title": "Clutch Self-Talk",
+        "axis": "confidence",
+        "duration_min": 3,
+        "description": "Rehearse must-hit-count cue phrases.",
+        "steps": []
+      },
+      {
+        "id": "drill_visualize",
+        "title": "First-Pitch Visualization",
+        "axis": "focus",
+        "duration_min": 4,
+        "description": "See the first pitch before it happens so the moment feels familiar.",
+        "steps": [
+          "Close your eyes",
+          "Run the first pitch three ways",
+          "Pick your response to each",
+          "Open and play it"
+        ]
+      },
+      {
+        "id": "drill_pressure_ladder",
+        "title": "Pressure Ladder",
+        "axis": "composure",
+        "duration_min": 6,
+        "description": "Practice the same rep while imagining rising stakes, rung by rung.",
+        "steps": [
+          "Rep at practice stakes",
+          "Rep at game stakes",
+          "Rep at championship stakes",
+          "Note what changed"
+        ]
+      },
+      {
+        "id": "drill_flush",
+        "title": "Flush the Inning",
+        "axis": "resilience",
+        "duration_min": 3,
+        "description": "A dugout ritual that ends the last inning so the next one starts clean.",
+        "steps": [
+          "Name the mistake out loud",
+          "One physical flush cue",
+          "State the next job"
+        ]
+      },
+      {
+        "id": "drill_win_log",
+        "title": "Wins Log",
+        "axis": "confidence",
+        "duration_min": 5,
+        "description": "Bank three concrete wins from today you can withdraw under pressure.",
+        "steps": [
+          "Write three wins",
+          "Say why each was yours",
+          "Read the log before games"
+        ]
+      },
+      {
+        "id": "drill_fire_up",
+        "title": "Ignition Routine",
+        "axis": "drive",
+        "duration_min": 3,
+        "description": "A repeatable spark for flat days: get to your competitive temperature on demand.",
+        "steps": [
+          "Pick your song or phrase",
+          "30 seconds of full intensity",
+          "Lock eyes on one target"
+        ]
+      },
+      {
+        "id": "drill_scout_self",
+        "title": "Scout Yourself",
+        "axis": "drive",
+        "duration_min": 6,
+        "description": "Write the scouting report an opponent would make on your mental game.",
+        "steps": [
+          "List what pressure does to you",
+          "List what you do to pressure",
+          "Circle one thing to move"
+        ]
+      },
+      {
+        "id": "drill_breath_reset",
+        "title": "Two-Breath Reset",
+        "axis": "composure",
+        "duration_min": 2,
+        "description": "The fastest legal reset in the game: two breaths between pitches.",
+        "steps": [
+          "Long exhale",
+          "Slow inhale",
+          "Eyes to target"
+        ]
+      },
+      {
+        "id": "drill_target_lock",
+        "title": "Target Lock",
+        "axis": "focus",
+        "duration_min": 4,
+        "description": "Narrow your eyes to one seam, one spot, one job.",
+        "steps": [
+          "Soft eyes wide",
+          "Hard eyes on the target",
+          "Hold three seconds",
+          "Release into the play"
+        ]
+      }
+    ]
+  },
+  "guides": [
+    {
+      "id": "g_what",
+      "title": "What Clutch Factor measures",
+      "summary": "The mental side of performance, as a single trackable score.",
+      "video_url": null
+    },
+    {
+      "id": "g_use",
+      "title": "How to use your score",
+      "summary": "Turn your number into reps that move it.",
+      "video_url": null
+    },
+    {
+      "id": "g_nil",
+      "title": "Recruiting & NIL playbook",
+      "summary": "How to present your mental game to college coaches.",
+      "video_url": null
+    },
+    {
+      "id": "g_read_nterpret",
+      "title": "Reading your NTerpret",
+      "summary": "Turn the five domains into a plan.",
+      "video_url": null
+    },
+    {
+      "id": "g_habit",
+      "title": "Building a drill habit",
+      "summary": "Small daily reps beat big rare sessions.",
+      "video_url": null
+    },
+    {
+      "id": "g_drive_home",
+      "title": "After a tough game",
+      "summary": "What to say on the drive home — and what to skip.",
+      "video_url": null
+    }
+  ]
+}

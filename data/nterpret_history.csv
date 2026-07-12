@@ -1,0 +1,481 @@
+athlete_id,quarter,domain_key,domain_name,score
+ath_harper,2025Q1,composure,Composure,69
+ath_harper,2025Q1,focus,Focus,63
+ath_harper,2025Q1,resilience,Resilience,50
+ath_harper,2025Q1,confidence,Confidence,67
+ath_harper,2025Q1,drive,Competitive Drive,73
+ath_harper,2025Q2,composure,Composure,71
+ath_harper,2025Q2,focus,Focus,65
+ath_harper,2025Q2,resilience,Resilience,54
+ath_harper,2025Q2,confidence,Confidence,68
+ath_harper,2025Q2,drive,Competitive Drive,77
+ath_harper,2025Q3,composure,Composure,76
+ath_harper,2025Q3,focus,Focus,70
+ath_harper,2025Q3,resilience,Resilience,55
+ath_harper,2025Q3,confidence,Confidence,73
+ath_harper,2025Q3,drive,Competitive Drive,80
+ath_harper,2025Q4,composure,Composure,79
+ath_harper,2025Q4,focus,Focus,74
+ath_harper,2025Q4,resilience,Resilience,60
+ath_harper,2025Q4,confidence,Confidence,74
+ath_harper,2025Q4,drive,Competitive Drive,80
+ath_harper,2026Q1,composure,Composure,82
+ath_harper,2026Q1,focus,Focus,76
+ath_harper,2026Q1,resilience,Resilience,65
+ath_harper,2026Q1,confidence,Confidence,79
+ath_harper,2026Q1,drive,Competitive Drive,83
+ath_harper,2026Q2,composure,Composure,84
+ath_harper,2026Q2,focus,Focus,78
+ath_harper,2026Q2,resilience,Resilience,66
+ath_harper,2026Q2,confidence,Confidence,81
+ath_harper,2026Q2,drive,Competitive Drive,88
+ath_dani,2025Q1,composure,Composure,83
+ath_dani,2025Q1,focus,Focus,53
+ath_dani,2025Q1,resilience,Resilience,70
+ath_dani,2025Q1,confidence,Confidence,83
+ath_dani,2025Q1,drive,Competitive Drive,87
+ath_dani,2025Q2,composure,Composure,84
+ath_dani,2025Q2,focus,Focus,53
+ath_dani,2025Q2,resilience,Resilience,70
+ath_dani,2025Q2,confidence,Confidence,85
+ath_dani,2025Q2,drive,Competitive Drive,88
+ath_dani,2025Q3,composure,Composure,83
+ath_dani,2025Q3,focus,Focus,54
+ath_dani,2025Q3,resilience,Resilience,71
+ath_dani,2025Q3,confidence,Confidence,86
+ath_dani,2025Q3,drive,Competitive Drive,89
+ath_dani,2025Q4,composure,Composure,87
+ath_dani,2025Q4,focus,Focus,58
+ath_dani,2025Q4,resilience,Resilience,72
+ath_dani,2025Q4,confidence,Confidence,89
+ath_dani,2025Q4,drive,Competitive Drive,90
+ath_dani,2026Q1,composure,Composure,89
+ath_dani,2026Q1,focus,Focus,57
+ath_dani,2026Q1,resilience,Resilience,73
+ath_dani,2026Q1,confidence,Confidence,89
+ath_dani,2026Q1,drive,Competitive Drive,89
+ath_dani,2026Q2,composure,Composure,88
+ath_dani,2026Q2,focus,Focus,58
+ath_dani,2026Q2,resilience,Resilience,74
+ath_dani,2026Q2,confidence,Confidence,90
+ath_dani,2026Q2,drive,Competitive Drive,91
+ath_reese,2025Q1,composure,Composure,66
+ath_reese,2025Q1,focus,Focus,63
+ath_reese,2025Q1,resilience,Resilience,55
+ath_reese,2025Q1,confidence,Confidence,61
+ath_reese,2025Q1,drive,Competitive Drive,69
+ath_reese,2025Q2,composure,Composure,67
+ath_reese,2025Q2,focus,Focus,66
+ath_reese,2025Q2,resilience,Resilience,58
+ath_reese,2025Q2,confidence,Confidence,64
+ath_reese,2025Q2,drive,Competitive Drive,69
+ath_reese,2025Q3,composure,Composure,70
+ath_reese,2025Q3,focus,Focus,67
+ath_reese,2025Q3,resilience,Resilience,59
+ath_reese,2025Q3,confidence,Confidence,64
+ath_reese,2025Q3,drive,Competitive Drive,71
+ath_reese,2025Q4,composure,Composure,71
+ath_reese,2025Q4,focus,Focus,70
+ath_reese,2025Q4,resilience,Resilience,57
+ath_reese,2025Q4,confidence,Confidence,66
+ath_reese,2025Q4,drive,Competitive Drive,72
+ath_reese,2026Q1,composure,Composure,66
+ath_reese,2026Q1,focus,Focus,64
+ath_reese,2026Q1,resilience,Resilience,52
+ath_reese,2026Q1,confidence,Confidence,62
+ath_reese,2026Q1,drive,Competitive Drive,68
+ath_reese,2026Q2,composure,Composure,72
+ath_reese,2026Q2,focus,Focus,70
+ath_reese,2026Q2,resilience,Resilience,61
+ath_reese,2026Q2,confidence,Confidence,68
+ath_reese,2026Q2,drive,Competitive Drive,74
+ath_marisol,2025Q1,composure,Composure,63
+ath_marisol,2025Q1,focus,Focus,68
+ath_marisol,2025Q1,resilience,Resilience,57
+ath_marisol,2025Q1,confidence,Confidence,60
+ath_marisol,2025Q1,drive,Competitive Drive,63
+ath_marisol,2025Q2,composure,Composure,69
+ath_marisol,2025Q2,focus,Focus,70
+ath_marisol,2025Q2,resilience,Resilience,61
+ath_marisol,2025Q2,confidence,Confidence,63
+ath_marisol,2025Q2,drive,Competitive Drive,65
+ath_marisol,2025Q3,composure,Composure,71
+ath_marisol,2025Q3,focus,Focus,76
+ath_marisol,2025Q3,resilience,Resilience,64
+ath_marisol,2025Q3,confidence,Confidence,65
+ath_marisol,2025Q3,drive,Competitive Drive,68
+ath_marisol,2025Q4,composure,Composure,73
+ath_marisol,2025Q4,focus,Focus,77
+ath_marisol,2025Q4,resilience,Resilience,68
+ath_marisol,2025Q4,confidence,Confidence,67
+ath_marisol,2025Q4,drive,Competitive Drive,72
+ath_marisol,2026Q1,composure,Composure,76
+ath_marisol,2026Q1,focus,Focus,81
+ath_marisol,2026Q1,resilience,Resilience,71
+ath_marisol,2026Q1,confidence,Confidence,70
+ath_marisol,2026Q1,drive,Competitive Drive,76
+ath_marisol,2026Q2,composure,Composure,80
+ath_marisol,2026Q2,focus,Focus,83
+ath_marisol,2026Q2,resilience,Resilience,72
+ath_marisol,2026Q2,confidence,Confidence,74
+ath_marisol,2026Q2,drive,Competitive Drive,77
+ath_tati,2025Q1,composure,Composure,77
+ath_tati,2025Q1,focus,Focus,69
+ath_tati,2025Q1,resilience,Resilience,65
+ath_tati,2025Q1,confidence,Confidence,75
+ath_tati,2025Q1,drive,Competitive Drive,67
+ath_tati,2025Q2,composure,Composure,77
+ath_tati,2025Q2,focus,Focus,73
+ath_tati,2025Q2,resilience,Resilience,64
+ath_tati,2025Q2,confidence,Confidence,73
+ath_tati,2025Q2,drive,Competitive Drive,68
+ath_tati,2025Q3,composure,Composure,79
+ath_tati,2025Q3,focus,Focus,73
+ath_tati,2025Q3,resilience,Resilience,68
+ath_tati,2025Q3,confidence,Confidence,73
+ath_tati,2025Q3,drive,Competitive Drive,68
+ath_tati,2025Q4,composure,Composure,80
+ath_tati,2025Q4,focus,Focus,76
+ath_tati,2025Q4,resilience,Resilience,69
+ath_tati,2025Q4,confidence,Confidence,76
+ath_tati,2025Q4,drive,Competitive Drive,69
+ath_tati,2026Q1,composure,Composure,80
+ath_tati,2026Q1,focus,Focus,77
+ath_tati,2026Q1,resilience,Resilience,68
+ath_tati,2026Q1,confidence,Confidence,77
+ath_tati,2026Q1,drive,Competitive Drive,71
+ath_tati,2026Q2,composure,Composure,81
+ath_tati,2026Q2,focus,Focus,76
+ath_tati,2026Q2,resilience,Resilience,70
+ath_tati,2026Q2,confidence,Confidence,78
+ath_tati,2026Q2,drive,Competitive Drive,72
+ath_kenzie,2025Q1,composure,Composure,52
+ath_kenzie,2025Q1,focus,Focus,55
+ath_kenzie,2025Q1,resilience,Resilience,44
+ath_kenzie,2025Q1,confidence,Confidence,53
+ath_kenzie,2025Q1,drive,Competitive Drive,68
+ath_kenzie,2025Q2,composure,Composure,53
+ath_kenzie,2025Q2,focus,Focus,58
+ath_kenzie,2025Q2,resilience,Resilience,46
+ath_kenzie,2025Q2,confidence,Confidence,54
+ath_kenzie,2025Q2,drive,Competitive Drive,69
+ath_kenzie,2025Q3,composure,Composure,52
+ath_kenzie,2025Q3,focus,Focus,61
+ath_kenzie,2025Q3,resilience,Resilience,47
+ath_kenzie,2025Q3,confidence,Confidence,56
+ath_kenzie,2025Q3,drive,Competitive Drive,68
+ath_kenzie,2025Q4,composure,Composure,52
+ath_kenzie,2025Q4,focus,Focus,58
+ath_kenzie,2025Q4,resilience,Resilience,45
+ath_kenzie,2025Q4,confidence,Confidence,56
+ath_kenzie,2025Q4,drive,Competitive Drive,70
+ath_kenzie,2026Q1,composure,Composure,52
+ath_kenzie,2026Q1,focus,Focus,62
+ath_kenzie,2026Q1,resilience,Resilience,45
+ath_kenzie,2026Q1,confidence,Confidence,56
+ath_kenzie,2026Q1,drive,Competitive Drive,71
+ath_kenzie,2026Q2,composure,Composure,55
+ath_kenzie,2026Q2,focus,Focus,62
+ath_kenzie,2026Q2,resilience,Resilience,48
+ath_kenzie,2026Q2,confidence,Confidence,59
+ath_kenzie,2026Q2,drive,Competitive Drive,71
+ath_priya,2025Q1,composure,Composure,61
+ath_priya,2025Q1,focus,Focus,66
+ath_priya,2025Q1,resilience,Resilience,52
+ath_priya,2025Q1,confidence,Confidence,60
+ath_priya,2025Q1,drive,Competitive Drive,59
+ath_priya,2025Q2,composure,Composure,66
+ath_priya,2025Q2,focus,Focus,68
+ath_priya,2025Q2,resilience,Resilience,58
+ath_priya,2025Q2,confidence,Confidence,61
+ath_priya,2025Q2,drive,Competitive Drive,65
+ath_priya,2025Q3,composure,Composure,68
+ath_priya,2025Q3,focus,Focus,73
+ath_priya,2025Q3,resilience,Resilience,60
+ath_priya,2025Q3,confidence,Confidence,63
+ath_priya,2025Q3,drive,Competitive Drive,67
+ath_priya,2025Q4,composure,Composure,71
+ath_priya,2025Q4,focus,Focus,73
+ath_priya,2025Q4,resilience,Resilience,62
+ath_priya,2025Q4,confidence,Confidence,68
+ath_priya,2025Q4,drive,Competitive Drive,70
+ath_priya,2026Q1,composure,Composure,76
+ath_priya,2026Q1,focus,Focus,76
+ath_priya,2026Q1,resilience,Resilience,65
+ath_priya,2026Q1,confidence,Confidence,71
+ath_priya,2026Q1,drive,Competitive Drive,71
+ath_priya,2026Q2,composure,Composure,78
+ath_priya,2026Q2,focus,Focus,81
+ath_priya,2026Q2,resilience,Resilience,69
+ath_priya,2026Q2,confidence,Confidence,73
+ath_priya,2026Q2,drive,Competitive Drive,75
+ath_sophia,2025Q1,composure,Composure,55
+ath_sophia,2025Q1,focus,Focus,49
+ath_sophia,2025Q1,resilience,Resilience,55
+ath_sophia,2025Q1,confidence,Confidence,53
+ath_sophia,2025Q1,drive,Competitive Drive,46
+ath_sophia,2025Q2,composure,Composure,54
+ath_sophia,2025Q2,focus,Focus,51
+ath_sophia,2025Q2,resilience,Resilience,55
+ath_sophia,2025Q2,confidence,Confidence,52
+ath_sophia,2025Q2,drive,Competitive Drive,50
+ath_sophia,2025Q3,composure,Composure,54
+ath_sophia,2025Q3,focus,Focus,53
+ath_sophia,2025Q3,resilience,Resilience,57
+ath_sophia,2025Q3,confidence,Confidence,52
+ath_sophia,2025Q3,drive,Competitive Drive,50
+ath_sophia,2025Q4,composure,Composure,55
+ath_sophia,2025Q4,focus,Focus,51
+ath_sophia,2025Q4,resilience,Resilience,58
+ath_sophia,2025Q4,confidence,Confidence,54
+ath_sophia,2025Q4,drive,Competitive Drive,49
+ath_sophia,2026Q1,composure,Composure,57
+ath_sophia,2026Q1,focus,Focus,53
+ath_sophia,2026Q1,resilience,Resilience,58
+ath_sophia,2026Q1,confidence,Confidence,54
+ath_sophia,2026Q1,drive,Competitive Drive,53
+ath_sophia,2026Q2,composure,Composure,58
+ath_sophia,2026Q2,focus,Focus,54
+ath_sophia,2026Q2,resilience,Resilience,60
+ath_sophia,2026Q2,confidence,Confidence,57
+ath_sophia,2026Q2,drive,Competitive Drive,52
+ath_ella,2025Q1,composure,Composure,66
+ath_ella,2025Q1,focus,Focus,60
+ath_ella,2025Q1,resilience,Resilience,66
+ath_ella,2025Q1,confidence,Confidence,58
+ath_ella,2025Q1,drive,Competitive Drive,64
+ath_ella,2025Q2,composure,Composure,64
+ath_ella,2025Q2,focus,Focus,63
+ath_ella,2025Q2,resilience,Resilience,70
+ath_ella,2025Q2,confidence,Confidence,58
+ath_ella,2025Q2,drive,Competitive Drive,67
+ath_ella,2025Q3,composure,Composure,68
+ath_ella,2025Q3,focus,Focus,63
+ath_ella,2025Q3,resilience,Resilience,70
+ath_ella,2025Q3,confidence,Confidence,62
+ath_ella,2025Q3,drive,Competitive Drive,67
+ath_ella,2025Q4,composure,Composure,67
+ath_ella,2025Q4,focus,Focus,65
+ath_ella,2025Q4,resilience,Resilience,71
+ath_ella,2025Q4,confidence,Confidence,63
+ath_ella,2025Q4,drive,Competitive Drive,66
+ath_ella,2026Q1,composure,Composure,63
+ath_ella,2026Q1,focus,Focus,58
+ath_ella,2026Q1,resilience,Resilience,64
+ath_ella,2026Q1,confidence,Confidence,55
+ath_ella,2026Q1,drive,Competitive Drive,61
+ath_ella,2026Q2,composure,Composure,70
+ath_ella,2026Q2,focus,Focus,66
+ath_ella,2026Q2,resilience,Resilience,73
+ath_ella,2026Q2,confidence,Confidence,64
+ath_ella,2026Q2,drive,Competitive Drive,69
+ath_noa,2025Q1,composure,Composure,54
+ath_noa,2025Q1,focus,Focus,56
+ath_noa,2025Q1,resilience,Resilience,42
+ath_noa,2025Q1,confidence,Confidence,47
+ath_noa,2025Q1,drive,Competitive Drive,57
+ath_noa,2025Q2,composure,Composure,56
+ath_noa,2025Q2,focus,Focus,59
+ath_noa,2025Q2,resilience,Resilience,48
+ath_noa,2025Q2,confidence,Confidence,48
+ath_noa,2025Q2,drive,Competitive Drive,61
+ath_noa,2025Q3,composure,Composure,57
+ath_noa,2025Q3,focus,Focus,61
+ath_noa,2025Q3,resilience,Resilience,49
+ath_noa,2025Q3,confidence,Confidence,53
+ath_noa,2025Q3,drive,Competitive Drive,64
+ath_noa,2025Q4,composure,Composure,62
+ath_noa,2025Q4,focus,Focus,63
+ath_noa,2025Q4,resilience,Resilience,51
+ath_noa,2025Q4,confidence,Confidence,54
+ath_noa,2025Q4,drive,Competitive Drive,67
+ath_noa,2026Q1,composure,Composure,66
+ath_noa,2026Q1,focus,Focus,68
+ath_noa,2026Q1,resilience,Resilience,56
+ath_noa,2026Q1,confidence,Confidence,60
+ath_noa,2026Q1,drive,Competitive Drive,71
+ath_noa,2026Q2,composure,Composure,67
+ath_noa,2026Q2,focus,Focus,71
+ath_noa,2026Q2,resilience,Resilience,58
+ath_noa,2026Q2,confidence,Confidence,62
+ath_noa,2026Q2,drive,Competitive Drive,73
+ath_gabby,2025Q1,composure,Composure,39
+ath_gabby,2025Q1,focus,Focus,47
+ath_gabby,2025Q1,resilience,Resilience,33
+ath_gabby,2025Q1,confidence,Confidence,43
+ath_gabby,2025Q1,drive,Competitive Drive,59
+ath_gabby,2025Q2,composure,Composure,41
+ath_gabby,2025Q2,focus,Focus,48
+ath_gabby,2025Q2,resilience,Resilience,37
+ath_gabby,2025Q2,confidence,Confidence,45
+ath_gabby,2025Q2,drive,Competitive Drive,58
+ath_gabby,2025Q3,composure,Composure,44
+ath_gabby,2025Q3,focus,Focus,51
+ath_gabby,2025Q3,resilience,Resilience,38
+ath_gabby,2025Q3,confidence,Confidence,46
+ath_gabby,2025Q3,drive,Competitive Drive,60
+ath_gabby,2025Q4,composure,Composure,45
+ath_gabby,2025Q4,focus,Focus,50
+ath_gabby,2025Q4,resilience,Resilience,38
+ath_gabby,2025Q4,confidence,Confidence,47
+ath_gabby,2025Q4,drive,Competitive Drive,59
+ath_gabby,2026Q1,composure,Composure,43
+ath_gabby,2026Q1,focus,Focus,52
+ath_gabby,2026Q1,resilience,Resilience,38
+ath_gabby,2026Q1,confidence,Confidence,46
+ath_gabby,2026Q1,drive,Competitive Drive,61
+ath_gabby,2026Q2,composure,Composure,45
+ath_gabby,2026Q2,focus,Focus,52
+ath_gabby,2026Q2,resilience,Resilience,40
+ath_gabby,2026Q2,confidence,Confidence,49
+ath_gabby,2026Q2,drive,Competitive Drive,63
+ath_mika,2025Q1,composure,Composure,50
+ath_mika,2025Q1,focus,Focus,47
+ath_mika,2025Q1,resilience,Resilience,42
+ath_mika,2025Q1,confidence,Confidence,49
+ath_mika,2025Q1,drive,Competitive Drive,54
+ath_mika,2025Q2,composure,Composure,56
+ath_mika,2025Q2,focus,Focus,46
+ath_mika,2025Q2,resilience,Resilience,45
+ath_mika,2025Q2,confidence,Confidence,49
+ath_mika,2025Q2,drive,Competitive Drive,58
+ath_mika,2025Q3,composure,Composure,55
+ath_mika,2025Q3,focus,Focus,51
+ath_mika,2025Q3,resilience,Resilience,46
+ath_mika,2025Q3,confidence,Confidence,52
+ath_mika,2025Q3,drive,Competitive Drive,60
+ath_mika,2025Q4,composure,Composure,58
+ath_mika,2025Q4,focus,Focus,54
+ath_mika,2025Q4,resilience,Resilience,49
+ath_mika,2025Q4,confidence,Confidence,58
+ath_mika,2025Q4,drive,Competitive Drive,66
+ath_mika,2026Q1,composure,Composure,61
+ath_mika,2026Q1,focus,Focus,59
+ath_mika,2026Q1,resilience,Resilience,55
+ath_mika,2026Q1,confidence,Confidence,60
+ath_mika,2026Q1,drive,Competitive Drive,67
+ath_mika,2026Q2,composure,Composure,66
+ath_mika,2026Q2,focus,Focus,60
+ath_mika,2026Q2,resilience,Resilience,57
+ath_mika,2026Q2,confidence,Confidence,63
+ath_mika,2026Q2,drive,Competitive Drive,70
+ath_zoe,2025Q1,composure,Composure,44
+ath_zoe,2025Q1,focus,Focus,41
+ath_zoe,2025Q1,resilience,Resilience,46
+ath_zoe,2025Q1,confidence,Confidence,38
+ath_zoe,2025Q1,drive,Competitive Drive,47
+ath_zoe,2025Q2,composure,Composure,44
+ath_zoe,2025Q2,focus,Focus,41
+ath_zoe,2025Q2,resilience,Resilience,47
+ath_zoe,2025Q2,confidence,Confidence,40
+ath_zoe,2025Q2,drive,Competitive Drive,45
+ath_zoe,2025Q3,composure,Composure,47
+ath_zoe,2025Q3,focus,Focus,40
+ath_zoe,2025Q3,resilience,Resilience,48
+ath_zoe,2025Q3,confidence,Confidence,41
+ath_zoe,2025Q3,drive,Competitive Drive,46
+ath_zoe,2025Q4,composure,Composure,46
+ath_zoe,2025Q4,focus,Focus,44
+ath_zoe,2025Q4,resilience,Resilience,50
+ath_zoe,2025Q4,confidence,Confidence,43
+ath_zoe,2025Q4,drive,Competitive Drive,49
+ath_zoe,2026Q1,composure,Composure,47
+ath_zoe,2026Q1,focus,Focus,44
+ath_zoe,2026Q1,resilience,Resilience,53
+ath_zoe,2026Q1,confidence,Confidence,43
+ath_zoe,2026Q1,drive,Competitive Drive,49
+ath_zoe,2026Q2,composure,Composure,48
+ath_zoe,2026Q2,focus,Focus,45
+ath_zoe,2026Q2,resilience,Resilience,52
+ath_zoe,2026Q2,confidence,Confidence,44
+ath_zoe,2026Q2,drive,Competitive Drive,50
+ath_adaeze,2025Q1,composure,Composure,71
+ath_adaeze,2025Q1,focus,Focus,74
+ath_adaeze,2025Q1,resilience,Resilience,76
+ath_adaeze,2025Q1,confidence,Confidence,70
+ath_adaeze,2025Q1,drive,Competitive Drive,74
+ath_adaeze,2025Q2,composure,Composure,76
+ath_adaeze,2025Q2,focus,Focus,76
+ath_adaeze,2025Q2,resilience,Resilience,79
+ath_adaeze,2025Q2,confidence,Confidence,71
+ath_adaeze,2025Q2,drive,Competitive Drive,77
+ath_adaeze,2025Q3,composure,Composure,76
+ath_adaeze,2025Q3,focus,Focus,78
+ath_adaeze,2025Q3,resilience,Resilience,82
+ath_adaeze,2025Q3,confidence,Confidence,74
+ath_adaeze,2025Q3,drive,Competitive Drive,78
+ath_adaeze,2025Q4,composure,Composure,79
+ath_adaeze,2025Q4,focus,Focus,80
+ath_adaeze,2025Q4,resilience,Resilience,83
+ath_adaeze,2025Q4,confidence,Confidence,78
+ath_adaeze,2025Q4,drive,Competitive Drive,84
+ath_adaeze,2026Q1,composure,Composure,82
+ath_adaeze,2026Q1,focus,Focus,87
+ath_adaeze,2026Q1,resilience,Resilience,87
+ath_adaeze,2026Q1,confidence,Confidence,82
+ath_adaeze,2026Q1,drive,Competitive Drive,84
+ath_adaeze,2026Q2,composure,Composure,86
+ath_adaeze,2026Q2,focus,Focus,88
+ath_adaeze,2026Q2,resilience,Resilience,90
+ath_adaeze,2026Q2,confidence,Confidence,84
+ath_adaeze,2026Q2,drive,Competitive Drive,89
+ath_lena,2025Q1,composure,Composure,73
+ath_lena,2025Q1,focus,Focus,65
+ath_lena,2025Q1,resilience,Resilience,56
+ath_lena,2025Q1,confidence,Confidence,63
+ath_lena,2025Q1,drive,Competitive Drive,76
+ath_lena,2025Q2,composure,Composure,66
+ath_lena,2025Q2,focus,Focus,62
+ath_lena,2025Q2,resilience,Resilience,52
+ath_lena,2025Q2,confidence,Confidence,57
+ath_lena,2025Q2,drive,Competitive Drive,74
+ath_lena,2025Q3,composure,Composure,65
+ath_lena,2025Q3,focus,Focus,59
+ath_lena,2025Q3,resilience,Resilience,49
+ath_lena,2025Q3,confidence,Confidence,54
+ath_lena,2025Q3,drive,Competitive Drive,70
+ath_lena,2025Q4,composure,Composure,60
+ath_lena,2025Q4,focus,Focus,56
+ath_lena,2025Q4,resilience,Resilience,46
+ath_lena,2025Q4,confidence,Confidence,49
+ath_lena,2025Q4,drive,Competitive Drive,67
+ath_lena,2026Q1,composure,Composure,57
+ath_lena,2026Q1,focus,Focus,52
+ath_lena,2026Q1,resilience,Resilience,40
+ath_lena,2026Q1,confidence,Confidence,45
+ath_lena,2026Q1,drive,Competitive Drive,63
+ath_lena,2026Q2,composure,Composure,52
+ath_lena,2026Q2,focus,Focus,47
+ath_lena,2026Q2,resilience,Resilience,38
+ath_lena,2026Q2,confidence,Confidence,42
+ath_lena,2026Q2,drive,Competitive Drive,58
+ath_rowan,2025Q1,composure,Composure,69
+ath_rowan,2025Q1,focus,Focus,55
+ath_rowan,2025Q1,resilience,Resilience,63
+ath_rowan,2025Q1,confidence,Confidence,64
+ath_rowan,2025Q1,drive,Competitive Drive,73
+ath_rowan,2025Q2,composure,Composure,70
+ath_rowan,2025Q2,focus,Focus,56
+ath_rowan,2025Q2,resilience,Resilience,60
+ath_rowan,2025Q2,confidence,Confidence,64
+ath_rowan,2025Q2,drive,Competitive Drive,76
+ath_rowan,2025Q3,composure,Composure,71
+ath_rowan,2025Q3,focus,Focus,56
+ath_rowan,2025Q3,resilience,Resilience,65
+ath_rowan,2025Q3,confidence,Confidence,66
+ath_rowan,2025Q3,drive,Competitive Drive,76
+ath_rowan,2025Q4,composure,Composure,70
+ath_rowan,2025Q4,focus,Focus,57
+ath_rowan,2025Q4,resilience,Resilience,65
+ath_rowan,2025Q4,confidence,Confidence,67
+ath_rowan,2025Q4,drive,Competitive Drive,76
+ath_rowan,2026Q1,composure,Composure,72
+ath_rowan,2026Q1,focus,Focus,59
+ath_rowan,2026Q1,resilience,Resilience,64
+ath_rowan,2026Q1,confidence,Confidence,70
+ath_rowan,2026Q1,drive,Competitive Drive,78
+ath_rowan,2026Q2,composure,Composure,74
+ath_rowan,2026Q2,focus,Focus,61
+ath_rowan,2026Q2,resilience,Resilience,66
+ath_rowan,2026Q2,confidence,Confidence,70
+ath_rowan,2026Q2,drive,Competitive Drive,79

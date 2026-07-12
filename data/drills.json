@@ -1,0 +1,143 @@
+[
+  {
+    "id": "drill_reset",
+    "title": "10-Second Reset",
+    "axis": "resilience",
+    "duration_min": 3,
+    "description": "Train your edge: a between-pitch routine to clear the last play.",
+    "steps": [
+      "Step off",
+      "One breath in for 4, out for 6",
+      "Tap the bat, cue word",
+      "Re-enter the box"
+    ]
+  },
+  {
+    "id": "drill_box_breath",
+    "title": "Box Breathing",
+    "axis": "composure",
+    "duration_min": 4,
+    "description": "Lower arousal before high-leverage at-bats.",
+    "steps": [
+      "In 4",
+      "Hold 4",
+      "Out 4",
+      "Hold 4 (x4)"
+    ]
+  },
+  {
+    "id": "drill_anchor",
+    "title": "Anchor Routine",
+    "axis": "focus",
+    "duration_min": 5,
+    "description": "Tie focus to a physical cue so it returns on demand.",
+    "steps": []
+  },
+  {
+    "id": "drill_self_talk",
+    "title": "Clutch Self-Talk",
+    "axis": "confidence",
+    "duration_min": 3,
+    "description": "Rehearse must-hit-count cue phrases.",
+    "steps": []
+  },
+  {
+    "id": "drill_visualize",
+    "title": "First-Pitch Visualization",
+    "axis": "focus",
+    "duration_min": 4,
+    "description": "See the first pitch before it happens so the moment feels familiar.",
+    "steps": [
+      "Close your eyes",
+      "Run the first pitch three ways",
+      "Pick your response to each",
+      "Open and play it"
+    ]
+  },
+  {
+    "id": "drill_pressure_ladder",
+    "title": "Pressure Ladder",
+    "axis": "composure",
+    "duration_min": 6,
+    "description": "Practice the same rep while imagining rising stakes, rung by rung.",
+    "steps": [
+      "Rep at practice stakes",
+      "Rep at game stakes",
+      "Rep at championship stakes",
+      "Note what changed"
+    ]
+  },
+  {
+    "id": "drill_flush",
+    "title": "Flush the Inning",
+    "axis": "resilience",
+    "duration_min": 3,
+    "description": "A dugout ritual that ends the last inning so the next one starts clean.",
+    "steps": [
+      "Name the mistake out loud",
+      "One physical flush cue",
+      "State the next job"
+    ]
+  },
+  {
+    "id": "drill_win_log",
+    "title": "Wins Log",
+    "axis": "confidence",
+    "duration_min": 5,
+    "description": "Bank three concrete wins from today you can withdraw under pressure.",
+    "steps": [
+      "Write three wins",
+      "Say why each was yours",
+      "Read the log before games"
+    ]
+  },
+  {
+    "id": "drill_fire_up",
+    "title": "Ignition Routine",
+    "axis": "drive",
+    "duration_min": 3,
+    "description": "A repeatable spark for flat days: get to your competitive temperature on demand.",
+    "steps": [
+      "Pick your song or phrase",
+      "30 seconds of full intensity",
+      "Lock eyes on one target"
+    ]
+  },
+  {
+    "id": "drill_scout_self",
+    "title": "Scout Yourself",
+    "axis": "drive",
+    "duration_min": 6,
+    "description": "Write the scouting report an opponent would make on your mental game.",
+    "steps": [
+      "List what pressure does to you",
+      "List what you do to pressure",
+      "Circle one thing to move"
+    ]
+  },
+  {
+    "id": "drill_breath_reset",
+    "title": "Two-Breath Reset",
+    "axis": "composure",
+    "duration_min": 2,
+    "description": "The fastest legal reset in the game: two breaths between pitches.",
+    "steps": [
+      "Long exhale",
+      "Slow inhale",
+      "Eyes to target"
+    ]
+  },
+  {
+    "id": "drill_target_lock",
+    "title": "Target Lock",
+    "axis": "focus",
+    "duration_min": 4,
+    "description": "Narrow your eyes to one seam, one spot, one job.",
+    "steps": [
+      "Soft eyes wide",
+      "Hard eyes on the target",
+      "Hold three seconds",
+      "Release into the play"
+    ]
+  }
+]

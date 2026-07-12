@@ -1,0 +1,38 @@
+[
+  {
+    "id": "g_what",
+    "title": "What Clutch Factor measures",
+    "summary": "The mental side of performance, as a single trackable score.",
+    "video_url": null
+  },
+  {
+    "id": "g_use",
+    "title": "How to use your score",
+    "summary": "Turn your number into reps that move it.",
+    "video_url": null
+  },
+  {
+    "id": "g_nil",
+    "title": "Recruiting & NIL playbook",
+    "summary": "How to present your mental game to college coaches.",
+    "video_url": null
+  },
+  {
+    "id": "g_read_nterpret",
+    "title": "Reading your NTerpret",
+    "summary": "Turn the five domains into a plan.",
+    "video_url": null
+  },
+  {
+    "id": "g_habit",
+    "title": "Building a drill habit",
+    "summary": "Small daily reps beat big rare sessions.",
+    "video_url": null
+  },
+  {
+    "id": "g_drive_home",
+    "title": "After a tough game",
+    "summary": "What to say on the drive home — and what to skip.",
+    "video_url": null
+  }
+]
