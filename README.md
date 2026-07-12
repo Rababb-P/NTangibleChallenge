@@ -6,10 +6,8 @@ Welcome to the NTangible intern challenge. This repo contains a fully working co
 
 ## Run the app (60 seconds)
 
-First, **fork this repo** — your fork is where you'll build. Then:
-
 ```bash
-git clone <your-fork-url>
+git clone https://github.com/Elliot-Sones/howie-viz-challenge.git
 cd howie-viz-challenge/app
 npm install
 npm run dev
@@ -65,6 +63,6 @@ The app is your reference. The data is your canvas.
 
 ## A note on the data & this repo
 
-Every athlete, score, game, and name in this kit is **synthetic** — generated for this challenge. No real athlete data is included anywhere.
+**Everything here is mock data.** Every athlete, score, game, and name is synthetic — generated for this challenge. No real athlete data is included anywhere.
 
-This kit is shared for the NTangible intern challenge — please don't redistribute the code, data, or brand assets.
+This kit exists for the NTangible intern challenge. The HOWie name, product design, and brand assets remain NTangible's — please don't reuse them outside the challenge.

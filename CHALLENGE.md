@@ -17,12 +17,14 @@ Play to your strengths. We picked this challenge because it has room for whateve
 
 Everything lives in [`data/`](data/) as JSON and CSV: one full season for a 16-athlete fastpitch team — Clutch Factor™ scores with 18 months of history per athlete, NTerpret™ mental profiles with quarterly snapshots, a 12-drill catalog with ~1,800 logged sessions, and a 24-game schedule.
 
+**All of it is mock data** — every athlete, name, score, and game is synthetic, generated for this challenge. No real athlete data anywhere.
+
 **Start with [`data/DATA.md`](data/DATA.md)** — it explains every file and field, the scales (Clutch Factor is 0–1000 with 750 as "the line"), the join keys, and how to regenerate or remix the season if your idea needs more.
 
 ## 2. Scope & rules
 
 - **We want you to use AI.** But own what you ship: if we ask questions — performance tradeoffs, known limitations, why this approach over another — you need to be able to answer them.
-- **Fork this repo and start there.** Build inside your fork — extend the app, add a folder for your standalone project, whatever fits. Forks of this private repo stay private.
+- **Clone this repo and start there.** Extend the app, or build alongside it — whatever fits.
 - **Timebox:** due date is Tuesday July 21st at 12am. Please submit your work before then. Late replies will not be accepted.
 - **Any stack, any tools.**
 
@@ -30,9 +32,9 @@ We left the rules very vague on purpose. Show us what your passionate about and 
 
 ## 3. Submission
 
-1. **Build in your fork** of this repo.
-2. **Update the README in your fork** with a description of **what you built, why, and how it works** — plus how to run it (we should get from clone to running in under 5 minutes). A few sentences on "what I'd do next" are welcome too.
-3. **Email your fork's GitHub link to [elliot@ntangible.co](mailto:elliot@ntangible.co).**
+1. **Build from a clone** of this repo.
+2. **Write a README for your project** describing **what you built, why, and how it works** — plus how to run it (we should get from clone to running in under 5 minutes). A few sentences on "what I'd do next" are welcome too.
+3. **Push your work to a GitHub repo of your own and email the link to [elliot@ntangible.co](mailto:elliot@ntangible.co).** If you make your repo private, include an invite so we can open it.
 
 We'll do a share-out where everyone demos their build.
 
