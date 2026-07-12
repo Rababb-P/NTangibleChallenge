@@ -27,6 +27,7 @@ There are stories deliberately hidden in this dataset. Finding one is worth more
 
 ## Scope & rules
 
+- **Fork this repo and start there.** Build inside your fork — extend the app, add a folder for your standalone project, whatever fits. Forks of this private repo stay private.
 - **Timebox:** one week from when you receive this. Aim for **8–12 focused hours** — we mean it. Shipped beats perfect.
 - **Individual work.** Five of you are getting this same kit; we're excited to see five different answers.
 - **Any stack, any tools. We recommend using AI.** But own what you ship: if we ask questions — performance tradeoffs, known limitations, why this approach over another — you need to be able to answer them.
@@ -38,7 +39,7 @@ There are stories deliberately hidden in this dataset. Finding one is worth more
 2. **A short demo** — ≤3-minute video *or* a written walkthrough with screenshots.
 3. **A few sentences on "what I'd do next"** with more time.
 
-Send a repo link or zip to Elliot. We'll do a share-out where everyone demos their build.
+Send Elliot the link to your fork. We'll do a share-out where everyone demos their build.
 
 ## How we'll look at it
 

@@ -8,8 +8,11 @@ Welcome to the NTangible intern challenge. This repo contains a fully working co
 
 You need Node 20+. That's it — no backend, no accounts, no API keys.
 
+First, **fork this repo** (button top-right) — your fork is where you'll build. Then:
+
 ```bash
-cd app
+git clone <your-fork-url>
+cd howie-viz-challenge/app
 npm install
 npm run dev
 ```
