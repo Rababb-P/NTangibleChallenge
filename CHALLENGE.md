@@ -29,7 +29,7 @@ There are stories deliberately hidden in this dataset. Finding one is worth more
 
 - **Timebox:** one week from when you receive this. Aim for **8–12 focused hours** — we mean it. Shipped beats perfect.
 - **Individual work.** Five of you are getting this same kit; we're excited to see five different answers.
-- **Any stack, any tools.** AI tools are allowed and encouraged — but you should be able to explain every line you submit.
+- **Any stack, any tools. We recommend using AI.** But own what you ship: if we ask questions — performance tradeoffs, known limitations, why this approach over another — you need to be able to answer them.
 - **Use the provided dataset.** You can regenerate/remix it with the included script if your idea needs more seasons or athletes.
 
 ## What you hand in
