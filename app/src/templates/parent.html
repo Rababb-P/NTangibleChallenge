@@ -1,0 +1,2555 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="e672d814-0682-498e-a772-39730639c7ba"></script>
+</head>
+<body>
+
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("d5e58c9e-9324-415b-bee6-5cd3272a51ef") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("bc0c1199-1259-495a-9f06-e09d389d20d7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("e096cc26-475a-4d5a-9dc9-66cebea484b3") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("d1e8261d-f218-47c5-864b-bfa38f207004") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("d7a45d06-3ed0-4ce2-9600-225b9d7d1f7f") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("3717c4fa-6cc2-4e9f-9d63-3ceb775a70c7") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("37825b37-60ee-496e-b86f-54907d25d5a9") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("d5e58c9e-9324-415b-bee6-5cd3272a51ef") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("bc0c1199-1259-495a-9f06-e09d389d20d7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("e096cc26-475a-4d5a-9dc9-66cebea484b3") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("d1e8261d-f218-47c5-864b-bfa38f207004") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("d7a45d06-3ed0-4ce2-9600-225b9d7d1f7f") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("3717c4fa-6cc2-4e9f-9d63-3ceb775a70c7") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("37825b37-60ee-496e-b86f-54907d25d5a9") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("d5e58c9e-9324-415b-bee6-5cd3272a51ef") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("bc0c1199-1259-495a-9f06-e09d389d20d7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("e096cc26-475a-4d5a-9dc9-66cebea484b3") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("d1e8261d-f218-47c5-864b-bfa38f207004") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("d7a45d06-3ed0-4ce2-9600-225b9d7d1f7f") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("3717c4fa-6cc2-4e9f-9d63-3ceb775a70c7") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("37825b37-60ee-496e-b86f-54907d25d5a9") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("d5e58c9e-9324-415b-bee6-5cd3272a51ef") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("bc0c1199-1259-495a-9f06-e09d389d20d7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("e096cc26-475a-4d5a-9dc9-66cebea484b3") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("d1e8261d-f218-47c5-864b-bfa38f207004") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("d7a45d06-3ed0-4ce2-9600-225b9d7d1f7f") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("3717c4fa-6cc2-4e9f-9d63-3ceb775a70c7") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("37825b37-60ee-496e-b86f-54907d25d5a9") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("d5e58c9e-9324-415b-bee6-5cd3272a51ef") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("bc0c1199-1259-495a-9f06-e09d389d20d7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("e096cc26-475a-4d5a-9dc9-66cebea484b3") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("d1e8261d-f218-47c5-864b-bfa38f207004") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("d7a45d06-3ed0-4ce2-9600-225b9d7d1f7f") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("3717c4fa-6cc2-4e9f-9d63-3ceb775a70c7") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("37825b37-60ee-496e-b86f-54907d25d5a9") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("d5e58c9e-9324-415b-bee6-5cd3272a51ef") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("bc0c1199-1259-495a-9f06-e09d389d20d7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("e096cc26-475a-4d5a-9dc9-66cebea484b3") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("d1e8261d-f218-47c5-864b-bfa38f207004") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("d7a45d06-3ed0-4ce2-9600-225b9d7d1f7f") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("3717c4fa-6cc2-4e9f-9d63-3ceb775a70c7") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("37825b37-60ee-496e-b86f-54907d25d5a9") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("2240dae1-b5d1-4623-ab23-810a8b64c6c1") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("df913913-87a6-43d5-904f-68113e5158b7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("30b8e95c-d54b-471c-a53b-538e21851791") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("c273d4ed-24a3-4876-afe4-ea2fbabe0d88") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("c0117882-e2d8-4043-94b4-e141e96e278a") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("b083dac7-2000-4e58-997a-b972b1b9614b") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("2240dae1-b5d1-4623-ab23-810a8b64c6c1") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("df913913-87a6-43d5-904f-68113e5158b7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("30b8e95c-d54b-471c-a53b-538e21851791") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("c273d4ed-24a3-4876-afe4-ea2fbabe0d88") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("c0117882-e2d8-4043-94b4-e141e96e278a") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("b083dac7-2000-4e58-997a-b972b1b9614b") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("2240dae1-b5d1-4623-ab23-810a8b64c6c1") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("df913913-87a6-43d5-904f-68113e5158b7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("30b8e95c-d54b-471c-a53b-538e21851791") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("c273d4ed-24a3-4876-afe4-ea2fbabe0d88") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("c0117882-e2d8-4043-94b4-e141e96e278a") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("b083dac7-2000-4e58-997a-b972b1b9614b") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("2240dae1-b5d1-4623-ab23-810a8b64c6c1") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("df913913-87a6-43d5-904f-68113e5158b7") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("30b8e95c-d54b-471c-a53b-538e21851791") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("c273d4ed-24a3-4876-afe4-ea2fbabe0d88") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("c0117882-e2d8-4043-94b4-e141e96e278a") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("b083dac7-2000-4e58-997a-b972b1b9614b") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  @keyframes ntFadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes ntRise { from { transform: translateY(10px); } to { transform: translateY(0); } }
+  @keyframes ntSheetUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes ntScrim { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes ntBubble { from { opacity: 0; transform: translateY(8px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+  @keyframes ntShimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+  @keyframes ntDots { 0%, 60%, 100% { transform: translateY(0); opacity: 0.4; } 30% { transform: translateY(-4px); opacity: 1; } }
+  @keyframes ntBreath { 0%, 100% { opacity: 0.32; } 50% { opacity: 0.7; } }
+  @keyframes ntWordIn { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes ntBreatheScale { 0%,100% { transform: scale(0.82); opacity: 0.5; } 50% { transform: scale(1.12); opacity: 0.9; } }
+  .nt-scroll::-webkit-scrollbar { width: 0; height: 0; }
+  .nt-stagger > * { animation: ntRise 0.5s cubic-bezier(0.22,1,0.36,1) both; }
+  .nt-stagger > *:nth-child(1){animation-delay:.03s} .nt-stagger > *:nth-child(2){animation-delay:.09s}
+  .nt-stagger > *:nth-child(3){animation-delay:.15s} .nt-stagger > *:nth-child(4){animation-delay:.21s}
+  .nt-stagger > *:nth-child(5){animation-delay:.27s} .nt-stagger > *:nth-child(6){animation-delay:.33s}
+  .nt-stagger > *:nth-child(7){animation-delay:.39s} .nt-stagger > *:nth-child(8){animation-delay:.45s}
+  .nt-tap { -webkit-tap-highlight-color: transparent; cursor: pointer; transition: transform .12s ease, background-color .15s ease, border-color .15s ease, opacity .15s ease; }
+  .nt-tap:active { transform: scale(0.985); }
+  .nt-press:active { transform: scale(0.96); }
+  input.nt-fld { font-family: 'Inter', sans-serif; }
+  input.nt-fld::placeholder { color: #C9C5BC; }
+  input.nt-fld:focus { outline: none; border-bottom-color: #0E0E0E; }
+
+@keyframes howieBlink { 0%, 91%, 100% { transform: scaleY(1); } 93%, 95% { transform: scaleY(0.12); } }
+@keyframes howiePulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.45; transform: scale(0.78); } }
+@keyframes howieBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@media (prefers-reduced-motion: reduce) { .howie-anim * { animation: none !important; } }
+</style>
+<script src="1760019a-f9ad-4843-bc52-91a7eef4be58"></script>
+<script>
+/* Suppress bundler overlay noise from third-party browser-extension resource errors.
+   Keeps genuine app errors (which carry a message/filename); strips bare "[bundle] error" lines. */
+(function(){
+  function clean(){
+    var d = document.getElementById('__bundler_err');
+    if(!d) return;
+    var lines = d.textContent.split(String.fromCharCode(10)).filter(function(l){ return l && l !== '[bundle] error'; });
+    if(lines.length === 0){ d.remove(); } else { d.textContent = lines.join(String.fromCharCode(10)); }
+  }
+  try { new MutationObserver(clean).observe(document.documentElement, {childList:true, subtree:true}); } catch(e){}
+  setInterval(clean, 400);
+})();
+</script>
+</helmet>
+<div style="min-height:100vh; display:flex; align-items:center; justify-content:center; background:#cdc9c2; padding:36px; box-sizing:border-box; font-family:'Inter',sans-serif">
+<x-import component="IOSDevice" from="5a7d1741-649a-4262-86ef-1d49d45b3fd6#/ios-frame.jsx" hint-size="402px,874px">
+
+<div style="height:100%; display:flex; flex-direction:column; background:#F7F6F3; position:relative; overflow:hidden; color:#0E0E0E">
+
+  <!-- ============================ LOGIN ============================ -->
+  <sc-if value="{{ isLogin }}" hint-placeholder-val="{{ true }}">
+  <div class="nt-scroll" style="height:100%; overflow:auto; position:relative">
+    <!-- stat grid texture -->
+    <div aria-hidden="true" style="position:absolute; inset:0; display:grid; grid-template-columns:repeat(2,1fr); grid-auto-rows:150px; opacity:0.5; pointer-events:none; z-index:0">
+      <sc-for list="{{ statCells }}" as="c" hint-placeholder-count="8">
+        <div style="position:relative; border-right:1px solid rgba(230,227,221,0.7); border-bottom:1px solid rgba(230,227,221,0.7)">
+          <span style="position:absolute; top:12px; left:14px; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#D8D4CC; animation:ntBreath 7s ease-in-out infinite">{{ c.k }}</span>
+          <span style="position:absolute; bottom:12px; right:14px; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#D8D4CC; animation:ntBreath 7s ease-in-out infinite 2s">{{ c.v }}</span>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="position:relative; z-index:1; min-height:100%; display:flex; flex-direction:column">
+      <!-- brand top bar (partner-neutral sign-in) -->
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:56px 20px 16px">
+        <img src="4ade5469-7491-4419-aba9-f55720568da8.png" alt="NTangible" style="height:18px; width:auto; display:block">
+        <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:#6F6C64">Parent Portal</span>
+      </div>
+
+      <div style="flex:1; display:flex; align-items:center; padding:8px 16px 24px">
+        <div style="position:relative; width:100%; background:#fff; border:1px solid #D8D4CC; border-radius:2px; padding:30px 26px; animation:ntRise 0.5s cubic-bezier(0.22,1,0.36,1) both">
+          <span style="position:absolute; top:-1px; left:-1px; width:20px; height:20px; border-top:2px solid #0E0E0E; border-left:2px solid #0E0E0E"></span>
+          <span style="position:absolute; top:-1px; right:-1px; width:20px; height:20px; border-top:2px solid #0E0E0E; border-right:2px solid #0E0E0E"></span>
+          <span style="position:absolute; bottom:-1px; left:-1px; width:20px; height:20px; border-bottom:2px solid #0E0E0E; border-left:2px solid #0E0E0E"></span>
+          <span style="position:absolute; bottom:-1px; right:-1px; width:20px; height:20px; border-bottom:2px solid #0E0E0E; border-right:2px solid #0E0E0E"></span>
+
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:26px">
+            <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64">Portal Access</span>
+            <span style="display:inline-flex; align-items:center; gap:6px; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9A968E" strokewidth="2.4"><rect x="4" y="11" width="16" height="10" rx="1.5"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+              Encrypted
+            </span>
+          </div>
+
+          <h1 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:32px; line-height:1.05; margin:0 0 30px">The drive home starts here.</h1>
+
+          <div style="margin-bottom:24px">
+            <label style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin-bottom:6px">Email</label>
+            <input class="nt-fld" value="sam@example.com" readonly="" style="width:100%; background:transparent; border:0; border-bottom:1px solid #D8D4CC; color:#0E0E0E; font-size:17px; padding:8px 0">
+          </div>
+          <div style="margin-bottom:30px">
+            <label style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin-bottom:6px">Invite Code</label>
+            <input class="nt-fld" value="DEMO2026" readonly="" style="width:100%; background:transparent; border:0; border-bottom:1px solid #D8D4CC; color:#0E0E0E; font-family:'Roboto Mono',monospace; letter-spacing:0.12em; font-size:17px; padding:8px 0">
+          </div>
+
+          <div style="display:flex; align-items:center; gap:22px; flex-wrap:wrap">
+            <button class="nt-press" onclick="{{ enterPortal }}" style="display:inline-flex; align-items:center; gap:10px; background:#0E0E0E; color:#fff; border:0; border-radius:40px; padding:15px 30px; font-family:'Inter',sans-serif; font-weight:700; font-size:15px; cursor:pointer">
+              Enter portal <span style="font-weight:400">→</span>
+            </button>
+            <button onclick="{{ goAccess }}" style="background:none; border:0; border-bottom:1px solid #0E0E0E; padding:0 0 3px; font-family:'Roboto Mono',monospace; font-weight:600; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#0E0E0E; cursor:pointer">First time? Get access</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid #E6E3DD; padding:20px 20px 30px; display:flex; flex-direction:column; gap:10px">
+        <span style="display:flex; align-items:center; gap:14px; font-size:14px; color:#42403B">
+          <span style="display:inline-block; width:28px; height:1px; background:#0E0E0E"></span>
+          <span>Clutch isn't a feeling. <b style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; font-weight:700">It's a score.</b></span>
+        </span>
+        <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64">© NTangible 2026 · Parents and guardians only, 18+</span>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ============================ ACCESS / REGISTRATION ============================ -->
+  <sc-if value="{{ isAccess }}" hint-placeholder-val="{{ true }}">
+  <div class="nt-scroll" style="height:100%; overflow:auto; position:relative">
+    <div aria-hidden="true" style="position:absolute; inset:0; display:grid; grid-template-columns:repeat(2,1fr); grid-auto-rows:150px; opacity:0.5; pointer-events:none; z-index:0">
+      <sc-for list="{{ statCells }}" as="c" hint-placeholder-count="8">
+        <div style="position:relative; border-right:1px solid rgba(230,227,221,0.7); border-bottom:1px solid rgba(230,227,221,0.7)">
+          <span style="position:absolute; top:12px; left:14px; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#D8D4CC">{{ c.k }}</span>
+          <span style="position:absolute; bottom:12px; right:14px; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#D8D4CC">{{ c.v }}</span>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="position:relative; z-index:1; min-height:100%; display:flex; flex-direction:column">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:56px 20px 16px">
+        <button class="nt-tap" onclick="{{ goLogin }}" aria-label="Back to sign in" style="background:none; border:0; padding:0; cursor:pointer">
+          <img src="4ade5469-7491-4419-aba9-f55720568da8.png" alt="NTangible" style="height:18px; width:auto; display:block">
+        </button>
+        <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:#6F6C64">Parent Access</span>
+      </div>
+
+      <div style="flex:1; display:flex; align-items:center; padding:8px 16px 24px">
+        <div style="position:relative; width:100%; background:#fff; border:1px solid #D8D4CC; border-radius:2px; padding:26px 22px; animation:ntRise 0.5s cubic-bezier(0.22,1,0.36,1) both">
+          <span style="position:absolute; top:-1px; left:-1px; width:20px; height:20px; border-top:2px solid #0E0E0E; border-left:2px solid #0E0E0E"></span>
+          <span style="position:absolute; top:-1px; right:-1px; width:20px; height:20px; border-top:2px solid #0E0E0E; border-right:2px solid #0E0E0E"></span>
+          <span style="position:absolute; bottom:-1px; left:-1px; width:20px; height:20px; border-bottom:2px solid #0E0E0E; border-left:2px solid #0E0E0E"></span>
+          <span style="position:absolute; bottom:-1px; right:-1px; width:20px; height:20px; border-bottom:2px solid #0E0E0E; border-right:2px solid #0E0E0E"></span>
+
+          <!-- ---- FORM ---- -->
+          <sc-if value="{{ accessForm }}" hint-placeholder-val="{{ true }}">
+          <div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:22px">
+              <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64">First-Time Access</span>
+              <span style="display:inline-flex; align-items:center; gap:6px; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9A968E" strokewidth="2.4"><rect x="4" y="11" width="16" height="10" rx="1.5"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+                Verified
+              </span>
+            </div>
+            <h1 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:28px; line-height:1.08; margin:0 0 10px">Link your athlete.</h1>
+            <p style="font-size:14px; line-height:1.55; color:#42403B; margin:0 0 22px">Choose your organization, then enter your athlete's registration details. If they match the roster, your secure sign-in link arrives by email.</p>
+
+            <!-- Organization picker -->
+            <div style="margin-bottom:20px">
+              <label style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin-bottom:8px">Organization</label>
+              <button class="nt-tap" onclick="{{ openPartnerPicker }}" style="width:100%; display:flex; align-items:center; gap:12px; background:transparent; border:0; border-bottom:1px solid #D8D4CC; padding:6px 0 10px; cursor:pointer; text-align:left">
+                <span style="display:inline-flex; align-items:center; justify-content:center; background:#0E0E0E; border-radius:5px; padding:5px 9px; min-height:28px; flex:none">
+                  <sc-if value="{{ accessOrg.isAlliance }}" hint-placeholder-val="hi"><img src="cdc99512-07a6-4fdd-81ff-00cccace5d43.png" alt="" style="height:18px; width:auto; display:block"></sc-if>
+                  <sc-if value="{{ accessOrg.noLogo }}" hint-placeholder-val="{{ true }}"><span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#fff">{{ accessOrg.short }}</span></sc-if>
+                </span>
+                <span style="flex:1; min-width:0">
+                  <span style="display:block; font-size:16px; color:#0E0E0E">{{ accessOrg.name }}</span>
+                  <span style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#6F6C64; margin-top:2px">{{ accessOrg.sport }}</span>
+                </span>
+                <span style="color:#6F6C64; font-size:13px">▾</span>
+              </button>
+            </div>
+
+            <!-- Parent email -->
+            <div style="margin-bottom:20px">
+              <label style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin-bottom:6px">Your Email · Parent or Guardian</label>
+              <input class="nt-fld" type="email" value="{{ access.email }}" oninput="{{ onAccessEmail }}" placeholder="you@example.com" style="width:100%; background:transparent; border:0; border-bottom:1px solid #D8D4CC; color:#0E0E0E; font-size:17px; padding:8px 0">
+            </div>
+
+            <!-- Athlete fields (rostered orgs) -->
+            <sc-if value="{{ accessIsOther }}" hint-placeholder-val="hi">
+              <div style="border:1px solid #D8D4CC; background:#F7F6F3; padding:14px 16px; margin-bottom:22px">
+                <p style="font-size:13px; line-height:1.55; color:#42403B; margin:0">We don't have your organization wired up yet. Leave your email and we'll reach out to get your program set up on NTangible.</p>
+              </div>
+            </sc-if>
+            <sc-if value="{{ accessRostered }}" hint-placeholder-val="{{ true }}">
+              <div style="margin-bottom:20px">
+                <label style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin-bottom:6px">Athlete ID · {{ accessOrg.idLabel }}</label>
+                <input class="nt-fld" value="{{ access.athleteId }}" oninput="{{ onAccessId }}" placeholder="On your registration receipt" style="width:100%; background:transparent; border:0; border-bottom:1px solid #D8D4CC; color:#0E0E0E; font-family:'Roboto Mono',monospace; letter-spacing:0.06em; font-size:16px; padding:8px 0">
+              </div>
+              <div style="display:flex; gap:16px; margin-bottom:20px">
+                <div style="flex:1">
+                  <label style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#6F6C64; margin-bottom:6px">Athlete DOB</label>
+                  <input class="nt-fld" value="{{ access.dob }}" oninput="{{ onAccessDob }}" placeholder="MM / DD / YYYY" style="width:100%; background:transparent; border:0; border-bottom:1px solid #D8D4CC; color:#0E0E0E; font-size:16px; padding:8px 0">
+                </div>
+                <div style="flex:1">
+                  <label style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#6F6C64; margin-bottom:6px">Last Name</label>
+                  <input class="nt-fld" value="{{ access.lastName }}" oninput="{{ onAccessLast }}" placeholder="As registered" style="width:100%; background:transparent; border:0; border-bottom:1px solid #D8D4CC; color:#0E0E0E; font-size:16px; padding:8px 0">
+                </div>
+              </div>
+            </sc-if>
+
+            <!-- Attestation -->
+            <button class="nt-tap" onclick="{{ toggleAttest }}" style="display:flex; align-items:flex-start; gap:11px; background:none; border:0; padding:2px 0 0; cursor:pointer; text-align:left; margin-bottom:20px">
+              <span style="width:20px; height:20px; border:1.5px solid #0E0E0E; border-radius:4px; flex:none; margin-top:1px; display:flex; align-items:center; justify-content:center; background:{{ attestBg }}">
+                <sc-if value="{{ accessAttested }}" hint-placeholder-val="{{ true }}"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" strokewidth="3.2" strokelinecap="round" strokelinejoin="round"><path d="M4 12l5 5L20 6"></path></svg></sc-if>
+              </span>
+              <span style="flex:1; font-size:13px; line-height:1.5; color:#42403B">I confirm I am this athlete's parent or legal guardian, I am 18 or older, and this portal is for my use, not my athlete's.</span>
+            </button>
+
+            <sc-if value="{{ accessError }}" hint-placeholder-val="hi">
+              <p style="font-size:13px; line-height:1.5; color:#42403B; border-left:2px solid #0E0E0E; padding-left:12px; margin:0 0 18px">{{ accessError }}</p>
+            </sc-if>
+
+            <button class="nt-press" onclick="{{ submitAccess }}" type="button" style="width:100%; display:inline-flex; align-items:center; justify-content:center; gap:10px; background:#0E0E0E; color:#fff; border:0; border-radius:40px; padding:15px; font-family:'Inter',sans-serif; font-weight:700; font-size:15px; cursor:pointer">
+              Request access <span style="font-weight:400">→</span>
+            </button>
+            <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#6F6C64; margin:16px 0 0; text-align:center">
+              Already linked? <button onclick="{{ goLogin }}" style="background:none; border:0; border-bottom:1px solid #0E0E0E; color:#0E0E0E; font-family:inherit; font-size:inherit; letter-spacing:inherit; text-transform:inherit; padding:0 0 1px; cursor:pointer">Sign in</button>
+            </p>
+          </div>
+          </sc-if>
+
+          <!-- ---- SUCCESS ---- -->
+          <sc-if value="{{ accessSent }}" hint-placeholder-val="hi">
+          <div style="animation:ntRise 0.4s cubic-bezier(0.22,1,0.36,1) both">
+            <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin:0 0 12px">Request Received</p>
+            <h1 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:30px; margin:0 0 14px">Check your email.</h1>
+            <p style="font-size:15px; line-height:1.6; color:#42403B; margin:0 0 20px">If your details match <b style="color:#0E0E0E">{{ accessOrg.name }}</b>'s roster, a secure sign-in link is on its way to <b style="color:#0E0E0E">{{ access.email }}</b>. It expires in 72 hours and works once.</p>
+            <div style="border:1px solid #0E0E0E; background:#fff; padding:18px 18px; margin-bottom:22px">
+              <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin:0 0 8px">Why we do it this way</p>
+              <p style="font-size:14px; line-height:1.6; color:#42403B; margin:0">Access links only ever go to the email a parent enters here, checked against the organization's roster. We never confirm on this screen whether a match exists, so athlete records can't be fished for.</p>
+            </div>
+            <button class="nt-press" onclick="{{ enterPortalFromAccess }}" style="width:100%; display:inline-flex; align-items:center; justify-content:center; gap:10px; background:#0E0E0E; color:#fff; border:0; border-radius:40px; padding:15px; font-weight:700; font-size:15px; cursor:pointer; margin-bottom:12px">
+              Open the link · enter portal <span style="font-weight:400">→</span>
+            </button>
+            <button class="nt-tap" onclick="{{ goLogin }}" style="width:100%; background:none; border:0; font-family:'Roboto Mono',monospace; font-weight:600; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#0E0E0E; padding:6px; cursor:pointer">Back to sign in</button>
+          </div>
+          </sc-if>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid #E6E3DD; padding:18px 20px 30px; display:flex; align-items:center; gap:14px">
+        <span style="display:inline-block; width:28px; height:1px; background:#0E0E0E"></span>
+        <span style="font-size:14px; color:#42403B">Clutch isn't a feeling. <b style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; font-weight:700">It's a score.</b></span>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ============================ APP CHROME ============================ -->
+  <sc-if value="{{ appView }}" hint-placeholder-val="{{ true }}">
+
+  <!-- ============================ ONBOARDING (first run) ============================ -->
+  <sc-if value="{{ showOnboard }}" hint-placeholder-val="{{ true }}">
+  <div style="position:absolute; inset:0; z-index:60; background:#F7F6F3; display:flex; flex-direction:column">
+    <div style="flex:none; padding:54px 22px 0; display:flex; align-items:center; justify-content:space-between">
+      <div style="display:flex; gap:7px; align-items:center">
+        <sc-for list="{{ obDots }}" as="d" hint-placeholder-count="3">
+          <span style="height:7px; width:{{ d.w }}; border-radius:5px; background:{{ d.bg }}; transition:width 0.3s ease, background 0.3s ease"></span>
+        </sc-for>
+      </div>
+      <button class="nt-tap" onclick="{{ obSkip }}" style="background:none; border:0; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#6F6C64; cursor:pointer; padding:6px">Skip</button>
+    </div>
+
+    <div style="flex:1; min-height:0; display:flex; flex-direction:column; justify-content:center; padding:0 28px">
+      <!-- CARD 0 -->
+      <sc-if value="{{ ob0 }}" hint-placeholder-val="{{ true }}">
+      <div style="animation:ntFadeUp 0.5s ease both">
+        <div style="width:84px; height:84px; margin-bottom:26px"><svg class="howie-anim" viewBox="0 0 64 64" fill="none" style="width:100%; height:100%; display:block; overflow:visible; animation:howieBob 5s ease-in-out infinite">
+  <line x1="32" y1="16" x2="32" y2="8" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round"></line>
+  <circle cx="32" cy="6" r="2.6" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howiePulse 2.6s ease-in-out infinite"></circle>
+  <rect x="6" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="53" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="12" y="16" width="40" height="38" rx="11" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <circle cx="24.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <circle cx="39.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <path d="M25 42.5 Q32 47 39 42.5" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round" fill="none"></path>
+</svg></div>
+        <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:#6F6C64; margin:0 0 12px">Welcome</p>
+        <h1 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.03em; font-size:31px; line-height:1.1; margin:0 0 16px">The right words, when they're hard to find.</h1>
+        <p style="font-size:16px; line-height:1.6; color:#42403B; margin:0">The car ride after a tough game is the hardest conversation in youth sports. This app helps you get it right. Here's the quick version.</p>
+      </div>
+      </sc-if>
+      <!-- CARD 1 -->
+      <sc-if value="{{ ob1 }}" hint-placeholder-val="hi">
+      <div style="animation:ntFadeUp 0.5s ease both">
+        <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:#6F6C64; margin:0 0 12px">Your two tools</p>
+        <h1 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.03em; font-size:30px; line-height:1.1; margin:0 0 22px">Two ways to get help</h1>
+        <div style="display:flex; flex-direction:column; gap:14px">
+          <div style="background:#0E0E0E; color:#fff; border-radius:2px; padding:18px">
+            <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin:0 0 6px">Drive Home Mode</p>
+            <p style="font-size:15px; line-height:1.5; margin:0">Just had a game? Three taps and you'll have the right words for the ride home, matched to how Maya hears them best.</p>
+          </div>
+          <div style="background:#fff; border:1px solid #D8D4CC; border-radius:2px; padding:18px">
+            <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#6F6C64; margin:0 0 6px">Ask Howie</p>
+            <p style="font-size:15px; line-height:1.5; color:#42403B; margin:0">Anything on your mind, any time. Howie knows Maya's profile and helps you find a calm, supportive way to say it.</p>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+      <!-- CARD 2 -->
+      <sc-if value="{{ ob2 }}" hint-placeholder-val="hi">
+      <div style="animation:ntFadeUp 0.5s ease both">
+        <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:#6F6C64; margin:0 0 12px">One thing to know</p>
+        <h1 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.03em; font-size:30px; line-height:1.1; margin:0 0 16px">It's all built around Maya.</h1>
+        <p style="font-size:16px; line-height:1.6; color:#42403B; margin:0 0 14px">Everything here is shaped by how Maya is wired, how she learns, what motivates her, how she takes feedback, so the advice actually fits your kid, not a generic playbook.</p>
+        <p style="font-size:13px; line-height:1.55; color:#6F6C64; margin:0">Howie is an AI guide for parents, not therapy or medical care.</p>
+      </div>
+      </sc-if>
+    </div>
+
+    <div style="flex:none; padding:14px 24px calc(28px + 6px)">
+      <button class="nt-press" onclick="{{ obNext }}" style="width:100%; background:#0E0E0E; color:#fff; border:0; border-radius:40px; padding:16px; font-family:'Inter',sans-serif; font-weight:700; font-size:16px; letter-spacing:-0.01em; cursor:pointer">{{ obCta }}</button>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- shared header -->
+  <div style="flex:none; position:relative; z-index:6; background:rgba(247,246,243,0.94); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1px solid #E6E3DD">
+    <div style="padding:54px 14px 11px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center">
+      <div style="justify-self:start">
+        <sc-if value="{{ showBack }}" hint-placeholder-val="{{ true }}">
+          <button class="nt-tap" onclick="{{ goBack }}" style="display:inline-flex; align-items:center; gap:6px; background:none; border:0; padding:6px 6px 6px 2px; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#6F6C64; cursor:pointer">
+            <span style="font-size:15px; line-height:1">‹</span> Back
+          </button>
+        </sc-if>
+      </div>
+      <img src="4ade5469-7491-4419-aba9-f55720568da8.png" alt="NTangible" class="nt-tap" onclick="{{ goHome }}" style="height:17px; width:auto; display:block; justify-self:center">
+      <div style="justify-self:end">
+        <span style="display:inline-flex; align-items:center; justify-content:center; background:#0E0E0E; border-radius:5px; padding:4px 7px; min-height:22px">
+          <sc-if value="{{ activePartner.isAlliance }}" hint-placeholder-val="hi"><img src="cdc99512-07a6-4fdd-81ff-00cccace5d43.png" alt="" style="height:14px; width:auto; display:block"></sc-if>
+          <sc-if value="{{ activePartner.noLogo }}" hint-placeholder-val="{{ true }}"><span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#fff">{{ activePartner.short }}</span></sc-if>
+        </span>
+      </div>
+    </div>
+    <div style="border-top:1px solid #E6E3DD; text-align:center; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6F6C64; padding:6px 12px">
+      Howie is an AI guide for parents, not therapy or medical care.
+    </div>
+  </div>
+
+  <!-- middle -->
+  <div style="flex:1; min-height:0; position:relative">
+
+    <!-- ---------------- HOME ---------------- -->
+    <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+    <div class="nt-scroll" style="height:100%; overflow:auto; padding:22px 18px 28px">
+      <div class="nt-stagger" style="display:flex; flex-direction:column; gap:30px">
+
+        <div style="display:flex; flex-direction:column; gap:14px">
+          <section style="display:flex; align-items:flex-end; gap:14px">
+            <div style="width:60px; height:60px; flex:none"><svg class="howie-anim" viewBox="0 0 64 64" fill="none" style="width:100%; height:100%; display:block; overflow:visible; animation:howieBob 5s ease-in-out infinite">
+  <line x1="32" y1="16" x2="32" y2="8" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round"></line>
+  <circle cx="32" cy="6" r="2.6" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howiePulse 2.6s ease-in-out infinite"></circle>
+  <rect x="6" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="53" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="12" y="16" width="40" height="38" rx="11" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <circle cx="24.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <circle cx="39.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <path d="M25 42.5 Q32 47 39 42.5" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round" fill="none"></path>
+</svg></div>
+            <div style="position:relative; flex:1; background:#fff; border:1px solid #D8D4CC; border-radius:18px; border-bottom-left-radius:3px; padding:16px 18px">
+              <p style="margin:0; font-size:14px; line-height:1.55; color:#42403B">Good evening, {{ pname }}. Whatever tonight brings, we'll find the right words for Maya.</p>
+            </div>
+          </section>
+          <form onsubmit="{{ submitAsk }}" style="display:flex; align-items:flex-end; gap:14px; background:#fff; border:1px solid #D8D4CC; border-radius:18px; padding:14px 16px">
+            <input class="nt-fld" value="{{ input }}" oninput="{{ onInput }}" placeholder="What's going on with Maya?" style="flex:1; min-width:0; background:transparent; border:0; border-bottom:1px solid #D8D4CC; color:#0E0E0E; font-size:15px; padding:7px 0">
+            <button class="nt-press" onclick="{{ submitAsk }}" type="button" style="display:inline-flex; align-items:center; gap:8px; background:#0E0E0E; color:#fff; border:0; border-radius:40px; padding:11px 20px; font-weight:700; font-size:14px; cursor:pointer">Ask <span style="font-weight:400">→</span></button>
+          </form>
+          <div style="display:flex; flex-wrap:wrap; gap:8px">
+            <sc-for list="{{ quick }}" as="q" hint-placeholder-count="4">
+              <button class="nt-tap" onclick="{{ q.onTap }}" style="background:#fff; border:1px solid #D8D4CC; border-radius:40px; padding:9px 15px; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#6F6C64; cursor:pointer">{{ q.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+
+        <section>
+          <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:14px">
+            <span style="font-family:'Roboto Mono',monospace; font-size:12px; letter-spacing:0.1em; color:#6F6C64">Or</span>
+            <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:#6F6C64">If you'd rather not type</span>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr; gap:1px; background:#D8D4CC; border:1px solid #D8D4CC">
+            <button class="nt-tap" onclick="{{ goDrive }}" style="text-align:left; background:#fff; border:0; padding:18px; cursor:pointer">
+              <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin:0 0 8px">Just had a game?</p>
+              <h2 style="font-family:'Inter',sans-serif; font-weight:600; font-size:21px; letter-spacing:-0.02em; margin:0 0 5px">Drive Home Mode</h2>
+              <p style="font-size:13px; line-height:1.5; color:#42403B; margin:0 0 12px">Three taps. The right words for the ride home, tuned to how Maya needs to hear them.</p>
+              <span style="font-family:'Roboto Mono',monospace; font-weight:600; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#0E0E0E; border-bottom:1px solid #0E0E0E; padding-bottom:2px">Open →</span>
+            </button>
+            <button class="nt-tap" onclick="{{ goGuides }}" style="text-align:left; background:#fff; border:0; padding:18px; cursor:pointer">
+              <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin:0 0 8px">Browse</p>
+              <h2 style="font-family:'Inter',sans-serif; font-weight:600; font-size:21px; letter-spacing:-0.02em; margin:0 0 5px">Guides</h2>
+              <p style="font-size:13px; line-height:1.5; color:#42403B; margin:0 0 12px">The Parent Playbook by moment: pre-game, post-game, season-long.</p>
+              <span style="font-family:'Roboto Mono',monospace; font-weight:600; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#0E0E0E; border-bottom:1px solid #0E0E0E; padding-bottom:2px">Open →</span>
+            </button>
+          </div>
+          <button class="nt-tap" onclick="{{ goProfile }}" style="display:inline-flex; align-items:center; gap:8px; margin-top:18px; background:none; border:0; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#6F6C64; cursor:pointer">Maya's profile <span>→</span></button>
+        </section>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ---------------- DRIVE HOME ---------------- -->
+    <sc-if value="{{ isDrive }}" hint-placeholder-val="{{ true }}">
+    <div class="nt-scroll" style="height:100%; overflow:auto; padding:22px 18px 28px">
+      <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:#6F6C64; margin:0 0 12px">Drive Home Mode</p>
+      <h1 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:34px; line-height:1.05; margin:0 0 8px">How did it go?</h1>
+      <p style="font-size:15px; line-height:1.5; color:#42403B; margin:0 0 26px">One tap. No typing. Words you can use in the next five minutes.</p>
+      <div class="nt-stagger" style="border:1px solid #D8D4CC; background:#fff">
+        <sc-for list="{{ outcomes }}" as="o" hint-placeholder-count="6">
+          <button class="nt-tap" onclick="{{ o.onPick }}" style="width:100%; text-align:left; background:#fff; border:0; border-bottom:1px solid #D8D4CC; padding:18px 18px; display:flex; align-items:baseline; gap:16px; cursor:pointer">
+            <span style="font-family:'Roboto Mono',monospace; font-size:12px; color:#6F6C64">{{ o.n }}</span>
+            <span style="flex:1">
+              <span style="display:block; font-family:'Inter',sans-serif; font-weight:600; font-size:21px; letter-spacing:-0.02em">{{ o.label }}</span>
+              <span style="display:block; font-size:13px; color:#6F6C64; margin-top:3px">{{ o.sub }}</span>
+            </span>
+            <span style="color:#C9C5BC; font-size:15px">›</span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ---------------- CHAT ---------------- -->
+    <sc-if value="{{ isChat }}" hint-placeholder-val="{{ true }}">
+    <div style="height:100%; display:flex; flex-direction:column">
+      <sc-if value="{{ chatHeaderOn }}" hint-placeholder-val="hi">
+      <div style="flex:none; display:flex; align-items:center; justify-content:space-between; padding:10px 18px; background:#F7F6F3; border-bottom:1px solid #E6E3DD">
+        <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#6F6C64">Chat with Howie</span>
+        <div style="display:flex; align-items:center; gap:8px">
+          <button class="nt-tap" onclick="{{ openHistory }}" type="button" aria-label="History" style="display:inline-flex; align-items:center; gap:6px; background:#fff; border:1px solid #D8D4CC; border-radius:40px; padding:6px 13px; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#0E0E0E; cursor:pointer">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0E0E0E" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            History
+          </button>
+          <sc-if value="{{ chatStarted }}" hint-placeholder-val="hi">
+          <button class="nt-tap" onclick="{{ refreshChat }}" type="button" aria-label="New chat" style="display:inline-flex; align-items:center; gap:6px; background:#fff; border:1px solid #D8D4CC; border-radius:40px; padding:6px 13px; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#0E0E0E; cursor:pointer">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0E0E0E" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"></path><path d="M21 4v5h-5"></path></svg>
+            New chat
+          </button>
+          </sc-if>
+        </div>
+      </div>
+      </sc-if>
+      <div class="nt-scroll" ref="{{ chatRef }}" style="flex:1; min-height:0; overflow:auto; padding:20px 18px 8px">
+
+        <sc-if value="{{ chatEmpty }}" hint-placeholder-val="{{ true }}">
+        <div class="nt-stagger">
+          <div style="display:flex; align-items:flex-end; gap:14px; margin-bottom:22px">
+            <div style="width:74px; height:74px; flex:none"><svg class="howie-anim" viewBox="0 0 64 64" fill="none" style="width:100%; height:100%; display:block; overflow:visible; animation:howieBob 5s ease-in-out infinite">
+  <line x1="32" y1="16" x2="32" y2="8" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round"></line>
+  <circle cx="32" cy="6" r="2.6" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howiePulse 2.6s ease-in-out infinite"></circle>
+  <rect x="6" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="53" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="12" y="16" width="40" height="38" rx="11" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <circle cx="24.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <circle cx="39.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <path d="M25 42.5 Q32 47 39 42.5" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round" fill="none"></path>
+</svg></div>
+            <div style="background:#fff; border:1px solid #D8D4CC; border-radius:18px; border-bottom-left-radius:3px; padding:15px 17px; margin-bottom:6px">
+              <p style="margin:0; font-size:14px; line-height:1.55; color:#42403B">Hey, I'm Howie. Tell me what's going on with your athlete, no judgment, and I'll help you find the right words.</p>
+            </div>
+          </div>
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:#6F6C64; margin:0 0 10px">Howie · Parent Assistant</p>
+          <h1 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:34px; margin:0 0 8px">Ask Howie.</h1>
+          <p style="font-size:15px; line-height:1.5; color:#42403B; margin:0 0 22px">Built from our team sports psychologist's playbook and Maya's profile.</p>
+          <div style="border:1px solid #D8D4CC; background:#fff">
+            <sc-for list="{{ starters }}" as="s" hint-placeholder-count="4">
+              <button class="nt-tap" onclick="{{ s.onSend }}" style="width:100%; text-align:left; background:#fff; border:0; border-bottom:1px solid #D8D4CC; padding:15px 18px; display:flex; align-items:baseline; gap:14px; font-size:14px; line-height:1.45; color:#42403B; cursor:pointer">
+                <span style="font-family:'Roboto Mono',monospace; font-size:11px; color:#6F6C64">{{ s.n }}</span>
+                <span style="flex:1">{{ s.text }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+        </sc-if>
+
+        <div style="display:flex; flex-direction:column; gap:16px">
+          <sc-for list="{{ mlist }}" as="m" hint-placeholder-count="0">
+            <sc-if value="{{ m.isUser }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex; justify-content:flex-end; animation:ntRise 0.3s cubic-bezier(0.22,1,0.36,1) both">
+                <div style="background:#0E0E0E; color:#fff; border-radius:18px; border-bottom-right-radius:3px; padding:11px 16px; max-width:84%; font-size:14px; line-height:1.5">{{ m.content }}</div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ m.isHowie }}" hint-placeholder-val="{{ true }}">
+              <div style="animation:ntRise 0.3s cubic-bezier(0.22,1,0.36,1) both">
+                <div style="display:flex; align-items:flex-end; gap:10px; max-width:92%">
+                  <div style="width:32px; height:32px; flex:none; margin-bottom:2px"><svg class="howie-anim" viewBox="0 0 64 64" fill="none" style="width:100%; height:100%; display:block; overflow:visible; animation:howieBob 5s ease-in-out infinite">
+  <line x1="32" y1="16" x2="32" y2="8" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round"></line>
+  <circle cx="32" cy="6" r="2.6" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howiePulse 2.6s ease-in-out infinite"></circle>
+  <rect x="6" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="53" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="12" y="16" width="40" height="38" rx="11" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <circle cx="24.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <circle cx="39.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <path d="M25 42.5 Q32 47 39 42.5" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round" fill="none"></path>
+</svg></div>
+                  <div style="background:#fff; border:1px solid #D8D4CC; border-radius:18px; border-bottom-left-radius:3px; padding:13px 16px; font-size:14px; line-height:1.6; color:#42403B">
+                    <sc-if value="{{ m.thinking }}" hint-placeholder-val="{{ true }}">
+                      <span style="display:block">
+                        <span style="display:block; margin-bottom:8px">{{ m.ack }}</span>
+                        <span style="display:flex; align-items:center; gap:12px">
+                          <span style="display:inline-flex; gap:4px; align-items:center">
+                            <i style="width:5px; height:5px; border-radius:50%; background:#0E0E0E; display:inline-block; animation:ntDots 1.2s ease-in-out infinite"></i>
+                            <i style="width:5px; height:5px; border-radius:50%; background:#0E0E0E; display:inline-block; animation:ntDots 1.2s ease-in-out infinite 0.18s"></i>
+                            <i style="width:5px; height:5px; border-radius:50%; background:#0E0E0E; display:inline-block; animation:ntDots 1.2s ease-in-out infinite 0.36s"></i>
+                          </span>
+                          <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64; animation:ntWordIn 0.35s ease">{{ m.word }}…</span>
+                        </span>
+                      </span>
+                    </sc-if>
+                    <sc-if value="{{ m.content }}" hint-placeholder-val="hi"><span style="white-space:pre-wrap">{{ m.content }}</span></sc-if>
+                  </div>
+                </div>
+                <sc-if value="{{ m.showActions }}" hint-placeholder-val="{{ true }}">
+                  <div style="display:flex; gap:18px; margin-top:8px; padding-left:42px; align-items:center">
+                    <sc-if value="{{ m.rated }}" hint-placeholder-val="{{ true }}">
+                      <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6F6C64">Thanks for the read.</span>
+                    </sc-if>
+                    <sc-if value="{{ m.notRated }}" hint-placeholder-val="{{ true }}">
+                      <button class="nt-tap" onclick="{{ m.onUp }}" style="background:none; border:0; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6F6C64; cursor:pointer; padding:11px 8px; min-height:44px; box-sizing:border-box">Helpful</button>
+                      <button class="nt-tap" onclick="{{ m.onDown }}" style="background:none; border:0; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6F6C64; cursor:pointer; padding:11px 8px; min-height:44px; box-sizing:border-box">Not helpful</button>
+                    </sc-if>
+                    <button class="nt-tap" onclick="{{ m.onSave }}" style="display:inline-flex; align-items:center; gap:5px; background:none; border:0; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:{{ m.saveColor }}; cursor:pointer; padding:11px 8px; min-height:44px; box-sizing:border-box">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="{{ m.saveFill }}" stroke="{{ m.saveColor }}" strokewidth="2" strokelinejoin="round"><path d="M6 4h12v16l-6-4-6 4z"></path></svg>{{ m.saveLabel }}
+                    </button>
+                  </div>
+                </sc-if>
+              </div>
+            </sc-if>
+          </sc-for>
+        </div>
+      </div>
+
+      <form onsubmit="{{ submitChat }}" style="flex:none; display:flex; align-items:flex-end; gap:12px; padding:12px 18px; background:#F7F6F3; border-top:1px solid #E6E3DD">
+        <button class="nt-tap" onclick="{{ openSaved }}" type="button" aria-label="Saved" style="position:relative; flex:none; background:#fff; border:1px solid #D8D4CC; border-radius:40px; width:42px; height:42px; display:flex; align-items:center; justify-content:center; cursor:pointer; margin-bottom:1px">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0E0E0E" strokewidth="1.9" strokelinecap="round" strokelinejoin="round"><path d="M6 4h12v16l-6-4-6 4z"></path></svg>
+          <sc-if value="{{ hasNotes }}" hint-placeholder-val="{{ true }}"><span style="position:absolute; top:-4px; right:-4px; min-width:17px; height:17px; padding:0 4px; border-radius:10px; background:#0E0E0E; color:#fff; font-family:'Roboto Mono',monospace; font-size:11px; display:flex; align-items:center; justify-content:center">{{ notesCount }}</span></sc-if>
+        </button>
+        <textarea class="nt-fld" rows="1" value="{{ input }}" oninput="{{ onInput }}" onkeydown="{{ onChatKey }}" placeholder="Ask Howie anything…" style="flex:1; min-width:0; background:transparent; border:0; border-bottom:1px solid #D8D4CC; color:#0E0E0E; font-size:15px; padding:8px 0; font-family:'Inter',sans-serif; line-height:1.45; resize:none; overflow-y:auto; max-height:96px; box-sizing:border-box"></textarea>
+        <button class="nt-press" onclick="{{ submitChat }}" type="button" style="display:inline-flex; align-items:center; gap:8px; background:#0E0E0E; color:#fff; border:0; border-radius:40px; padding:11px 20px; font-weight:700; font-size:14px; cursor:pointer">Send <span style="font-weight:400">→</span></button>
+      </form>
+    </div>
+    </sc-if>
+
+    <!-- ---------------- GUIDES LIST ---------------- -->
+    <sc-if value="{{ isGuides }}" hint-placeholder-val="{{ true }}">
+    <div class="nt-scroll" style="height:100%; overflow:auto; padding:22px 18px 28px">
+      <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:#6F6C64; margin:0 0 12px">The Parent Playbook</p>
+      <h1 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:34px; margin:0 0 22px">Guides</h1>
+      <div class="nt-stagger" style="border:1px solid #D8D4CC; background:#fff">
+        <sc-for list="{{ guides }}" as="g" hint-placeholder-count="6">
+          <button class="nt-tap" onclick="{{ g.onOpen }}" style="width:100%; text-align:left; background:#fff; border:0; border-bottom:1px solid #D8D4CC; padding:18px; display:flex; align-items:flex-start; gap:14px; cursor:pointer">
+            <span style="font-family:'Roboto Mono',monospace; font-size:11px; color:#6F6C64; padding-top:5px">{{ g.n }}</span>
+            <span style="flex:1; min-width:0">
+              <span style="display:block; font-family:'Inter',sans-serif; font-weight:600; font-size:18px; letter-spacing:-0.01em; margin-bottom:3px">{{ g.title }}</span>
+              <span style="display:block; font-size:13px; line-height:1.5; color:#42403B">{{ g.blurb }}</span>
+            </span>
+            <span style="color:#C9C5BC; padding-top:3px">→</span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ---------------- GUIDE DETAIL ---------------- -->
+    <sc-if value="{{ isGuide }}" hint-placeholder-val="{{ true }}">
+    <div class="nt-scroll" style="height:100%; overflow:auto; padding:22px 18px 36px">
+      <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:#6F6C64; margin:0 0 12px">The Parent Playbook</p>
+      <h1 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:31px; line-height:1.08; margin:0 0 28px">{{ guide.title }}</h1>
+      <div style="display:flex; flex-direction:column; gap:26px">
+        <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="3">
+          <section>
+            <h2 style="font-family:'Inter',sans-serif; font-weight:600; font-size:18px; letter-spacing:-0.01em; margin:0 0 9px">{{ sec.heading }}</h2>
+            <sc-if value="{{ sec.body }}" hint-placeholder-val="hi"><p style="font-size:15px; line-height:1.62; color:#42403B; margin:0">{{ sec.body }}</p></sc-if>
+            <sc-if value="{{ sec.hasSay }}" hint-placeholder-val="{{ true }}">
+              <div style="margin-top:14px; display:flex; flex-direction:column; gap:10px">
+                <sc-for list="{{ sec.say }}" as="line" hint-placeholder-count="1">
+                  <div style="border:1px solid #0E0E0E; background:#fff; padding:14px 16px; font-size:15px; line-height:1.5; color:#0E0E0E">{{ line }}</div>
+                </sc-for>
+              </div>
+            </sc-if>
+            <sc-if value="{{ sec.hasAvoid }}" hint-placeholder-val="{{ true }}">
+              <ul style="margin:14px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px">
+                <sc-for list="{{ sec.avoid }}" as="line" hint-placeholder-count="2">
+                  <li style="display:flex; gap:11px; font-size:14px; line-height:1.55; color:#42403B"><span style="font-family:'Roboto Mono',monospace; color:#6F6C64">✕</span> <span style="flex:1">{{ line }}</span></li>
+                </sc-for>
+              </ul>
+            </sc-if>
+          </section>
+        </sc-for>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ---------------- NTERPRET FULL REPORT ---------------- -->
+    <sc-if value="{{ isNterpret }}" hint-placeholder-val="{{ true }}">
+    <div class="nt-scroll" style="height:100%; overflow:auto; padding:22px 18px 32px">
+      <div class="nt-stagger" style="display:flex; flex-direction:column; gap:26px">
+
+        <section style="background:#0E0E0E; color:#fff; border-radius:2px; padding:24px 20px 22px">
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin:0 0 6px">Maya · Mental Scouting Report</p>
+          <h1 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:30px; line-height:1.08; margin:0 0 12px">NTerpret™</h1>
+          <p style="font-size:14px; line-height:1.6; color:rgba(255,255,255,0.82); margin:0 0 16px">Three independent windows into how Maya operates as an athlete: how she communicates, how she learns, and what drives her. None is better than another. Together they're her mental scouting report.</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap">
+            <sc-for list="{{ nterpretFull }}" as="d" hint-placeholder-count="3">
+              <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; background:rgba(255,255,255,0.12); color:#fff; padding:6px 10px; border-radius:20px">{{ d.value }}</span>
+            </sc-for>
+          </div>
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin:16px 0 0">Assessed {{ nterpret2.assessed }} · {{ nterpret2.validity }}</p>
+        </section>
+
+        <section style="background:#fff; border:1px solid #D8D4CC; padding:18px 18px">
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:#6F6C64; margin:0 0 8px">Summary insights</p>
+          <p style="font-size:15px; line-height:1.62; color:#0E0E0E; margin:0">{{ nterpret2.narrative }}</p>
+        </section>
+
+        <sc-for list="{{ nterpretFull }}" as="d" hint-placeholder-count="3">
+          <section style="background:#fff; border:1px solid #D8D4CC">
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:11px 16px; border-bottom:1px solid #E6E3DD; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64">
+              <span>{{ d.n }} · {{ d.axis }}</span>
+            </div>
+            <div style="padding:18px 18px">
+              <h2 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:26px; line-height:1.05; margin:0 0 4px">{{ d.value }}</h2>
+              <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#6F6C64; margin:0 0 14px">{{ d.tagline }}</p>
+              <p style="font-size:14px; line-height:1.6; color:#42403B; margin:0 0 4px">{{ d.body }}</p>
+              <button class="nt-tap" onclick="{{ d.onToggle }}" style="display:inline-flex; align-items:center; gap:7px; background:none; border:0; padding:8px 0 0; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64; cursor:pointer"><span style="font-size:13px; line-height:1">{{ d.caret }}</span> More on this style</button>
+              <sc-if value="{{ d.open }}" hint-placeholder-val="hi">
+              <div style="margin-top:14px">
+                <div style="background:#F7F6F3; border:1px solid #E6E3DD; padding:13px 14px">
+                  <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64; margin:0 0 5px">About this style</p>
+                  <p style="font-size:13px; line-height:1.55; color:#42403B; margin:0">{{ d.general }}</p>
+                </div>
+                <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#C9C5BC; margin:12px 0 0">{{ d.scale }}</p>
+              </div>
+              </sc-if>
+            </div>
+          </section>
+        </sc-for>
+
+        <section style="border:1px solid #0E0E0E; background:#fff; padding:20px 18px">
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin:0 0 8px">After Mistakes · The Read</p>
+          <p style="font-size:15px; line-height:1.6; color:#0E0E0E; margin:0">{{ nterpret2.afterMistakes }}</p>
+        </section>
+
+        <section>
+          <button class="nt-tap" onclick="{{ toggleGrowth }}" style="width:100%; display:flex; align-items:center; gap:10px; background:#fff; border:1px solid #D8D4CC; padding:15px 16px; cursor:pointer; text-align:left">
+            <span style="flex:1">
+              <span style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#6F6C64; margin-bottom:3px">Growth areas</span>
+              <span style="display:block; font-size:13px; color:#42403B">Two edges where a little structure helps Maya most</span>
+            </span>
+            <span style="font-family:'Roboto Mono',monospace; font-size:18px; color:#6F6C64; line-height:1">{{ growthCaret }}</span>
+          </button>
+          <sc-if value="{{ growthOpen }}" hint-placeholder-val="hi">
+          <div style="display:flex; flex-direction:column; gap:1px; background:#D8D4CC; border:1px solid #D8D4CC; border-top:0">
+            <sc-for list="{{ nterpretGrowth }}" as="g" hint-placeholder-count="2">
+              <div style="background:#fff; padding:16px 16px; display:flex; gap:14px">
+                <span style="font-family:'Roboto Mono',monospace; font-size:12px; color:#6F6C64; padding-top:2px">{{ g.n }}</span>
+                <span style="flex:1">
+                  <span style="display:block; font-family:'Inter',sans-serif; font-weight:600; font-size:16px; letter-spacing:-0.01em; margin-bottom:5px">{{ g.title }}</span>
+                  <span style="display:block; font-size:13px; line-height:1.55; color:#42403B">{{ g.body }}</span>
+                </span>
+              </div>
+            </sc-for>
+          </div>
+          </sc-if>
+        </section>
+
+        <section>
+          <button class="nt-tap" onclick="{{ toggleHacks }}" style="width:100%; display:flex; align-items:center; gap:10px; background:#fff; border:1px solid #D8D4CC; padding:15px 16px; cursor:pointer; text-align:left">
+            <span style="flex:1">
+              <span style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#6F6C64; margin-bottom:3px">Performance hacks</span>
+              <span style="display:block; font-size:13px; color:#42403B">Three small habits for the moments that matter</span>
+            </span>
+            <span style="font-family:'Roboto Mono',monospace; font-size:18px; color:#6F6C64; line-height:1">{{ hacksCaret }}</span>
+          </button>
+          <sc-if value="{{ hacksOpen }}" hint-placeholder-val="hi">
+          <div style="display:flex; flex-direction:column; gap:14px; margin-top:14px">
+            <sc-for list="{{ nterpretHacks }}" as="h" hint-placeholder-count="3">
+              <div style="background:#fff; border:1px solid #D8D4CC; padding:16px 16px">
+                <span style="display:inline-block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; background:#0E0E0E; color:#fff; padding:4px 9px; border-radius:3px; margin-bottom:10px">{{ h.when }}</span>
+                <p style="font-size:14px; line-height:1.6; color:#42403B; margin:0">{{ h.body }}</p>
+              </div>
+            </sc-for>
+          </div>
+          </sc-if>
+        </section>
+
+        <section>
+          <button class="nt-tap" onclick="{{ askNterpret }}" style="width:100%; display:flex; align-items:center; gap:12px; background:#0E0E0E; color:#fff; border:0; border-radius:2px; padding:16px 18px; cursor:pointer; text-align:left">
+            <div style="width:34px; height:34px; flex:none"><svg class="howie-anim" viewBox="0 0 64 64" fill="none" style="width:100%; height:100%; display:block; overflow:visible; animation:howieBob 5s ease-in-out infinite">
+  <line x1="32" y1="16" x2="32" y2="8" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round"></line>
+  <circle cx="32" cy="6" r="2.6" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howiePulse 2.6s ease-in-out infinite"></circle>
+  <rect x="6" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="53" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="12" y="16" width="40" height="38" rx="11" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <circle cx="24.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <circle cx="39.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <path d="M25 42.5 Q32 47 39 42.5" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round" fill="none"></path>
+</svg></div>
+            <span style="flex:1; font-size:14px; line-height:1.4">Want further information? <b style="font-weight:600">Ask Howie.</b></span>
+            <span style="font-weight:400">→</span>
+          </button>
+        </section>
+
+        <section>
+          <button class="nt-tap" onclick="{{ goChat }}" style="width:100%; text-align:left; background:#fff; border:1px solid #D8D4CC; padding:18px; display:flex; align-items:center; gap:14px; cursor:pointer">
+            <span style="flex:1">
+              <span style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#6F6C64; margin-bottom:5px">Put it to work</span>
+              <span style="display:block; font-family:'Inter',sans-serif; font-weight:600; font-size:18px; letter-spacing:-0.01em">Ask Howie how to use this</span>
+            </span>
+            <span style="color:#C9C5BC; font-size:18px">→</span>
+          </button>
+        </section>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ---------------- CLUTCH FACTOR (parent) ---------------- -->
+    <sc-if value="{{ isClutch }}" hint-placeholder-val="hi">
+    <div class="nt-scroll" style="height:100%; overflow:auto; padding:22px 18px 32px">
+      <div class="nt-stagger" style="display:flex; flex-direction:column; gap:22px">
+        <section style="background:#0E0E0E; color:#fff; border-radius:2px; padding:24px 20px 22px; text-align:center">
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin:0 0 4px">Maya · NTangible Assessment</p>
+          <h1 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:26px; margin:0 0 14px">Clutch Factor™</h1>
+          <div style="position:relative; width:230px; max-width:100%; margin:0 auto">
+            <svg viewBox="0 0 240 132" width="100%" style="display:block">
+              <path d="M14 124 A106 106 0 0 1 226 124" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="14" stroke-linecap="round"></path>
+              <path d="M14 124 A106 106 0 0 1 226 124" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" pathLength="100" stroke-dasharray="{{ clutchPct }} 100"></path>
+            </svg>
+            <div style="position:absolute; left:0; right:0; bottom:6px; text-align:center">
+              <span style="display:block; font-family:'Inter',sans-serif; font-weight:700; font-size:52px; line-height:1; letter-spacing:-0.04em">{{ clutch.score }}</span>
+              <span style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-top:4px">of 1000</span>
+            </div>
+          </div>
+          <span style="display:inline-block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; background:#fff; color:#0E0E0E; padding:5px 12px; border-radius:3px; margin:12px 0 0">{{ clutch.tier }} · {{ clutch.band }}</span>
+        </section>
+
+        <section style="background:#fff; border:1px solid #D8D4CC; padding:18px 18px">
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:#6F6C64; margin:0 0 8px">What this is</p>
+          <p style="font-size:15px; line-height:1.62; color:#0E0E0E; margin:0">{{ clutch.parentSummary }}</p>
+        </section>
+
+        <section style="border:1px solid #0E0E0E; background:#fff; padding:18px 18px">
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:#6F6C64; margin:0 0 8px">What it means for you</p>
+          <p style="font-size:15px; line-height:1.6; color:#0E0E0E; margin:0">{{ clutch.forParents }}</p>
+        </section>
+
+        <!-- where she lands -->
+        <section>
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#6F6C64; margin:0 0 12px">Where Maya lands</p>
+          <div style="display:flex; flex-direction:column; gap:1px; background:#D8D4CC; border:1px solid #D8D4CC">
+            <sc-for list="{{ clutchTiers }}" as="t" hint-placeholder-count="5">
+              <div style="background:{{ t.rowBg }}; padding:14px 16px">
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:4px">
+                  <span style="font-family:'Inter',sans-serif; font-weight:700; font-size:15px; letter-spacing:-0.01em; color:{{ t.fg }}">{{ t.band }}</span>
+                  <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:{{ t.labelFg }}">{{ t.label }}</span>
+                  <sc-if value="{{ t.here }}" hint-placeholder-val="{{ true }}">
+                    <span style="margin-left:auto; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; background:#fff; color:#0E0E0E; padding:3px 8px; border-radius:20px">Maya is here</span>
+                  </sc-if>
+                </div>
+                <p style="font-size:13px; line-height:1.5; color:{{ t.metaFg }}; margin:0">{{ t.meaning }}</p>
+              </div>
+            </sc-for>
+          </div>
+        </section>
+
+        <!-- trend over time -->
+        <section>
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#6F6C64; margin:0 0 12px">Maya's trend</p>
+          <div style="background:#0E0E0E; color:#fff; border-radius:2px; padding:20px 20px 16px">
+            <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:16px">
+              <span style="font-family:'Inter',sans-serif; font-weight:700; font-size:34px; letter-spacing:-0.04em; line-height:1">{{ trendLatest.score }}</span>
+              <span style="font-family:'Inter',sans-serif; font-weight:700; font-size:15px; color:{{ trendColor }}">{{ trendArrow }} {{ trendAbs }}</span>
+              <span style="margin-left:auto; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.5)">since last test</span>
+            </div>
+            <svg viewBox="0 0 280 138" width="100%" style="display:block; overflow:visible">
+              <polyline points="{{ trendPoly }}" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></polyline>
+              <sc-for list="{{ trendPts }}" as="p" hint-placeholder-count="2">
+                <circle cx="{{ p.x }}" cy="{{ p.y }}" r="4" fill="#fff"></circle>
+              </sc-for>
+            </svg>
+            <div style="display:flex; justify-content:space-between; margin-top:4px">
+              <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.5)">{{ trendFirst.date }}</span>
+              <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.5)">{{ trendLatest.date }}</span>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:1px; background:#D8D4CC; border:1px solid #D8D4CC; border-top:0; margin-top:1px">
+            <sc-for list="{{ clutchHistoryRows }}" as="h" hint-placeholder-count="2">
+              <div style="background:#fff; padding:13px 16px; display:flex; align-items:center; gap:12px">
+                <span style="flex:1; font-family:'Inter',sans-serif; font-weight:600; font-size:15px; letter-spacing:-0.01em">{{ h.date }}</span>
+                <sc-if value="{{ h.hasDelta }}" hint-placeholder-val="hi"><span style="font-family:'Inter',sans-serif; font-weight:700; font-size:12px; color:{{ h.deltaColor }}">{{ h.deltaArrow }} {{ h.deltaAbs }}</span></sc-if>
+                <span style="font-family:'Inter',sans-serif; font-weight:700; font-size:19px; letter-spacing:-0.03em; width:44px; text-align:right">{{ h.score }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </section>
+
+        <!-- how it's measured (collapsible) -->
+        <section>
+          <button class="nt-tap" onclick="{{ toggleClutchMeans }}" style="width:100%; display:flex; align-items:center; gap:10px; background:#fff; border:1px solid #D8D4CC; padding:15px 16px; cursor:pointer; text-align:left">
+            <span style="flex:1">
+              <span style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#6F6C64; margin-bottom:3px">How it's measured</span>
+              <span style="display:block; font-size:13px; color:#42403B">What the score actually captures</span>
+            </span>
+            <span style="font-family:'Roboto Mono',monospace; font-size:18px; color:#6F6C64; line-height:1">{{ clutchMeansCaret }}</span>
+          </button>
+          <sc-if value="{{ clutchMeansOpen }}" hint-placeholder-val="hi">
+          <div style="border:1px solid #D8D4CC; border-top:0; background:#fff; padding:16px 16px">
+            <p style="font-size:14px; line-height:1.6; color:#42403B; margin:0">{{ clutch.whatItMeans }}</p>
+          </div>
+          </sc-if>
+        </section>
+
+        <section>
+          <button class="nt-tap" onclick="{{ askClutch }}" style="width:100%; display:flex; align-items:center; gap:12px; background:#0E0E0E; color:#fff; border:0; border-radius:2px; padding:16px 18px; cursor:pointer; text-align:left">
+            <div style="width:34px; height:34px; flex:none"><svg class="howie-anim" viewBox="0 0 64 64" fill="none" style="width:100%; height:100%; display:block; overflow:visible; animation:howieBob 5s ease-in-out infinite">
+  <line x1="32" y1="16" x2="32" y2="8" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round"></line>
+  <circle cx="32" cy="6" r="2.6" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howiePulse 2.6s ease-in-out infinite"></circle>
+  <rect x="6" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="53" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="12" y="16" width="40" height="38" rx="11" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <circle cx="24.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <circle cx="39.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <path d="M25 42.5 Q32 47 39 42.5" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round" fill="none"></path>
+</svg></div>
+            <span style="flex:1; font-size:14px; line-height:1.4">Want further information? <b style="font-weight:600">Ask Howie.</b></span>
+            <span style="font-weight:400">→</span>
+          </button>
+        </section>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ---------------- PROFILE ---------------- -->
+    <sc-if value="{{ isProfile }}" hint-placeholder-val="{{ true }}">
+    <div class="nt-scroll" style="height:100%; overflow:auto; padding:22px 18px 28px">
+      <div class="nt-stagger" style="display:flex; flex-direction:column; gap:34px">
+        <header>
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin:0 0 8px">Profile</p>
+          <h1 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:30px; margin:0">Your account</h1>
+        </header>
+
+        <section>
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:#6F6C64; margin:0 0 14px">Personal details</p>
+          <div style="background:#fff; border:1px solid #D8D4CC">
+            <button class="nt-tap" onclick="{{ openSettings }}" style="width:100%; text-align:left; background:#fff; border:0; border-bottom:1px solid #E6E3DD; padding:14px 16px; display:flex; align-items:center; gap:12px; cursor:pointer">
+              <span style="flex:1; min-width:0">
+                <span style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64; margin-bottom:3px">Name</span>
+                <span style="display:block; font-size:16px; color:#0E0E0E">Sam Reyes</span>
+              </span>
+              <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6F6C64">Edit</span>
+            </button>
+            <button class="nt-tap" onclick="{{ openSettings }}" style="width:100%; text-align:left; background:#fff; border:0; border-bottom:1px solid #E6E3DD; padding:14px 16px; display:flex; align-items:center; gap:12px; cursor:pointer">
+              <span style="flex:1; min-width:0">
+                <span style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64; margin-bottom:3px">Email</span>
+                <span style="display:block; font-size:16px; color:#0E0E0E">sam.reyes@email.com</span>
+              </span>
+              <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6F6C64">Edit</span>
+            </button>
+            <button class="nt-tap" onclick="{{ openSettings }}" style="width:100%; text-align:left; background:#fff; border:0; padding:14px 16px; display:flex; align-items:center; gap:12px; cursor:pointer">
+              <span style="flex:1; min-width:0">
+                <span style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64; margin-bottom:3px">Phone</span>
+                <span style="display:block; font-size:16px; color:#0E0E0E">(804) 555-0162</span>
+              </span>
+              <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6F6C64">Edit</span>
+            </button>
+          </div>
+        </section>
+
+        <section>
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px">
+            <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:#6F6C64; margin:0">Linked athlete · Maya</p>
+            <span style="display:inline-flex; align-items:center; gap:6px; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6F6C64">
+              <span style="width:6px; height:6px; border-radius:50%; background:#1F8A5B; display:inline-block"></span>Synced
+            </span>
+          </div>
+          <button class="nt-tap" onclick="{{ goClutchView }}" style="width:100%; text-align:left; background:#0E0E0E; color:#fff; border:0; border-radius:2px; padding:20px 20px; cursor:pointer">
+            <div style="display:flex; align-items:center; gap:18px">
+              <div style="position:relative; width:104px; height:60px; flex:none">
+                <svg width="104" height="60" viewBox="0 0 104 60" style="display:block">
+                  <path d="M8 56 A44 44 0 0 1 96 56" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="8" stroke-linecap="round"></path>
+                  <path d="M8 56 A44 44 0 0 1 96 56" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" pathLength="100" stroke-dasharray="{{ clutchPct }} 100"></path>
+                </svg>
+                <span style="position:absolute; left:0; right:0; bottom:0; text-align:center; font-family:'Inter',sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.03em">{{ clutch.score }}</span>
+              </div>
+              <div style="flex:1; min-width:0">
+                <span style="display:inline-block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; background:#fff; color:#0E0E0E; padding:3px 8px; border-radius:3px; margin-bottom:8px">{{ clutch.tier }}</span>
+                <p style="font-family:'Inter',sans-serif; font-weight:600; font-size:15px; line-height:1.3; margin:0; color:#fff">Composure under pressure, scored.</p>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:16px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.18)">
+              <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.6)">Assessed {{ clutch.assessed }}</span>
+              <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#fff">What this means →</span>
+            </div>
+          </button>
+        </section>
+
+        <section style="position:relative; background:#fff; border:1px solid #D8D4CC">
+          <span style="position:absolute; top:-1px; left:-1px; width:18px; height:18px; border-top:2px solid #0E0E0E; border-left:2px solid #0E0E0E"></span>
+          <span style="position:absolute; top:-1px; right:-1px; width:18px; height:18px; border-top:2px solid #0E0E0E; border-right:2px solid #0E0E0E"></span>
+          <span style="position:absolute; bottom:-1px; left:-1px; width:18px; height:18px; border-bottom:2px solid #0E0E0E; border-left:2px solid #0E0E0E"></span>
+          <span style="position:absolute; bottom:-1px; right:-1px; width:18px; height:18px; border-bottom:2px solid #0E0E0E; border-right:2px solid #0E0E0E"></span>
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:11px 16px; border-bottom:1px solid #E6E3DD; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64">
+            <span>About Maya · NTerpret™</span><span>Profile</span>
+          </div>
+          <div style="padding:20px 18px">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:20px">
+              <div>
+                <h2 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:32px; margin:0 0 4px">Maya</h2>
+                <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#6F6C64">Softball · Shortstop</span>
+              </div>
+              <span style="display:inline-flex; align-items:center; justify-content:center; background:#0E0E0E; border-radius:6px; padding:5px 9px; min-height:30px; flex:none">
+                <sc-if value="{{ activePartner.isAlliance }}" hint-placeholder-val="hi"><img src="cdc99512-07a6-4fdd-81ff-00cccace5d43.png" alt="" style="height:22px; width:auto; display:block"></sc-if>
+                <sc-if value="{{ activePartner.noLogo }}" hint-placeholder-val="{{ true }}"><span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#fff">{{ activePartner.short }}</span></sc-if>
+              </span>
+            </div>
+            <div style="border:1px solid #D8D4CC; margin-bottom:18px">
+              <sc-for list="{{ nterpret }}" as="t" hint-placeholder-count="3">
+                <div style="padding:16px 16px; border-bottom:1px solid #D8D4CC">
+                  <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin:0 0 7px">{{ t.label }}</p>
+                  <p style="font-family:'Inter',sans-serif; font-weight:600; font-size:22px; letter-spacing:-0.02em; margin:0 0 7px">{{ t.value }}</p>
+                  <p style="font-size:13px; line-height:1.55; color:#42403B; margin:0">{{ t.note }}</p>
+                </div>
+              </sc-for>
+            </div>
+            <div style="border:1px solid #0E0E0E; background:#fff; padding:18px 18px">
+              <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin:0 0 8px">After Mistakes · The Read</p>
+              <p style="font-size:15px; line-height:1.55; margin:0">Replays mistakes internally for roughly a day. Skip the same-night debrief. Revisit tomorrow if she brings it up.</p>
+            </div>
+            <button class="nt-tap" onclick="{{ goNterpret }}" style="width:100%; margin-top:16px; display:flex; align-items:center; justify-content:space-between; background:#0E0E0E; color:#fff; border:0; padding:15px 16px; cursor:pointer">
+              <span style="font-family:'Roboto Mono',monospace; font-size:12px; letter-spacing:0.18em; text-transform:uppercase">Read the full report</span>
+              <span style="font-weight:400">→</span>
+            </button>
+          </div>
+        </section>
+
+        <section>
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:#6F6C64; margin:0 0 14px">Activity history</p>
+          <div style="background:#fff; border:1px solid #D8D4CC">
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:15px 16px; border-bottom:1px solid #E6E3DD">
+              <span style="font-size:14px; color:#42403B">Rides home you've shown up for</span>
+              <span style="font-family:'Inter',sans-serif; font-weight:600; font-size:22px; letter-spacing:-0.02em">{{ rides }}</span>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:15px 16px">
+              <span style="font-size:14px; color:#42403B">Last moment</span>
+              <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6F6C64">{{ lastMoment }}</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:#6F6C64; margin:0 0 14px">Saved notes</p>
+          <sc-if value="{{ hasNotes }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex; flex-direction:column; gap:12px">
+              <sc-for list="{{ notes }}" as="n" hint-placeholder-count="1">
+                <div style="background:#fff; border:1px solid #D8D4CC; padding:16px">
+                  <sc-if value="{{ n.prompt }}" hint-placeholder-val="hi"><p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6F6C64; margin:0 0 9px">On: {{ n.prompt }}</p></sc-if>
+                  <p style="font-size:14px; line-height:1.6; color:#42403B; margin:0; white-space:pre-wrap">{{ n.text }}</p>
+                  <div style="display:flex; align-items:center; justify-content:space-between; margin-top:12px">
+                    <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6F6C64">{{ n.ago }}</span>
+                    <button class="nt-tap" onclick="{{ n.onRemove }}" style="background:none; border:0; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6F6C64; cursor:pointer">Remove</button>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+          <sc-if value="{{ noNotes }}" hint-placeholder-val="{{ true }}">
+            <div style="background:#fff; border:1px solid #D8D4CC; padding:18px 16px">
+              <p style="font-size:14px; line-height:1.55; color:#42403B; margin:0 0 14px">Nothing saved yet. When Howie gives you a line worth keeping, tap Save and it lands here.</p>
+              <button class="nt-tap" onclick="{{ goChat }}" style="background:none; border:0; border-bottom:1px solid #0E0E0E; padding:0 0 3px; font-family:'Roboto Mono',monospace; font-weight:600; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#0E0E0E; cursor:pointer">Ask Howie →</button>
+            </div>
+          </sc-if>
+        </section>
+
+        <section>
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.28em; text-transform:uppercase; color:#6F6C64; margin:0 0 14px">Help &amp; support</p>
+          <button class="nt-tap" onclick="{{ openSupport }}" style="width:100%; text-align:left; background:#fff; border:1px solid #D8D4CC; padding:16px 16px; display:flex; align-items:center; gap:13px; cursor:pointer">
+            <span style="width:38px; height:38px; border-radius:50%; background:#F7F6F3; border:1px solid #E6E3DD; display:flex; align-items:center; justify-content:center; flex:none">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0E0E0E" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v12H8l-4 4z"></path></svg>
+            </span>
+            <span style="flex:1; min-width:0">
+              <span style="display:block; font-family:'Inter',sans-serif; font-weight:600; font-size:16px; letter-spacing:-0.01em">Contact NTangible</span>
+              <span style="display:block; font-size:12px; color:#6F6C64; margin-top:2px">Questions, feedback, or a bug? We're here.</span>
+            </span>
+            <span style="color:#C9C5BC; font-size:16px">›</span>
+          </button>
+        </section>
+
+        <section style="display:flex; flex-direction:column; gap:12px">
+          <button class="nt-tap" onclick="{{ openSettings }}" style="display:flex; align-items:center; justify-content:space-between; background:#fff; border:1px solid #D8D4CC; padding:15px 16px; cursor:pointer">
+            <span style="font-size:15px">Account &amp; data</span>
+            <span style="font-family:'Roboto Mono',monospace; color:#6F6C64">→</span>
+          </button>
+          <button class="nt-tap" onclick="{{ signOut }}" style="text-align:left; background:none; border:0; padding:14px 16px; font-family:'Roboto Mono',monospace; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#6F6C64; cursor:pointer">Sign out</button>
+        </section>
+      </div>
+    </div>
+    </sc-if>
+
+  </div>
+
+  <!-- tab bar -->
+  <nav style="flex:none; background:#fff; border-top:1px solid #D8D4CC; display:grid; grid-template-columns:repeat(3,1fr); padding-bottom:22px; position:relative; z-index:6">
+    <button class="nt-tap" onclick="{{ goHome }}" style="display:flex; flex-direction:column; align-items:center; gap:5px; background:none; border:0; padding:9px 0 6px; cursor:pointer">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="{{ homeColor }}" strokewidth="{{ homeStroke }}" strokelinecap="round" strokelinejoin="round"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9.5V21h14V9.5"></path></svg>
+      <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:{{ homeColor }}">Home</span>
+    </button>
+    <button class="nt-tap" onclick="{{ goChat }}" style="display:flex; flex-direction:column; align-items:center; gap:4px; background:none; border:0; padding:9px 0 6px; cursor:pointer; opacity:{{ chatOpacity }}">
+      <div style="width:26px; height:26px"><svg class="howie-anim" viewBox="0 0 64 64" fill="none" style="width:100%; height:100%; display:block; overflow:visible; animation:howieBob 5s ease-in-out infinite">
+  <line x1="32" y1="16" x2="32" y2="8" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round"></line>
+  <circle cx="32" cy="6" r="2.6" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howiePulse 2.6s ease-in-out infinite"></circle>
+  <rect x="6" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="53" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="12" y="16" width="40" height="38" rx="11" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <circle cx="24.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <circle cx="39.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <path d="M25 42.5 Q32 47 39 42.5" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round" fill="none"></path>
+</svg></div>
+      <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:{{ chatColor }}">Howie</span>
+    </button>
+    <button class="nt-tap" onclick="{{ goProfile }}" style="display:flex; flex-direction:column; align-items:center; gap:5px; background:none; border:0; padding:9px 0 6px; cursor:pointer">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="{{ profColor }}" strokewidth="{{ profStroke }}" strokelinecap="round" strokelinejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"></path></svg>
+      <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:{{ profColor }}">Profile</span>
+    </button>
+  </nav>
+
+  </sc-if>
+
+  <!-- ============================ SHEETS ============================ -->
+  <sc-if value="{{ sheetOpen }}" hint-placeholder-val="{{ true }}">
+  <div style="position:absolute; inset:0; z-index:40; display:flex; flex-direction:column; justify-content:flex-end">
+    <div onclick="{{ closeSheet }}" style="position:absolute; inset:0; background:rgba(14,14,14,0.42); animation:ntScrim 0.3s ease both"></div>
+
+    <!-- DISCLAIMER -->
+    <sc-if value="{{ sheetDisclaimer }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative; background:#fff; border-top-left-radius:20px; border-top-right-radius:20px; padding:10px 22px calc(20px + 18px); animation:ntSheetUp 0.4s cubic-bezier(0.22,1,0.36,1) both">
+      <div style="width:38px; height:5px; border-radius:3px; background:#D8D4CC; margin:0 auto 16px"></div>
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px">
+        <div style="width:40px; height:40px; flex:none"><svg class="howie-anim" viewBox="0 0 64 64" fill="none" style="width:100%; height:100%; display:block; overflow:visible; animation:howieBob 5s ease-in-out infinite">
+  <line x1="32" y1="16" x2="32" y2="8" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round"></line>
+  <circle cx="32" cy="6" r="2.6" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howiePulse 2.6s ease-in-out infinite"></circle>
+  <rect x="6" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="53" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="12" y="16" width="40" height="38" rx="11" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <circle cx="24.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <circle cx="39.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <path d="M25 42.5 Q32 47 39 42.5" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round" fill="none"></path>
+</svg></div>
+        <div>
+          <p style="font-family:'Inter',sans-serif; font-weight:600; font-size:18px; letter-spacing:-0.02em; margin:0">{{ discTitle }}</p>
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64; margin:2px 0 0">{{ discSubtitle }}</p>
+        </div>
+      </div>
+      <div style="height:248px; overflow-y:auto; border:1px solid #D8D4CC; background:#F7F6F3; padding:14px 14px; margin-bottom:16px">
+        <p style="font-size:13px; line-height:1.6; color:#42403B; margin:0 0 16px">{{ discIntro }}</p>
+        <sc-for list="{{ discSections }}" as="s" hint-placeholder-count="15">
+          <div style="margin-bottom:15px">
+            <h3 style="font-family:'Inter',sans-serif; font-weight:600; font-size:13px; letter-spacing:-0.01em; margin:0 0 5px">{{ s.h }}</h3>
+            <p style="font-size:12px; line-height:1.6; color:#42403B; margin:0; white-space:pre-wrap">{{ s.b }}</p>
+          </div>
+        </sc-for>
+        <p style="font-size:12px; line-height:1.6; color:#0E0E0E; font-weight:500; margin:0">{{ discAcceptance }}</p>
+      </div>
+      <button class="nt-press" onclick="{{ acceptTerms }}" style="width:100%; background:#0E0E0E; color:#fff; border:0; border-radius:40px; padding:15px; font-weight:700; font-size:15px; cursor:pointer">I Accept</button>
+    </div>
+    </sc-if>
+
+    <!-- DRIVE HOME SCRIPT -->
+    <sc-if value="{{ sheetScript }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative; background:#F7F6F3; border-top-left-radius:20px; border-top-right-radius:20px; height:88%; display:flex; flex-direction:column; animation:ntSheetUp 0.4s cubic-bezier(0.22,1,0.36,1) both; overflow:hidden">
+      <div style="flex:none; padding:10px 0 6px; display:flex; flex-direction:column; align-items:center">
+        <div style="width:38px; height:5px; border-radius:3px; background:#D8D4CC"></div>
+      </div>
+
+      <sc-if value="{{ scriptLoading }}" hint-placeholder-val="{{ true }}">
+        <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:0 40px; text-align:center">
+          <div style="position:relative; width:96px; height:96px; display:flex; align-items:center; justify-content:center; margin-bottom:24px">
+            <span style="position:absolute; inset:0; border-radius:50%; background:radial-gradient(circle, rgba(14,14,14,0.08), rgba(14,14,14,0)); animation:ntBreatheScale 3.2s ease-in-out infinite"></span>
+            <span style="position:absolute; width:96px; height:96px; border-radius:50%; border:1.5px solid #D8D4CC; animation:ntBreatheScale 3.2s ease-in-out infinite"></span>
+            <div style="position:relative; width:52px; height:52px"><svg class="howie-anim" viewBox="0 0 64 64" fill="none" style="width:100%; height:100%; display:block; overflow:visible; animation:howieBob 5s ease-in-out infinite">
+  <line x1="32" y1="16" x2="32" y2="8" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round"></line>
+  <circle cx="32" cy="6" r="2.6" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howiePulse 2.6s ease-in-out infinite"></circle>
+  <rect x="6" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="53" y="30" width="5" height="10" rx="2" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <rect x="12" y="16" width="40" height="38" rx="11" stroke="#0E0E0E" strokewidth="2.4" fill="#FFFFFF"></rect>
+  <circle cx="24.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <circle cx="39.5" cy="33" r="3.1" fill="#0E0E0E" style="transform-box:fill-box; transform-origin:center; animation:howieBlink 4.5s ease-in-out infinite"></circle>
+  <path d="M25 42.5 Q32 47 39 42.5" stroke="#0E0E0E" strokewidth="2.4" strokelinecap="round" fill="none"></path>
+</svg></div>
+          </div>
+          <p style="font-family:'Inter',sans-serif; font-weight:600; font-size:17px; letter-spacing:-0.01em; margin:0 0 6px">Take a breath.</p>
+          <p style="font-size:14px; line-height:1.6; color:#6F6C64; margin:0; max-width:260px">Finding the right words for Maya. This is the easy part, you showed up.</p>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ scriptReady }}" hint-placeholder-val="{{ true }}">
+      <div class="nt-scroll" style="flex:1; min-height:0; overflow:auto; padding:6px 18px 22px">
+        <div class="nt-stagger" style="display:flex; flex-direction:column; gap:16px">
+          <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#6F6C64; margin:6px 0 0">For Maya · Reserved · Visual · Intrinsic Growth</p>
+
+          <div style="position:relative; background:#fff; border:1px solid #D8D4CC">
+            <span style="position:absolute; top:-1px; left:-1px; width:18px; height:18px; border-top:2px solid #0E0E0E; border-left:2px solid #0E0E0E"></span>
+            <span style="position:absolute; top:-1px; right:-1px; width:18px; height:18px; border-top:2px solid #0E0E0E; border-right:2px solid #0E0E0E"></span>
+            <span style="position:absolute; bottom:-1px; left:-1px; width:18px; height:18px; border-bottom:2px solid #0E0E0E; border-left:2px solid #0E0E0E"></span>
+            <span style="position:absolute; bottom:-1px; right:-1px; width:18px; height:18px; border-bottom:2px solid #0E0E0E; border-right:2px solid #0E0E0E"></span>
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:11px 16px; border-bottom:1px solid #E6E3DD; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64"><span>Start Here</span><span>Say this first</span></div>
+            <p style="padding:18px 18px; font-size:18px; line-height:1.5; font-weight:500; margin:0">{{ script.opener }}</p>
+          </div>
+
+          <div style="background:#fff; border:1px solid #D8D4CC">
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:11px 16px; border-bottom:1px solid #E6E3DD; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64"><span>If You Talk More</span><span>Intrinsic Growth</span></div>
+            <div style="padding:18px 18px; display:flex; flex-direction:column; gap:14px">
+              <p style="font-size:15px; line-height:1.6; color:#42403B; margin:0">{{ script.driver }}</p>
+              <sc-if value="{{ script.mistake }}" hint-placeholder-val="hi">
+                <div style="display:flex; gap:14px"><span style="width:3px; background:#0E0E0E; flex:none"></span><p style="font-size:15px; line-height:1.6; color:#42403B; margin:0">{{ script.mistake }}</p></div>
+              </sc-if>
+            </div>
+          </div>
+
+          <div style="background:#fff; border:1px solid #D8D4CC">
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:11px 16px; border-bottom:1px solid #E6E3DD; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64"><span>When You Revisit It</span><span>Visual learner</span></div>
+            <p style="padding:18px 18px; font-size:15px; line-height:1.6; color:#42403B; margin:0">{{ script.revisit }}</p>
+          </div>
+
+          <div style="background:#fff; border:1px solid #D8D4CC">
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:11px 16px; border-bottom:1px solid #E6E3DD; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64"><span>What Not To Say</span><span>Leave it</span></div>
+            <ul style="margin:0; padding:18px 18px; list-style:none; display:flex; flex-direction:column; gap:12px">
+              <sc-for list="{{ scriptAvoid }}" as="a" hint-placeholder-count="3">
+                <li style="display:flex; gap:11px; font-size:14px; line-height:1.55; color:#42403B"><span style="font-family:'Roboto Mono',monospace; color:#6F6C64">✕</span> <span style="flex:1">{{ a }}</span></li>
+              </sc-for>
+            </ul>
+          </div>
+
+          <div style="border:1px solid #0E0E0E; background:#fff; padding:20px 18px">
+            <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin:0 0 8px">The Closer</p>
+            <p style="font-size:15px; line-height:1.55; margin:0">{{ script.closer }}</p>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:10px; padding-top:4px">
+            <button class="nt-press" onclick="{{ openShare }}" style="background:#0E0E0E; color:#fff; border:0; border-radius:40px; padding:14px; font-weight:700; font-size:15px; cursor:pointer">Share with the other parent</button>
+            <div style="display:flex; gap:10px">
+              <button class="nt-press" onclick="{{ closeSheet }}" style="flex:1; background:transparent; color:#0E0E0E; border:1.5px solid #0E0E0E; border-radius:40px; padding:12.5px; font-weight:700; font-size:15px; cursor:pointer">Start over</button>
+              <button class="nt-press" onclick="{{ goChat }}" style="flex:1; background:transparent; color:#0E0E0E; border:1.5px solid #0E0E0E; border-radius:40px; padding:12.5px; font-weight:700; font-size:15px; cursor:pointer">Ask Howie →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+    </div>
+    </sc-if>
+
+    <!-- SAVED -->
+    <!-- HISTORY (past conversations, stored on this device) -->
+    <sc-if value="{{ sheetHistory }}" hint-placeholder-val="hi">
+    <div style="position:relative; background:#fff; border-top-left-radius:20px; border-top-right-radius:20px; padding:10px 0 calc(34px + 14px); animation:ntSheetUp 0.4s cubic-bezier(0.22,1,0.36,1) both; max-height:84%; display:flex; flex-direction:column">
+      <div style="width:38px; height:5px; border-radius:3px; background:#D8D4CC; margin:0 auto 14px; flex:none"></div>
+      <div style="padding:0 22px 14px; flex:none">
+        <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin:0 0 6px">History</p>
+        <h2 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:24px; margin:0">Your conversations</h2>
+        <p style="font-size:13px; line-height:1.5; color:#42403B; margin:12px 0 0">Chats stay on this device. Pick one up where you left off, or start fresh.</p>
+      </div>
+
+      <div class="nt-scroll" style="overflow:auto; border-top:1px solid #E6E3DD; flex:1; min-height:0">
+        <div style="padding:14px 22px; border-bottom:1px solid #E6E3DD; background:#F7F6F3">
+          <button class="nt-tap" onclick="{{ newChat }}" style="width:100%; display:flex; align-items:center; gap:12px; background:none; border:0; padding:4px 0; cursor:pointer; text-align:left">
+            <span style="width:34px; height:34px; border-radius:50%; border:1px dashed #C9C5BC; display:flex; align-items:center; justify-content:center; color:#6F6C64; font-size:19px; flex:none; line-height:1">+</span>
+            <span style="font-size:15px; color:#0E0E0E">Start a new chat</span>
+          </button>
+        </div>
+
+        <sc-if value="{{ hasHistory }}" hint-placeholder-val="{{ true }}">
+          <sc-for list="{{ chatHistory }}" as="h" hint-placeholder-count="2">
+            <div style="padding:16px 22px; border-bottom:1px solid #E6E3DD; display:flex; align-items:center; gap:12px">
+              <button class="nt-tap" onclick="{{ h.onOpen }}" style="flex:1; min-width:0; background:none; border:0; padding:0; cursor:pointer; text-align:left">
+                <span style="display:flex; align-items:center; gap:8px; margin-bottom:6px">
+                  <sc-if value="{{ h.active }}" hint-placeholder-val="hi"><span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#fff; background:#1F7A4D; padding:2px 7px; border-radius:20px">Open now</span></sc-if>
+                  <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#9A968E">{{ h.when }} · {{ h.count }} messages</span>
+                </span>
+                <span style="display:block; font-size:14px; line-height:1.5; color:#0E0E0E; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">{{ h.title }}</span>
+              </button>
+              <button class="nt-tap" onclick="{{ h.onRemove }}" aria-label="Delete conversation" style="background:none; border:0; padding:2px; cursor:pointer; min-width:44px; min-height:44px; box-sizing:border-box; display:inline-flex; align-items:center; justify-content:center; color:#9A968E"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokewidth="2.2" strokelinecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+            </div>
+          </sc-for>
+        </sc-if>
+        <sc-if value="{{ noHistory }}" hint-placeholder-val="{{ true }}">
+          <div style="padding:26px 22px; text-align:center">
+            <p style="font-size:14px; line-height:1.55; color:#42403B; margin:0">No conversations yet. Anything you talk through with Howie shows up here.</p>
+          </div>
+        </sc-if>
+      </div>
+
+      <div style="padding:14px 22px 0; flex:none">
+        <button class="nt-press" onclick="{{ closeSheet }}" style="width:100%; background:#0E0E0E; color:#fff; border:0; border-radius:40px; padding:14px; font-weight:700; font-size:15px; cursor:pointer">Done</button>
+      </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ sheetSaved }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative; background:#fff; border-top-left-radius:20px; border-top-right-radius:20px; padding:10px 0 calc(34px + 14px); animation:ntSheetUp 0.4s cubic-bezier(0.22,1,0.36,1) both; max-height:84%; display:flex; flex-direction:column">
+      <div style="width:38px; height:5px; border-radius:3px; background:#D8D4CC; margin:0 auto 14px; flex:none"></div>
+      <div style="padding:0 22px 14px; flex:none">
+        <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin:0 0 6px">Saved</p>
+        <h2 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:24px; margin:0">Lines worth keeping</h2>
+        <p style="font-size:13px; line-height:1.5; color:#42403B; margin:12px 0 0">Tap the bookmark on any Howie reply to keep it here. Howie remembers what you save in future chats.</p>
+      </div>
+
+      <div class="nt-scroll" style="overflow:auto; border-top:1px solid #E6E3DD; flex:1; min-height:0">
+        <sc-if value="{{ hasNotes }}" hint-placeholder-val="{{ true }}">
+          <sc-for list="{{ notes }}" as="n" hint-placeholder-count="2">
+            <div style="padding:16px 22px; border-bottom:1px solid #E6E3DD">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:9px">
+                <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#fff; background:{{ n.tagBg }}; padding:2px 7px; border-radius:20px">{{ n.tag }}</span>
+                <sc-if value="{{ n.prompt }}" hint-placeholder-val="hi"><span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#6F6C64; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">On: {{ n.prompt }}</span></sc-if>
+              </div>
+              <p style="font-size:14px; line-height:1.6; color:#42403B; margin:0; white-space:pre-wrap">{{ n.text }}</p>
+              <div style="display:flex; align-items:center; gap:16px; margin-top:12px">
+                <button class="nt-tap" onclick="{{ n.onBring }}" style="display:inline-flex; align-items:center; gap:6px; background:none; border:0; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#0E0E0E; cursor:pointer">Bring into chat <span>→</span></button>
+                <span style="flex:1"></span>
+                <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#9A968E">{{ n.ago }}</span>
+                <button class="nt-tap" onclick="{{ n.onRemove }}" aria-label="Remove" style="background:none; border:0; padding:2px; cursor:pointer; min-width:44px; min-height:44px; box-sizing:border-box; display:inline-flex; align-items:center; justify-content:center; color:#9A968E"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokewidth="2.2" strokelinecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+              </div>
+            </div>
+          </sc-for>
+        </sc-if>
+        <sc-if value="{{ noNotes }}" hint-placeholder-val="{{ true }}">
+          <div style="padding:26px 22px; text-align:center">
+            <p style="font-size:14px; line-height:1.55; color:#42403B; margin:0">Nothing saved yet. Tap the bookmark on any Howie reply and it lands here.</p>
+          </div>
+        </sc-if>
+      </div>
+
+      <div style="padding:14px 22px 0; flex:none">
+        <button class="nt-press" onclick="{{ closeSheet }}" style="width:100%; background:#0E0E0E; color:#fff; border:0; border-radius:40px; padding:14px; font-weight:700; font-size:15px; cursor:pointer">Done</button>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- SHARE -->
+    <sc-if value="{{ sheetShare }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative; background:#fff; border-top-left-radius:20px; border-top-right-radius:20px; padding:10px 18px calc(34px + 18px); animation:ntSheetUp 0.4s cubic-bezier(0.22,1,0.36,1) both">
+      <div style="width:38px; height:5px; border-radius:3px; background:#D8D4CC; margin:0 auto 16px"></div>
+      <div style="background:#F7F6F3; border:1px solid #D8D4CC; border-radius:2px; padding:14px 16px; margin-bottom:18px">
+        <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6F6C64; margin:0 0 7px">Tonight's ride home · Maya</p>
+        <p style="font-size:13px; line-height:1.55; color:#42403B; margin:0; white-space:pre-wrap">{{ shareText }}</p>
+      </div>
+      <div style="display:flex; gap:16px; overflow-x:auto; padding-bottom:6px">
+        <sc-for list="{{ shareTargets }}" as="s" hint-placeholder-count="4">
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; flex:none; width:62px">
+            <div style="width:58px; height:58px; border-radius:14px; background:{{ s.bg }}; display:flex; align-items:center; justify-content:center; font-family:'Inter',sans-serif; font-weight:700; font-size:20px; color:{{ s.fg }}">{{ s.glyph }}</div>
+            <span style="font-size:11px; color:#42403B; text-align:center; line-height:1.2">{{ s.label }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <button class="nt-press" onclick="{{ closeSheet }}" style="width:100%; margin-top:18px; background:#F7F6F3; color:#0E0E0E; border:1px solid #D8D4CC; border-radius:40px; padding:14px; font-weight:700; font-size:15px; cursor:pointer">Done</button>
+    </div>
+    </sc-if>
+
+    <!-- SUPPORT -->
+    <sc-if value="{{ sheetSupport }}" hint-placeholder-val="hi">
+    <div style="position:relative; background:#fff; border-top-left-radius:20px; border-top-right-radius:20px; max-height:94vh; overflow-y:auto; padding:10px 18px calc(34px + 18px); animation:ntSheetUp 0.4s cubic-bezier(0.22,1,0.36,1) both">
+      <div style="width:38px; height:5px; border-radius:3px; background:#D8D4CC; margin:0 auto 16px"></div>
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px">
+        <h2 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:23px; margin:0">Contact support</h2>
+        <button class="nt-tap" onclick="{{ closeSheet }}" aria-label="Close" style="background:none; border:0; padding:2px; cursor:pointer; min-width:44px; min-height:44px; box-sizing:border-box; display:inline-flex; align-items:center; justify-content:center; color:#6F6C64; flex:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+      </div>
+
+      <sc-if value="{{ supportSent }}" hint-placeholder-val="hi">
+        <div style="text-align:center; padding:26px 8px 8px">
+          <div style="width:54px; height:54px; border-radius:50%; background:#0E0E0E; display:flex; align-items:center; justify-content:center; margin:0 auto 16px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></div>
+          <h3 style="font-family:'Inter',sans-serif; font-weight:600; font-size:20px; letter-spacing:-0.02em; margin:0 0 8px">Opening your email</h3>
+          <p style="font-size:14px; line-height:1.6; color:#42403B; margin:0 0 22px; max-width:300px; margin-left:auto; margin-right:auto">Your message to <b style="color:#0E0E0E">support@ntangible.co</b> is ready in your mail app. Hit send there and we'll reply within one business day.</p>
+          <button class="nt-press" onclick="{{ closeSheet }}" style="background:#0E0E0E; color:#fff; border:0; border-radius:40px; padding:13px 30px; font-weight:700; font-size:15px; cursor:pointer">Done</button>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ supportNotSent }}" hint-placeholder-val="{{ true }}">
+      <div>
+        <p style="font-size:14px; line-height:1.6; color:#42403B; margin:0 0 20px">Questions, feedback, or something not working? Send our team a note and we'll get back to you.</p>
+
+        <div style="margin-bottom:18px">
+          <label style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#6F6C64; margin-bottom:7px">Subject</label>
+          <input class="nt-fld" value="{{ supportSubject }}" oninput="{{ onSupportSubject }}" placeholder="What's this about?" style="width:100%; background:transparent; border:0; border-bottom:1px solid #D8D4CC; color:#0E0E0E; font-size:16px; padding:8px 0">
+        </div>
+
+        <div style="margin-bottom:20px">
+          <label style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#6F6C64; margin-bottom:7px">Message</label>
+          <textarea value="{{ supportMessage }}" oninput="{{ onSupportMessage }}" placeholder="Tell us what's on your mind…" style="width:100%; min-height:120px; resize:vertical; background:#F7F6F3; border:1px solid #D8D4CC; border-radius:2px; color:#0E0E0E; font-family:'Inter',sans-serif; font-size:15px; line-height:1.55; padding:12px 13px; box-sizing:border-box"></textarea>
+        </div>
+
+        <button class="nt-press" onclick="{{ sendSupport }}" style="width:100%; display:inline-flex; align-items:center; justify-content:center; gap:8px; background:#0E0E0E; color:#fff; border:0; border-radius:40px; padding:14px; font-weight:700; font-size:15px; cursor:pointer">Send to support <span style="font-weight:400">→</span></button>
+
+        <div style="display:flex; align-items:center; gap:8px; justify-content:center; margin-top:16px">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9A968E" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
+          <span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#9A968E">support@ntangible.co · replies in 1 business day</span>
+        </div>
+      </div>
+      </sc-if>
+    </div>
+    </sc-if>
+
+    <!-- SETTINGS -->
+    <sc-if value="{{ sheetSettings }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative; background:#fff; border-top-left-radius:20px; border-top-right-radius:20px; padding:10px 0 calc(34px + 14px); animation:ntSheetUp 0.4s cubic-bezier(0.22,1,0.36,1) both">
+      <div style="width:38px; height:5px; border-radius:3px; background:#D8D4CC; margin:0 auto 14px"></div>
+      <div style="padding:0 22px 16px">
+        <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin:0 0 6px">Account &amp; data</p>
+        <h2 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:24px; margin:0">Settings</h2>
+      </div>
+      <div style="border-top:1px solid #E6E3DD">
+        <sc-for list="{{ toggles }}" as="t" hint-placeholder-count="3">
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:16px 22px; border-bottom:1px solid #E6E3DD; gap:16px">
+            <div style="flex:1">
+              <p style="font-size:15px; margin:0 0 2px">{{ t.label }}</p>
+              <p style="font-size:12px; line-height:1.4; color:#6F6C64; margin:0">{{ t.sub }}</p>
+            </div>
+            <button class="nt-tap" onclick="{{ t.onToggle }}" style="flex:none; width:50px; height:30px; border-radius:30px; border:0; padding:3px; cursor:pointer; background:{{ t.trackBg }}; display:flex; justify-content:flex-start; transition:background .25s ease">
+              <span style="width:24px; height:24px; border-radius:50%; background:#fff; box-shadow:0 1px 3px rgba(0,0,0,0.3); display:block; transform:translateX({{ t.knobX }}); transition:transform .34s cubic-bezier(0.34,1.56,0.64,1)"></span>
+            </button>
+          </div>
+        </sc-for>
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:16px 22px; border-bottom:1px solid #E6E3DD">
+          <span style="font-size:15px">Request my data</span><span style="font-family:'Roboto Mono',monospace; color:#6F6C64">→</span>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:16px 22px">
+          <span style="font-size:15px; color:#B4261F">Delete account</span><span style="font-family:'Roboto Mono',monospace; color:#B4261F">→</span>
+        </div>
+      </div>
+      <div style="padding:16px 22px 0">
+        <button class="nt-press" onclick="{{ closeSheet }}" style="width:100%; background:#0E0E0E; color:#fff; border:0; border-radius:40px; padding:14px; font-weight:700; font-size:15px; cursor:pointer">Done</button>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- PARTNER PICKER -->
+    <sc-if value="{{ sheetPartner }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative; background:#fff; border-top-left-radius:20px; border-top-right-radius:20px; padding:10px 0 calc(34px + 14px); animation:ntSheetUp 0.4s cubic-bezier(0.22,1,0.36,1) both; max-height:82%; display:flex; flex-direction:column">
+      <div style="width:38px; height:5px; border-radius:3px; background:#D8D4CC; margin:0 auto 14px; flex:none"></div>
+      <div style="padding:0 22px 14px; flex:none">
+        <p style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:#6F6C64; margin:0 0 6px">Select your organization</p>
+        <h2 style="font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.02em; font-size:24px; margin:0">Organizations</h2>
+      </div>
+      <div class="nt-scroll" style="overflow:auto; border-top:1px solid #E6E3DD">
+        <sc-for list="{{ partnerOptions }}" as="p" hint-placeholder-count="5">
+          <button class="nt-tap" onclick="{{ p.onSelect }}" style="width:100%; display:flex; align-items:center; gap:14px; background:#fff; border:0; border-bottom:1px solid #E6E3DD; padding:14px 22px; cursor:pointer; text-align:left">
+            <span style="display:inline-flex; align-items:center; justify-content:center; background:#0E0E0E; border-radius:5px; padding:5px 8px; min-width:58px; min-height:30px; flex:none">
+              <sc-if value="{{ p.isAlliance }}" hint-placeholder-val="hi"><img src="cdc99512-07a6-4fdd-81ff-00cccace5d43.png" alt="" style="height:18px; width:auto; display:block"></sc-if>
+              <sc-if value="{{ p.noLogo }}" hint-placeholder-val="{{ true }}"><span style="font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#fff">{{ p.short }}</span></sc-if>
+            </span>
+            <span style="flex:1; min-width:0">
+              <span style="display:block; font-size:16px; color:#0E0E0E">{{ p.name }}</span>
+              <span style="display:block; font-family:'Roboto Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#6F6C64; margin-top:2px">{{ p.sport }}</span>
+            </span>
+            <sc-if value="{{ p.selected }}" hint-placeholder-val="{{ true }}">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E0E0E" strokewidth="2.6" strokelinecap="round" strokelinejoin="round" style="flex:none"><path d="M4 12l5 5L20 6"></path></svg>
+            </sc-if>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+    </sc-if>
+  </div>
+  </sc-if>
+
+</div>
+</x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:474,&quot;height&quot;:946},&quot;startScreen&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;login&quot;,&quot;home&quot;,&quot;drive&quot;,&quot;chat&quot;,&quot;guides&quot;,&quot;profile&quot;],&quot;default&quot;:&quot;login&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;parentName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Sam&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = {
+    screen: 'login',
+    sheet: null,
+    obStep: 0, onboarded: false,
+    driveOutcome: null,
+    scriptLoading: false,
+    guideSlug: null,
+    messages: [],
+    input: '',
+    busy: false,
+    rated: {},
+    saved: {},
+    addingNote: false,
+    noteDraft: '',
+    savedFilter: 'all',
+    notes: [
+      { id: 'n1', source: 'howie', prompt: "He got benched and he's crushed.", text: "That stings. When she's ready, ask instead of reassure: \"What do you think the coach is seeing? What's in your control this week?\"", at: Date.now() - 5 * 3600 * 1000 }
+    ],
+    settings: { reminders: true, reduced: false, saveLocal: true },
+    supportSubject: '', supportMessage: '', supportSent: false,
+    partner: 'alliance', expanded: {},
+    access: { org: 'alliance', email: '', athleteId: '', dob: '', lastName: '', attested: false, sent: false, error: '' }
+  };
+
+  PARTNERS = [
+    { id: 'alliance', name: 'Alliance Fastpitch', short: 'Alliance', sport: 'Softball · 8U–18U', logo: 'assets/alliance-fastpitch.png', idLabel: 'Alliance #' },
+    { id: 'fss', name: 'Future Stars Series', short: 'Future Stars', sport: 'Baseball · Scouting', logo: null, idLabel: 'FSS Player #' },
+    { id: 'pg', name: 'Perfect Game', short: 'Perfect Game', sport: 'Baseball / Softball', logo: null, idLabel: 'PG Cohort #' },
+    { id: 'usssa', name: 'USSSA', short: 'USSSA', sport: 'Multi-sport', logo: null, idLabel: 'Member #' },
+    { id: 'other', name: "My organization isn't listed", short: 'Other', sport: 'Request manually', logo: null, idLabel: 'Org #' }
+  ];
+
+  getPartner(id) { return this.PARTNERS.find(p => p.id === id) || this.PARTNERS[0]; }
+
+  athlete = {
+    firstName: "Maya", sport: "Softball", position: "Shortstop",
+    communicationStyle: "Reserved",
+    communicationNote: "Processes internally before she talks. Silence after a game is processing, not shutting you out. Side-by-side settings (the car, a walk) work better than face-to-face.",
+    learningStyle: "Visual",
+    learningNote: "Converts what she sees into skill. She would rather watch one rep than hear ten explanations.",
+    motivationDriver: "Intrinsic Growth",
+    driverNote: "Driven by getting better, not by trophies or praise. Ask what she learned, not whether she won."
+  };
+
+  NTERPRET = {
+    assessed: 'December 2025', validity: 'Valid through June 2026',
+    narrative: "Maya performs best when she's had time to process and she trusts the people around her. She reads situations internally before she acts, learns fastest when she can see a rep and then try it, and measures herself against her own growth rather than the scoreboard. Pressure she's prepared for sharpens her; surprises and unclear expectations are where she dips.",
+    dimensions: [
+      { axis: 'Communicates', value: 'Reserved', scale: 'Reserved · Supportive · Expressive · Direct', tagline: 'Processes before speaking', body: "She thinks things through internally before she says them. Silence after a game is her working, not shutting you out. She opens up more side-by-side (the car, a walk) than face-to-face.", general: "Reserved athletes think before they share. They rarely react in the heat of the moment and do their best processing in low-pressure, one-on-one settings rather than in front of a group." },
+      { axis: 'Learns', value: 'Visual', scale: 'Visual · Auditory · Kinesthetic', tagline: 'Sees it, then does it', body: 'She converts what she sees into skill. One clear rep on film is worth ten spoken cues. Demonstration and imagery land where long explanations slide off.', general: "Visual learners absorb through what they observe. They pick a skill up fastest when it's shown before it's described, and they hold corrections better from a clip than from a conversation." },
+      { axis: 'Driven By', value: 'Intrinsic Growth', scale: 'Intrinsic Growth · Competitive Edge · Team Commitment · Recognition', tagline: 'Runs on getting better', body: 'Her fuel is improvement, not trophies or praise. She measures herself against her own progress. "What did I learn?" moves her more than "did we win?"', general: "Athletes anchored by Intrinsic Growth are driven by mastery. Their motivation holds through slumps because it doesn't ride on results, and they respond best to challenges framed as progress." }
+    ],
+    growthAreas: [
+      { title: 'Unclear roles rattle her', body: "Last-minute changes or fuzzy expectations can start a spiral. A short pre-game routine that re-centers on what's in her control cuts that short before it builds." },
+      { title: 'Slow to trust new coaching', body: "It takes her time to open up to a new coach. A heads-up about how she processes, plus a few early wins, shortens that window." }
+    ],
+    hacks: [
+      { when: 'Pre-Game', body: "Help her lock in with a 3-word role cue before first pitch (\"see it, trust it, go\"). It settles responsibilities and speeds her first decision." },
+      { when: 'Post-Game', body: "Keep the ride home a 10-second reset, not a debrief: one breath, one thing that went well, one intention for next game. Save the rest for tomorrow." },
+      { when: 'Practice', body: "Encourage a short checklist each session: 2 things to reinforce, 1 skill to drill. It aims her reps and builds confidence through intention." }
+    ],
+    afterMistakes: "She replays mistakes internally for roughly a day. She doesn't need a same-night breakdown, she's already running the loop. Give it 24 hours, help her pull one lesson, then let it go. When you revisit, a clip beats a lecture."
+  };
+
+  CLUTCH = {
+    score: 788, tier: 'GREAT', band: '750 – 799', assessed: 'December 2025', validity: 'Valid through June 2026',
+    history: [
+      { date: 'Jun 2025', score: 742, label: 'Above Average' },
+      { date: 'Dec 2025', score: 788, label: 'Great' }
+    ],
+    parentSummary: "Maya scores 788, in the Great range. That means she has the composure and decision-speed under pressure that college recruiters look for. She tends to hold steady, or rise, when the game is on the line.",
+    whatItMeans: "Clutch Factor isn't a measure of talent. It's how an athlete processes information and handles emotion in high-pressure moments, whether they elevate, hold, or dip when it matters most. It's scored out of 1000, and the good news for any range: it's highly trainable.",
+    forParents: "You don't need to coach this number. Just know that Maya already performs well under pressure, so the most helpful thing you can do is keep the stakes low and let her competitive side do the work. Howie can suggest the exact words for big-game weeks.",
+    tiers: [
+      { band: '800+', label: 'Elite', here: false, meaning: 'Wired to accelerate when pressure peaks.' },
+      { band: '750 – 799', label: 'Great', here: true, meaning: 'The composure and decision speed D1 recruiters look for.' },
+      { band: '725 – 749', label: 'Above Average', here: false, meaning: 'Handles pressure well, on the cusp of top-tier.' },
+      { band: '651 – 724', label: 'Average', here: false, meaning: 'A solid foundation; consistency under stress is the next step.' },
+      { band: '650 & under', label: 'Below Average', here: false, meaning: 'Pressure can disrupt focus, and that responds fast to reps.' }
+    ]
+  };
+
+  statCells = [
+    { k: "OPS", v: "8.70" }, { k: "WHIP", v: "2.10" }, { k: "FIP", v: "9.90" }, { k: "WAR", v: "9.70" },
+    { k: "ISO", v: "3.60" }, { k: "BABIP", v: "0.29" }, { k: "K%", v: "1.00" }, { k: "EV", v: "7.50" },
+    { k: "SLG", v: "5.00" }, { k: "LA", v: "1.30" }, { k: "ERA", v: "6.10" }, { k: "GB%", v: "3.70" }
+  ];
+
+  QUICK = [
+    { label: "Bad game tonight", say: "She had a rough game tonight. What do I say in the car?" },
+    { label: "Tryout coming up", say: "There's a tryout this weekend. How do I help without adding pressure?" },
+    { label: "Got benched", say: "She got benched and she's crushed. Help me with this one." },
+    { label: "I'm the nervous one", say: "Honestly, I am the nervous one on game days. Help me first." }
+  ];
+
+  STARTERS = [
+    "She had a bad game tonight. What do I say in the car?",
+    "How do I talk about a tryout coming up this weekend?",
+    "She got benched and she's crushed. Help.",
+    "Honestly? I am the nervous one on game days. Help me first."
+  ];
+
+  OUTCOMES = [
+    { n: "01", key: "great", label: "Great game", sub: "She played well and she knows it" },
+    { n: "02", key: "rough", label: "Rough night", sub: "Mistakes, frustration, quiet kid" },
+    { n: "03", key: "tough", label: "Tough loss", sub: "Big game, hard ending" },
+    { n: "04", key: "benched", label: "Barely played", sub: "Benched, pulled, or stuck watching" },
+    { n: "05", key: "error", label: "The costly mistake", sub: "Her error decided it" },
+    { n: "06", key: "teammate", label: "Team drama", sub: "Conflict with a teammate or the group" }
+  ];
+
+  SCRIPTS = {
+    great: {
+      opener: "Whatever else happened out there, I loved watching you play tonight.",
+      driver: "Maya runs on getting better, not the scoreboard, so name the growth, not the win. Ask what she figured out tonight that she couldn't do last month.",
+      revisit: "She's a visual learner. If she wants to break down a good play later, pull up a clip instead of talking it through.",
+      avoid: ["\"You were the best one out there.\" Ranking her against teammates isn't the fuel she runs on.", "Over-celebrating the result. It quietly raises the stakes for next time.", "A long play-by-play in the car. Let the good night just be a good night."],
+      closer: "I love watching you play."
+    },
+    rough: {
+      opener: "Rough one. I'm just glad I was there. We don't have to talk about it unless you want to.",
+      driver: "Maya processes internally before she talks, so silence in the car is her working, not shutting you out. Keep your eyes forward and let the quiet sit.",
+      mistake: "If she brings up a specific mistake, don't pile on or rescue her from it. A simple \"that happens to everyone who plays this game\" is enough tonight.",
+      revisit: "She replays mistakes for about a day. Skip the same-night debrief. If she wants to look at it tomorrow, watch a clip together instead of talking it through.",
+      avoid: ["\"You'll get 'em next time.\" It rushes her past a feeling she needs to sit with.", "\"You should have...\" It turns the car into a film room.", "Coaching the game on the ride home. You're the parent, not the second coach."],
+      closer: "I love watching you play."
+    },
+    tough: {
+      opener: "That's a hard way for it to end. I'm proud of how you competed.",
+      driver: "Name the effort and the growth, not the result. With Maya, \"what did you learn out there\" lands better than anything about the score.",
+      revisit: "Give it the night. She's a visual processor, so if she wants to revisit the turning point tomorrow, a clip beats a conversation.",
+      avoid: ["\"It's just one game.\" True, but it dismisses how much it mattered to her right now.", "Replaying the final play. She's already running it on a loop.", "Comparing this team or game to another."],
+      closer: "I love watching you play."
+    },
+    benched: {
+      opener: "I know tonight wasn't the night you wanted. I still loved watching you be part of it.",
+      driver: "Playing time is loaded territory. Don't promise to fix it and don't trash the coach. Ask what she thinks the coach is seeing and what's in her control this week.",
+      revisit: "Maya's driven by her own growth, so point her at the next rep, not the depth chart. Tomorrow, watch film of what earns minutes at her spot.",
+      avoid: ["\"Your coach doesn't know what he has.\" Even if true, it teaches her to look for someone to blame.", "Promising you'll talk to the coach. Let her lead that with your support behind her.", "\"At least you got an inning.\" It minimizes a real disappointment."],
+      closer: "I love watching you play."
+    },
+    error: {
+      opener: "I saw a kid who kept competing after a tough break. That's the part I'll remember.",
+      driver: "Maya replays mistakes internally for about a day, so she doesn't need you to replay it too. Let her own it without you narrating it.",
+      mistake: "If she names the error, keep it to one honest, kind sentence: \"that happens to everyone who plays this game.\" Then let it go.",
+      revisit: "Skip the same-night breakdown. If she wants to fix something tomorrow, give her one visual: a clip or a drill she can watch, not a lecture.",
+      avoid: ["\"It wasn't that bad.\" If it felt bad to her, it was bad to her.", "A detailed replay of the play tonight.", "\"Shake it off.\" She processes by sitting with it, not skipping past it."],
+      closer: "I love watching you play."
+    },
+    teammate: {
+      opener: "Sounds like tonight had more going on than the game. I'm here if you want to talk it through.",
+      driver: "Let her lead. Maya needs to feel the relationship is steady before she'll open up. Ask questions, and resist the urge to solve it for her.",
+      revisit: "If it's still heavy tomorrow, help her separate the sport from the people around it. That's usually where the real knot is.",
+      avoid: ["Taking sides or calling the other kid out. It teaches her to outsource the problem.", "\"Just ignore them.\" It skips the part where she figures out what she wants to do.", "Making it bigger than she's making it."],
+      closer: "I love watching you play."
+    }
+  };
+
+  GUIDES = [
+    { slug: "the-foundation", title: "The Foundation", blurb: "Universal principles for every athlete. Start here.", sections: [
+      { heading: "Two different jobs", body: "You have been a parent since the day your child was born. You are the parent of an athlete only at certain times. Knowing which mode you are in is the single most useful skill in sports parenting. Sport ends for 99% of kids. The parent-athlete relationship does not." },
+      { heading: "Start with a question, not a verdict", body: "When your athlete has a bad game, open with a question and then wait. Let the silence sit longer than feels natural. Silence is processing, not rejection.", say: ["\"Want to talk about it, or want some quiet?\"", "\"I'm glad I got to watch you play.\""] },
+      { heading: "The one line that always works", body: "Decades of athlete interviews land on the same six words as the thing kids most want to hear from a parent after competition:", say: ["\"I love watching you play.\""] },
+      { heading: "What to avoid everywhere", avoid: ["\"You should have...\" It turns the car into a film room.", "Coaching the game on the ride home. You are the parent, not the second coach.", "\"You're fine.\" It dismisses the feeling instead of letting them have it.", "Comparing them to a teammate or sibling, in either direction."] }
+    ] },
+    { slug: "after-a-bad-game", title: "After a Bad Game", blurb: "The car, the kitchen, the next morning.", sections: [
+      { heading: "The ride home is not a debrief", body: "Research that filmed real rides home found they were mostly silence, and the talk that did happen was generic praise or critique. Neither helps. Your job in the car is simple: keep the relationship warm and let them decide if and when to talk." },
+      { heading: "Read your athlete, not the scoreboard", body: "A Reserved athlete needs side-by-side quiet: music on, eyes forward, no pressure. A Direct athlete wants one honest sentence, not a cushion. If you know your athlete's profile, Drive Home Mode gives you the exact opener." },
+      { heading: "If they bring up their mistakes", body: "Let them own it without piling on or rescuing them from it.", say: ["\"That happens to everyone who plays this game. What do you want to do with it?\""], avoid: ["Replaying the mistake in detail the same night.", "\"It wasn't that bad.\" If it felt bad to them, it was bad to them."] },
+      { heading: "The next morning", body: "If they want to revisit it, follow their lead and ask what they noticed. If they don't bring it up, let it go. Bad games are allowed to just be bad games." }
+    ] },
+    { slug: "before-the-big-game", title: "Before the Big Game", blurb: "Pre-game words that settle nerves instead of adding pressure.", sections: [
+      { heading: "Your job is to lower the stakes", body: "Your athlete already knows the game matters. Anything you add on top of that is weight, not fuel. The best pre-game message says: the work is done, I believe in you, and nothing about today changes how I see you.", say: ["\"You've put in the work. You know what to do. Go play your game.\"", "\"Have fun out there. I'll be watching.\""], avoid: ["\"This is your big chance.\" You are amplifying pressure they already feel.", "Last-minute technical reminders. If it isn't built by now, a sentence in the car won't build it."] },
+      { heading: "Keep the message consistent", body: "Whatever you say before games, say roughly the same thing every time. A steady pre-game line becomes a cue that settles them." },
+      { heading: "Manage your own nerves", body: "Kids read parents better than parents think. If your stomach is in knots, do not narrate it. Your calm is borrowed calm for them." }
+    ] },
+    { slug: "understanding-their-profile", title: "Understanding Their Profile", blurb: "What NTerpret™ tells you, and how to use it without boxing them in.", sections: [
+      { heading: "Three windows, not three labels", body: "NTerpret maps your athlete on three independent dimensions: how they communicate, how they learn, and what drives them. None is ranked, and none is more important than another. They are three different windows into how your child operates as an athlete." },
+      { heading: "The profile is a hypothesis, not a verdict", body: "If something in the profile doesn't match the kid at your dinner table, trust what you see and keep watching. Use it as a starting point for noticing, not a box to file them in." },
+      { heading: "How to use it day to day", body: "The profile changes the HOW, not the WHAT. Every athlete needs love, honesty, and steadiness. The profile tells you the delivery.", say: ["\"I've been trying to talk less and ask more. Tell me if I get it wrong.\""] }
+    ] },
+    { slug: "the-hardest-conversations", title: "The Hardest Conversations", blurb: "Benched, cut, quitting, coach conflict, being too hard on themselves.", sections: [
+      { heading: "When they get benched", body: "Playing time is the most emotionally loaded topic in youth sports. Do not promise to fix it and do not trash the coach.", say: ["\"That stings. What do you think the coach is seeing? What's in your control this week?\""], avoid: ["\"Your coach doesn't understand you like I do.\" Even when true, it teaches them the answer to adversity is finding someone to blame."] },
+      { heading: "When they say they want to quit", body: "Most quit talk is about something specific: a coach, a teammate, exhaustion, or fear, not the sport itself. Find out which before anything else.", say: ["\"I hear you, and that's real. Before anything changes, help me understand: is it the sport, or something around the sport?\""] },
+      { heading: "When they're too hard on themselves", body: "You are watching them spiral over a small mistake and it feels helpless. Do not argue with the feeling; give it a boundary.", say: ["\"You're allowed to be frustrated tonight. Tomorrow we move. Compare yourself to who you were last month, not to perfect.\""] }
+    ] },
+    { slug: "recruiting", title: "The Recruiting Journey", blurb: "Visits, commitments, and keeping perspective.", sections: [
+      { heading: "Whose journey it is", body: "Recruiting is your athlete's process with your guardrails, not the reverse. Your job is logistics, perspective, and protecting them from deciding under adrenaline." },
+      { heading: "Campus visits", body: "Excitement peaks on the visit. That is exactly why the rule exists:", say: ["\"We don't commit on the day of the visit. If it's right today, it will still be right Thursday.\""], avoid: ["Falling in love with the school out loud before they have. Your enthusiasm becomes their pressure."] },
+      { heading: "Keep the kid bigger than the recruit", body: "If every dinner conversation is recruiting, the sport starts to feel like a job interview that never ends. Set recruiting-free zones." }
+    ] }
+  ];
+
+  THINKING = ["Taking a beat", "Checking the playbook", "Reading the moment", "Finding the right words", "Re-reading the profile", "Sitting with it", "Choosing the words that land", "Working the problem"];
+
+  MOMENT_LABELS = { great: "a great game", rough: "a rough night", tough: "a tough loss", benched: "barely playing", error: "a costly mistake", teammate: "team drama" };
+
+  componentWillUnmount() { clearTimeout(this._st); }
+
+  componentDidUpdate() {
+    if (this.state.screen === 'chat' && this.chatEl) {
+      this.chatEl.scrollTop = this.chatEl.scrollHeight;
+    }
+  }
+
+  go(screen) { this.setState({ screen, sheet: null }); }
+  goBack() {
+    const s = this.state.screen;
+    if (s === 'guide') return this.setState({ screen: 'guides' });
+    if (s === 'nterpret') return this.setState({ screen: 'profile' });
+    if (s === 'clutch') return this.setState({ screen: 'profile' });
+    this.setState({ screen: 'home' });
+  }
+  enterPortal() { this.setState({ screen: 'home', sheet: this.termsSeen() ? null : 'disclaimer', partner: 'alliance' }); }
+  termsSeen() { if (this.state.termsAccepted) return true; try { return !!localStorage.getItem('ah_terms_parent'); } catch (e) { return false; } }
+  acceptTerms() { try { localStorage.setItem('ah_terms_parent', '1'); } catch (e) {} this.setState({ termsAccepted: true, sheet: null }); }
+  goAccess() { this.setState({ screen: 'access' }); }
+  goLogin() { this.setState({ screen: 'login', sheet: null, access: { ...this.state.access, sent: false, error: '' } }); }
+  openPartnerPicker() { this.setState({ sheet: 'partner' }); }
+  selectPartner(id) { this.setState({ access: { ...this.state.access, org: id, error: '' }, sheet: null }); }
+  setAccess(key, value) { this.setState({ access: { ...this.state.access, [key]: value, error: '' } }); }
+  submitAccess() {
+    const a = this.state.access;
+    let error = '';
+    if (!a.email.includes('@')) error = 'Enter a valid email address.';
+    else if (a.org !== 'other' && (!a.athleteId.trim() || !a.dob.trim() || !a.lastName.trim())) error = "All athlete fields are required to match the roster.";
+    else if (!a.attested) error = 'Please confirm you are the parent or guardian, 18 or older.';
+    if (error) return this.setState({ access: { ...a, error } });
+    this.setState({ access: { ...a, sent: true, error: '' } });
+  }
+  enterPortalFromAccess() {
+    this.setState({ screen: 'home', sheet: this.termsSeen() ? null : 'disclaimer', partner: this.state.access.org });
+  }
+  closeSheet() { this.setState({ sheet: null, scriptLoading: false }); }
+  openShare() { this.setState({ sheet: 'share' }); }
+  openSettings() { this.setState({ sheet: 'settings' }); }
+  openSupport() { this.setState({ sheet: 'support', supportSent: false }); }
+  sendSupport() {
+    const subj = (this.state.supportSubject || '').trim() || 'Parent app support';
+    const msg = (this.state.supportMessage || '').trim();
+    const body = msg + '\n\n- Sent from the NTangible Parent app';
+    const url = 'mailto:support@ntangible.co?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+    try { window.location.href = url; } catch (e) {}
+    this.setState({ supportSent: true });
+  }
+
+  pickOutcome(key) {
+    this.setState({ driveOutcome: key, sheet: 'script', scriptLoading: true });
+    clearTimeout(this._st);
+    this._st = setTimeout(() => this.setState({ scriptLoading: false }), 1700);
+  }
+
+  componentDidMount() {
+    try { if (localStorage.getItem('ah_onboarded_parent')) this.setState({ onboarded: true }); } catch (e) {}
+    try { if (localStorage.getItem('ah_terms_parent')) this.setState({ termsAccepted: true }); } catch (e) {}
+  }
+  obNext() { const s = this.state.obStep || 0; if (s >= 2) return this.finishOnboard(); this.setState({ obStep: s + 1 }); }
+  finishOnboard() { try { localStorage.setItem('ah_onboarded_parent', '1'); } catch (e) {} this.setState({ onboarded: true, obStep: 0 }); }
+
+  openGuide(slug) { this.setState({ screen: 'guide', guideSlug: slug, sheet: null }); }
+
+  askFrom(text) {
+    clearTimeout(this._reply);
+    this.setState({ screen: 'chat', sheet: null, messages: [], input: '', busy: false, rated: {}, saved: {} });
+    setTimeout(() => this.send(text), 80);
+  }
+
+  toggle(key) { this.setState({ expanded: { ...this.state.expanded, [key]: !this.state.expanded[key] } }); }
+
+  pickAck(content) {
+    const c = content.toLowerCase();
+    if (/(loss|lost|bad game|rough|mistake|error|crushed|cried|terrible)/.test(c)) return "Oof. Those nights are heavy. Give me a second.";
+    if (/(quit|cut|benched|playing time|never plays|bench)/.test(c)) return "That's a hard one, and worth getting right. Let me take a beat.";
+    if (/(nervous|anxious|my fault|help me first|i am the)/.test(c)) return "Takes some honesty to ask that. Let me think.";
+    if (/(tryout|big game|championship|playoffs|showcase|recruit)/.test(c)) return "Good timing to ask. Let me draw something up.";
+    return "That's a great question. Let me think on it.";
+  }
+
+  replyFor(content) {
+    const c = content.toLowerCase();
+    if (/(bench|playing time|\bcut\b|sat |didn't play|barely play)/.test(c)) {
+      return "This one's loaded, so let's get it right. Two rules first: don't promise to fix it, and don't trash the coach.\n\nWhen she's ready, ask instead of reassure: \"What do you think the coach is seeing? What's in your control this week?\" That points her growth-drive at the next rep instead of the depth chart, which is where Maya does her best thinking.\n\nThe conversation with the coach, if there is one, should be hers to lead with you behind her.\n\nTonight, though? Tonight she just needs to know you're glad she's on the team.";
+    }
+    if (/(loss|lost|bad game|rough|mistake|error|crushed)/.test(c)) {
+      return "Start with quiet. Maya processes a hard night internally, so the kindest thing you can do in the car is not make her perform being okay.\n\nIf you say anything, keep it small and warm: \"Rough one. I'm glad I was there.\" Then let the silence sit. It feels longer than it is.\n\nThe game review can wait a day. She replays mistakes for about a day anyway, so a same-night debrief just adds your voice to a loop she's already running. Tomorrow, if she brings it up, watch a clip together instead of talking it through.\n\nAnd whatever else, the line that always works: \"I love watching you play.\"";
+    }
+    if (/(tryout|big game|before|pre-game|championship|showcase)/.test(c)) {
+      return "Your job before a tryout is to lower the stakes, not raise them. Maya already knows it matters.\n\nKeep it normal. The same words you'd use before any game: \"You've put in the work. Go play your game.\" Big moments call for normal, not special.\n\nSkip the last-minute technical reminders. If it isn't built by now, a sentence in the car won't build it, it'll just give her one more thing to decode.\n\nAnd manage your own nerves quietly. She reads you better than you think. Your calm is borrowed calm for her.";
+    }
+    if (/(bench|playing time|cut|sat|didn't play)/.test(c)) {
+      return "This one's loaded, so let's get it right. Two rules first: don't promise to fix it, and don't trash the coach.\n\nWhen she's ready, ask instead of reassure: \"What do you think the coach is seeing? What's in your control this week?\" That points her growth-drive at the next rep instead of the depth chart, which is where Maya does her best thinking.\n\nThe conversation with the coach, if there is one, should be hers to lead with you behind her.\n\nTonight, though? Tonight she just needs to know you're glad she's on the team.";
+    }
+    if (/(nervous|anxious|my fault|help me first|i am the|i'm the)/.test(c)) {
+      return "Good on you for looking inward first. Most parents never ask that.\n\nHere's the thing: kids read parents better than parents think. If your stomach's in knots, Maya will catch it, so the most useful pre-game work is on your own nerves, not hers.\n\nDon't narrate the anxiety. Watch from wherever you naturally behave best. And give yourself the same grace you'd give her.\n\nThen the only line she needs from you: \"I love watching you play.\"";
+    }
+    return "That's worth a real answer. With Maya, the move is almost always the same shape: start with the relationship, then let her growth-drive do the work.\n\nLead with a question, not a verdict, and give the silence room. She processes before she talks, so quiet is her thinking, not a wall.\n\nWhatever the specifics, you can't go wrong ending on the six words that always land: \"I love watching you play.\"";
+  }
+
+  send(text) {
+    const content = (text || this.state.input || "").trim();
+    if (!content || this.state.busy) return;
+    const ack = this.pickAck(content);
+    const word = this.THINKING[Math.floor(Math.random() * this.THINKING.length)];
+    const next = [...this.state.messages, { role: "user", content }];
+    this.setState({
+      messages: [...next, { role: "assistant", content: "", ack, word }],
+      input: "", busy: true
+    });
+    const reply = this.replyFor(content);
+    this._reply = window.setTimeout(() => {
+      const m = [...this.state.messages];
+      m[m.length - 1] = { role: "assistant", content: reply, ack, word };
+      this.setState({ messages: m, busy: false });
+    }, 2000);
+  }
+
+  refreshChat() {
+    clearTimeout(this._reply);
+    this.setState({ messages: [], input: '', busy: false, rated: {}, saved: {} });
+  }
+  openSaved() { this.setState({ sheet: 'saved', addingNote: false, noteDraft: '' }); }
+  saveScript() {
+    const o = this.state.driveOutcome;
+    const s = o ? this.SCRIPTS[o] : null;
+    if (!s || this.state.scriptSaved) return;
+    const label = (this.MOMENT_LABELS[o] || 'Drive home') + ' · what to say';
+    this.setState({
+      scriptSaved: true,
+      notes: [{ id: 'ds' + Date.now(), source: 'drivehome', prompt: label, text: s.opener, at: Date.now() }, ...this.state.notes]
+    });
+  }
+  startNote() { this.setState({ addingNote: true }); }
+  cancelNote() { this.setState({ addingNote: false, noteDraft: '' }); }
+  onNoteDraftChange(v) { this.setState({ noteDraft: v }); }
+  saveOwnNote() {
+    const text = (this.state.noteDraft || '').trim();
+    if (!text) return;
+    this.setState({ notes: [{ id: 'own' + Date.now(), source: 'mine', prompt: '', text, at: Date.now(), mine: true }, ...this.state.notes], addingNote: false, noteDraft: '' });
+  }
+  bringToChat(note) {
+    this.setState({ screen: 'chat', sheet: null });
+    setTimeout(() => this.send('Earlier I saved this: "' + note.text + '" Help me put it into practice.'), 80);
+  }
+
+  rate(i, val) {
+    if (this.state.rated[i]) return;
+    this.setState({ rated: { ...this.state.rated, [i]: val } });
+  }
+  keep(i) {
+    if (this.state.saved[i]) return;
+    const msg = this.state.messages[i];
+    const prompt = this.state.messages[i - 1] ? this.state.messages[i - 1].content : "";
+    this.setState({
+      saved: { ...this.state.saved, [i]: true },
+      notes: [{ id: 'k' + i + Date.now(), source: 'howie', prompt, text: msg.content, at: Date.now() }, ...this.state.notes]
+    });
+  }
+  removeNote(id) { this.setState({ notes: this.state.notes.filter(n => n.id !== id) }); }
+
+  toggleSetting(key) { this.setState({ settings: { ...this.state.settings, [key]: !this.state.settings[key] } }); }
+
+  signOut() { this.setState({ screen: 'login', sheet: null, messages: [], input: '', rated: {}, saved: {} }); }
+
+  timeAgo(ts) {
+    const d = Math.floor((Date.now() - ts) / 1000);
+    if (d < 60) return "just now";
+    if (d < 3600) return Math.floor(d / 60) + "m ago";
+    if (d < 86400) return Math.floor(d / 3600) + "h ago";
+    return Math.floor(d / 86400) + "d ago";
+  }
+
+  renderVals() {
+    if (!this._inited) {
+      this._inited = true;
+      const ss = this.props.startScreen;
+      if (ss && ss !== 'login') this.state.screen = ss;
+    }
+    const pname = this.props.parentName || 'Sam';
+    const st = this.state;
+    const screen = st.screen;
+    const script = st.driveOutcome ? this.SCRIPTS[st.driveOutcome] : null;
+    const guide = st.guideSlug ? this.GUIDES.find(g => g.slug === st.guideSlug) : null;
+
+    const mlist = st.messages.map((m, i) => {
+      const isUser = m.role === 'user';
+      return {
+        idx: i, isUser, isHowie: !isUser, content: m.content, ack: m.ack || '', word: m.word || 'Thinking it through',
+        thinking: !isUser && !m.content,
+        showActions: !isUser && !!m.content && !st.busy,
+        rated: !!st.rated[i], notRated: !st.rated[i],
+        saved: !!st.saved[i], saveLabel: st.saved[i] ? 'Saved' : 'Save', saveColor: st.saved[i] ? '#0E0E0E' : '#6F6C64', saveFill: st.saved[i] ? '#0E0E0E' : 'none',
+        onUp: () => this.rate(i, 'up'), onDown: () => this.rate(i, 'down'), onSave: () => this.keep(i)
+      };
+    });
+
+    const trackOn = '#0E0E0E', trackOff = '#D8D4CC';
+    const toggles = [
+      { key: 'reminders', label: 'Game-day reminders', sub: 'A nudge to check Drive Home Mode after games' },
+      { key: 'reduced', label: 'Reduce motion', sub: 'Calm the animations across the app' },
+      { key: 'saveLocal', label: 'Keep notes on this device', sub: 'Saved lines stay private to this phone' }
+    ].map(t => {
+      const on = st.settings[t.key];
+      return { ...t, on, trackBg: on ? trackOn : trackOff, knobX: on ? '20px' : '0px', justify: on ? 'flex-end' : 'flex-start', onToggle: () => this.toggleSetting(t.key) };
+    });
+
+    const shareText = script
+      ? "START HERE: " + script.opener + "\n\nLATER: " + script.revisit + "\n\nAnd end with: I love watching you play."
+      : "";
+
+    return {
+      pname,
+      isLogin: screen === 'login',
+      isAccess: screen === 'access',
+      appView: screen !== 'login' && screen !== 'access',
+      ...(() => {
+        const step = st.obStep || 0;
+        return {
+          showOnboard: (screen !== 'login' && screen !== 'access') && !st.onboarded,
+          ob0: step === 0, ob1: step === 1, ob2: step === 2,
+          obDots: [0,1,2].map(i => ({ bg: i === step ? '#0E0E0E' : '#D8D4CC', w: i === step ? '22px' : '7px' })),
+          obCta: step === 2 ? "I'm ready" : 'Next',
+          obNext: () => this.obNext(),
+          obSkip: () => this.finishOnboard(),
+        };
+      })(),
+      isHome: screen === 'home', isDrive: screen === 'drive', isChat: screen === 'chat',
+      isGuides: screen === 'guides', isGuide: screen === 'guide', isProfile: screen === 'profile',
+      isNterpret: screen === 'nterpret',
+      isClutch: screen === 'clutch',
+      clutch: this.CLUTCH,
+      clutchPct: (this.CLUTCH.score / 1000) * 100,
+      clutchTiers: this.CLUTCH.tiers.map(t => ({ ...t, notHere: !t.here, rowBg: t.here ? '#0E0E0E' : '#fff', fg: t.here ? '#fff' : '#0E0E0E', metaFg: t.here ? 'rgba(255,255,255,0.82)' : '#42403B', labelFg: t.here ? 'rgba(255,255,255,0.6)' : '#6F6C64' })),
+      goClutchView: () => this.go('clutch'),
+      ...(() => {
+        const h = this.CLUTCH.history; const latest = h[h.length - 1], prev = h.length > 1 ? h[h.length - 2] : null;
+        const delta = prev ? latest.score - prev.score : 0;
+        const scores = h.map(p => p.score); const min = Math.min(...scores) - 20, max = Math.max(...scores) + 20;
+        const W = 280, H = 110;
+        const pts = h.map((p, i) => ({ x: (i / (h.length - 1)) * W, y: H - ((p.score - min) / (max - min)) * H + 14, score: p.score, date: p.date, label: p.label }));
+        return {
+          clutchHistoryRows: h.map((p, i) => { const d = i > 0 ? p.score - h[i - 1].score : null; return { ...p, n: String(i + 1).padStart(2, '0'), hasDelta: d != null, deltaAbs: d == null ? '' : Math.abs(d), deltaArrow: d == null ? '' : (d >= 0 ? '↑' : '↓'), deltaColor: d == null ? '#6F6C64' : (d >= 0 ? '#1F7A4D' : '#B4261F') }; }),
+          trendDelta: delta, trendAbs: Math.abs(delta), trendArrow: delta >= 0 ? '↑' : '↓', trendColor: delta >= 0 ? '#1F7A4D' : '#B4261F',
+          trendPoly: pts.map(p => p.x.toFixed(1) + ',' + p.y.toFixed(1)).join(' '), trendPts: pts,
+          trendFirst: h[0], trendLatest: latest, trendCount: h.length
+        };
+      })(),
+      clutchMeansOpen: !!st.expanded.clutchMeans, toggleClutchMeans: () => this.toggle('clutchMeans'), clutchMeansCaret: st.expanded.clutchMeans ? '−' : '+',
+      askClutch: () => this.askFrom("What does Maya's Clutch Factor of 788 mean, and how should I support her with it?"),
+      showBack: screen === 'drive' || screen === 'guides' || screen === 'guide' || screen === 'nterpret' || screen === 'clutch',
+
+      enterPortal: () => this.enterPortal(),
+      goAccess: () => this.goAccess(),
+      goLogin: () => this.goLogin(),
+      goHome: () => this.go('home'), goChat: () => this.go('chat'), goProfile: () => this.go('profile'),
+      goDrive: () => this.go('drive'), goGuides: () => this.go('guides'),
+      goNterpret: () => this.go('nterpret'),
+      goBack: () => this.goBack(),
+
+      // tab styling
+      chatColor: screen === 'chat' ? '#0E0E0E' : '#6F6C64',
+      homeColor: screen === 'home' ? '#0E0E0E' : '#6F6C64',
+      profColor: screen === 'profile' ? '#0E0E0E' : '#6F6C64',
+      homeStroke: screen === 'home' ? 2.2 : 1.8,
+      profStroke: screen === 'profile' ? 2.2 : 1.8,
+      chatOpacity: screen === 'chat' ? 1 : 0.55,
+
+      statCells: this.statCells,
+      quick: this.QUICK.map(q => ({ label: q.label, onTap: () => this.askFrom(q.say) })),
+      starters: this.STARTERS.map((s, i) => ({ text: s, n: String(i + 1).padStart(2, '0'), onSend: () => this.send(s) })),
+      outcomes: this.OUTCOMES.map(o => ({ n: o.n, label: o.label, sub: o.sub, onPick: () => this.pickOutcome(o.key) })),
+      guides: this.GUIDES.map((g, i) => ({ title: g.title, blurb: g.blurb, n: String(i + 1).padStart(2, '0'), onOpen: () => this.openGuide(g.slug) })),
+
+      input: st.input,
+      onInput: (e) => this.setState({ input: e.target.value }),
+      submitAsk: (e) => { if (e && e.preventDefault) e.preventDefault(); this.askFrom(st.input); },
+      submitChat: (e) => { if (e && e.preventDefault) e.preventDefault(); this.send(); },
+      chatRef: (el) => { this.chatEl = el; },
+      chatEmpty: st.messages.length === 0,
+      chatStarted: st.messages.length > 0,
+      refreshChat: () => this.refreshChat(),
+      mlist,
+
+      guide,
+      sections: guide ? guide.sections.map(s => ({ ...s, hasSay: !!(s.say && s.say.length), hasAvoid: !!(s.avoid && s.avoid.length) })) : [],
+
+      script,
+      scriptAvoid: script ? script.avoid : [],
+
+      nterpret2: this.NTERPRET,
+      nterpretFull: this.NTERPRET.dimensions.map((d, i) => ({ ...d, n: String(i + 1).padStart(2, '0'), open: !!st.expanded['dim' + i], onToggle: () => this.toggle('dim' + i), caret: st.expanded['dim' + i] ? '−' : '+' })),
+      nterpretGrowth: this.NTERPRET.growthAreas.map((g, i) => ({ ...g, n: String(i + 1).padStart(2, '0') })),
+      nterpretHacks: this.NTERPRET.hacks.map(h => ({ ...h })),
+      growthOpen: !!st.expanded.growth, toggleGrowth: () => this.toggle('growth'), growthCaret: st.expanded.growth ? '−' : '+',
+      hacksOpen: !!st.expanded.hacks, toggleHacks: () => this.toggle('hacks'), hacksCaret: st.expanded.hacks ? '−' : '+',
+      askNterpret: () => this.askFrom("Howie, walk me through Maya's NTerpret profile, what should I actually do with it?"),
+      nterpret: [
+        { label: "Communicates", value: this.athlete.communicationStyle, note: this.athlete.communicationNote },
+        { label: "Learns", value: this.athlete.learningStyle, note: this.athlete.learningNote },
+        { label: "Driven By", value: this.athlete.motivationDriver, note: this.athlete.driverNote }
+      ],
+      rides: st.notes ? 6 : 0,
+      lastMoment: st.driveOutcome ? (this.MOMENT_LABELS[st.driveOutcome] + " · just now") : "A rough night · 5h ago",
+      notes: st.notes.map(n => ({ ...n, ago: this.timeAgo(n.at), tag: 'From Howie', tagBg: '#0E0E0E', onRemove: () => this.removeNote(n.id), onBring: () => this.bringToChat(n) })),
+      hasNotes: st.notes.length > 0, noNotes: st.notes.length === 0,
+      notesCount: st.notes.length,
+      sheetSaved: st.sheet === 'saved',
+      addingNote: !!st.addingNote, notAddingNote: !st.addingNote,
+      noteDraft: st.noteDraft || '',
+      onNoteDraft: (e) => this.onNoteDraftChange(e.target.value),
+      openSaved: () => this.openSaved(),
+      startNote: () => this.startNote(), cancelNote: () => this.cancelNote(), saveOwnNote: () => this.saveOwnNote(),
+
+      sheetOpen: !!st.sheet,
+      sheetDisclaimer: st.sheet === 'disclaimer',
+      discTitle: (window.NT_DISCLAIMER || {}).title || 'Howie Chatbot Assistant',
+      discSubtitle: (window.NT_DISCLAIMER || {}).subtitle || 'Terms of Use & Data Disclaimer',
+      discIntro: (window.NT_DISCLAIMER || {}).intro || '',
+      discAcceptance: (window.NT_DISCLAIMER || {}).acceptance || '',
+      discSections: (window.NT_DISCLAIMER || {}).sections || [],
+      sheetScript: st.sheet === 'script',
+      saveScript: () => this.saveScript(),
+      sheetShare: st.sheet === 'share',
+      sheetSettings: st.sheet === 'settings',
+      sheetPartner: st.sheet === 'partner',
+      scriptLoading: st.scriptLoading,
+      scriptReady: st.sheet === 'script' && !st.scriptLoading,
+      closeSheet: () => this.closeSheet(),
+      acceptTerms: () => this.acceptTerms(),
+      openShare: () => this.openShare(),
+      openSettings: () => this.openSettings(),
+      openSupport: () => this.openSupport(),
+      sheetSupport: st.sheet === 'support',
+      supportSubject: st.supportSubject || '',
+      supportMessage: st.supportMessage || '',
+      supportSent: st.supportSent,
+      supportNotSent: !st.supportSent,
+      onSupportSubject: (e) => this.setState({ supportSubject: e.target.value }),
+      onSupportMessage: (e) => this.setState({ supportMessage: e.target.value }),
+      sendSupport: () => this.sendSupport(),
+      signOut: () => this.signOut(),
+      openPartnerPicker: () => this.openPartnerPicker(),
+
+      // active (logged-in) partner - themes the in-app chrome
+      activePartner: (() => { const p = this.getPartner(st.partner); return { ...p, hasLogo: !!p.logo, noLogo: !p.logo, isAlliance: p.id === 'alliance' }; })(),
+
+      // registration / access flow
+      access: st.access,
+      accessSent: st.access.sent,
+      accessForm: !st.access.sent,
+      accessOrg: (() => { const p = this.getPartner(st.access.org); return { ...p, hasLogo: !!p.logo, noLogo: !p.logo, isAlliance: p.id === 'alliance' }; })(),
+      accessError: st.access.error,
+      accessAttested: st.access.attested,
+      accessIsOther: st.access.org === 'other',
+      accessRostered: st.access.org !== 'other',
+      partnerOptions: this.PARTNERS.map(p => ({ ...p, hasLogo: !!p.logo, noLogo: !p.logo, isAlliance: p.id === 'alliance', selected: p.id === st.access.org, onSelect: () => this.selectPartner(p.id) })),
+      submitAccess: () => this.submitAccess(),
+      enterPortalFromAccess: () => this.enterPortalFromAccess(),
+      onAccessEmail: (e) => this.setAccess('email', e.target.value),
+      onAccessId: (e) => this.setAccess('athleteId', e.target.value),
+      onAccessDob: (e) => this.setAccess('dob', e.target.value),
+      onAccessLast: (e) => this.setAccess('lastName', e.target.value),
+      toggleAttest: () => this.setAccess('attested', !st.access.attested),
+      attestBg: st.access.attested ? '#0E0E0E' : '#fff',
+      toggles,
+      shareText,
+      shareTargets: [
+        { label: "Messages", glyph: "iM", bg: "#34C759", fg: "#fff" },
+        { label: "Copy", glyph: "⧉", bg: "#EDEBE5", fg: "#0E0E0E" },
+        { label: "WhatsApp", glyph: "W", bg: "#25D366", fg: "#fff" },
+        { label: "Mail", glyph: "@", bg: "#0E0E0E", fg: "#fff" },
+        { label: "More", glyph: "•••", bg: "#EDEBE5", fg: "#0E0E0E" }
+      ]
+    };
+  }
+}
+</script>
+
+
+</body></html>
