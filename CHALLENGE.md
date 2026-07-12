@@ -35,13 +35,13 @@ There are stories deliberately hidden in this dataset. Finding one is worth more
 - **Any stack, any tools.**
 - **Use the provided dataset.** You can regenerate/remix it with the included script if your idea needs more seasons or athletes.
 
-## What you hand in
+## Submission
 
-1. **Your project**, runnable, with a README that gets us from clone to running in under 5 minutes.
-2. **A short demo** — ≤3-minute video *or* a written walkthrough with screenshots.
-3. **A few sentences on "what I'd do next"** with more time.
+1. **Build in your fork** of this repo.
+2. **Update the README in your fork** with a description of **what you built, why, and how it works** — plus how to run it (we should get from clone to running in under 5 minutes). A few sentences on "what I'd do next" are welcome too.
+3. **Email your fork's GitHub link to [elliot@ntangible.co](mailto:elliot@ntangible.co).**
 
-Send Elliot the link to your fork. We'll do a share-out where everyone demos their build.
+We'll do a share-out where everyone demos their build.
 
 ## How we'll look at it
 
@@ -54,4 +54,4 @@ Send Elliot the link to your fork. We'll do a share-out where everyone demos the
 
 Explicitly **not** judged: setup polish, stack choice, lines of code, hours spent.
 
-Questions at any point → ask Elliot. Have fun with it.
+Questions at any point → [elliot@ntangible.co](mailto:elliot@ntangible.co). Have fun with it.
