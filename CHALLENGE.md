@@ -28,7 +28,7 @@ Everything lives in [`data/`](data/) as JSON and CSV: one full season for a 16-a
 - **Timebox:** due date is Tuesday July 21st at 12am. Please submit your work before then. Late replies will not be accepted.
 - **Any stack, any tools.**
 
-We left the rules very vague on purpose. Show us what your passionate about and what your good at! Have another idea that is not within this scope? Ask us, we are happy to make changes! 
+We left the rules very vague on purpose. Show us what you're passionate about and what you're good at! Have another idea that's not within this scope? Ask us — we're happy to make changes! 
 
 ## 3. Submission
 
