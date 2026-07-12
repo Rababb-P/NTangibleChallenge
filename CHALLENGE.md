@@ -13,6 +13,8 @@ That's deliberately open. It could be:
 
 Play to your strengths. We picked this challenge because it has room for whatever you're best at — frontend craft, data storytelling, creative coding, product thinking.
 
+**We recommend the use of AI.** But own what you ship: if we ask questions — performance tradeoffs, known limitations, why this approach over another — you need to be able to answer them.
+
 ## Sparks (not specs)
 
 You don't need to use any of these. They're here to show the *kind* of thing that gets us excited:
@@ -31,7 +33,6 @@ There are stories deliberately hidden in this dataset. Finding one is worth more
 - **Timebox:** one week from when you receive this. Aim for around **4–5 focused hours**. Shipped beats perfect.
 - **Individual work.** Everyone gets the same kit; we're excited to see how different the answers come back.
 - **Any stack, any tools.**
-- **We recommend the use of AI.** But own what you ship: if we ask questions — performance tradeoffs, known limitations, why this approach over another — you need to be able to answer them.
 - **Use the provided dataset.** You can regenerate/remix it with the included script if your idea needs more seasons or athletes.
 
 ## What you hand in
