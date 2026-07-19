@@ -1,4 +1,49 @@
-# HOWie Viz Challenge
+# Trust Your Gut? — my challenge submission
+
+**A retro-arcade with two games built on the season's pressure moments** — one for coaches, one for the athletes themselves. Everything on screen is computed live from [`data/`](data/); only the story captions are authored.
+
+## Run it
+
+```bash
+cd app
+npm install
+npm run dev
+```
+
+Open http://localhost:5173 and click **🕹 GAME** in the pill at the bottom — or go straight to http://localhost:5173/#game. (The original three-persona app is untouched; the arcade is a fourth view alongside it.)
+
+## The two modes
+
+**COACH MODE — bet the box score against the mental data.** Five real high-leverage moments from the 9 games decided by ≤2 runs. You pick who you'd want at the plate using only traditional stat lines; the cards flip to the mental side (Clutch Factor™, tight-game vs. blowout splits, reset speed) and you see who actually delivered. The gut isn't dumb — it wins round 3 — but the box score is *incomplete*: the team's .371 hitter fades in tight games while a .290 hitter becomes the best on the roster exactly then. The end screen shows receipts computed over **all** delivered high-leverage moments: best season average calls it 2/11, best pressure-game average 4/11, highest Clutch Factor 5/11 — vs. a ~33% coin-flip baseline.
+
+**PLAYER MODE — read the signals, then build your game.** You pick which of the 16 athletes YOU are (retro character select, each athlete's own color from the dataset). Then five trio rounds: three teammates each faced the *same kind* of pressure — full count, a bases-loaded jam, the first at-bat back after a rough game — in their own games, and exactly one delivered. You see signals only (3-month trajectory, drill reps in the prior 30 days, reset speed, her own words — never the raw score) and bet on who came through. The finale is personal: **your training plan**, computed for your chosen athlete — her weakest NTerpret™ domain, the drills from the catalog that train that exact axis, and the weekly rep pace of the athletes whose scores actually climbed.
+
+## The finding underneath player mode
+
+I validated the "do the reps work?" story before building on it, and the honest answer has two levels:
+
+- **Single moments are noisy.** Athletes who delivered in clutch moments had barely more recent training than those who didn't (10.4 vs. 9.4 sessions in the prior 30 days). The game never claims reps buy you a moment — round 3 is deliberately a round where every signal fails.
+- **Trajectories are not.** Total drill reps correlate with 18-month Clutch Factor growth at **r = 0.74**: every athlete with ~175+ logged sessions gained 160–211 points; every athlete under ~30 sessions stayed flat. The crescendo round makes it visible — the *lowest* score on the team, climbing 86 points a quarter behind her reps, delivers while the highest score, standing still, doesn't.
+
+That's the lesson the game teaches and the training plan operationalizes: reps buy the trajectory, and the trajectory is what keeps showing up when the margin gets thin.
+
+## How it works
+
+Small modules in [`app/src/game/`](app/src/game/):
+
+- **`stats.ts`** — imports the season straight from `data/` (no copies) and computes everything in one pass: batting lines, pressure vs. blowout splits (`game_log` × `games.pressure`), reset speeds (`moments`), as-of-date Clutch Factor and 3-month trends (`clutch_history`), rep habits (`drill_log`), weakest NTerpret domain + matching drills (`nterpret` + `drills`), and the "growers" cohort that anchors the training-plan pace. As-of-date functions mean no round peeks at the future.
+- **`rounds.ts`** / **`playerRounds.ts`** — curated moment IDs with written framing; everything else (candidates, signals, winners, data picks) is computed. If the dataset is regenerated and an ID disappears, that round drops out gracefully.
+- **`Arcade.tsx`**, **`CoachMode.tsx`**, **`PlayerMode.tsx`**, **`game.css`** — the shell and the two games, sharing one retro skin (pixel font, CRT scanlines, card-flip reveals). Wired into the app via a `#game` hash route in `App.tsx`.
+
+## What I'd do next
+
+- Pull `journals.json` into the reveals — the athletes *tell you* about these moments in their own voice, and mood tracks the numbers.
+- Auto-curate rounds for any regenerated season (`node scripts/generate-data.mjs --seed 7`) instead of hand-picking moment IDs.
+- Export the training plan as a shareable "mental scouting card" image.
+
+---
+
+# HOWie Viz Challenge (original kit README)
 
 Welcome to the NTangible intern challenge. This repo contains a fully working copy of **HOWie** — our mental-performance app for youth sports — running entirely on a bundled synthetic season of data, plus that same season as plain JSON/CSV files for you to build with.
 

@@ -5,6 +5,7 @@ import { AthleteApp } from "./apps/AthleteApp";
 import { ParentApp } from "./apps/ParentApp";
 import { CoachApp } from "./apps/CoachApp";
 import { PersonaSwitcher } from "./kit/PersonaSwitcher";
+import { Arcade } from "./game/Arcade";
 
 // Inside the native app (Capacitor) the phone provides the real status bar and
 // bezel, so the recovered device frame is web-only presentation chrome.
@@ -50,6 +51,13 @@ function DeviceShell({ children }: { children: ReactNode }) {
 export function App() {
   const [session, setSession] = useState<api.Session | null>(null);
   const [loading, setLoading] = useState(true);
+  // #game renders the Trust Your Gut arcade full-screen instead of the phone.
+  const [hash, setHash] = useState(window.location.hash);
+  useEffect(() => {
+    const onHash = () => setHash(window.location.hash);
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
 
   useEffect(() => {
     (async () => {
@@ -82,6 +90,8 @@ export function App() {
     api.setToken(null);
     setSession(null);
   }, []);
+
+  if (hash === "#game") return <Arcade />;
 
   if (loading)
     return <DeviceShell><div style={{ width: "100%", height: "100%", background: "#F7F6F3" }} /></DeviceShell>;

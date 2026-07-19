@@ -41,6 +41,18 @@ export function PersonaSwitcher() {
           {label}
         </button>
       ))}
+      <button
+        type="button"
+        title="Trust Your Gut? — a coach decision game on this season's pressure moments"
+        onClick={() => { location.hash = "game"; }}
+        style={{
+          border: "none", borderRadius: 999, padding: "6px 14px", cursor: "pointer",
+          fontSize: 12, fontWeight: 700, letterSpacing: 0.2,
+          background: "#0A0A14", color: "#3DF56C", fontFamily: "monospace",
+        }}
+      >
+        🕹 GAME
+      </button>
     </div>
   );
 }
