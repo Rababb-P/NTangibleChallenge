@@ -26,6 +26,7 @@ function CandidateCard({ c, round, picked, locked, onPick }: {
       <div className="tyg-card-inner">
         {/* FRONT — the box score, the only thing the gut gets */}
         <div className="tyg-face front">
+          {picked && !locked && <span className="tyg-badge bet">YOUR PICK</span>}
           <span className="tyg-jersey">#{a.jersey} · {a.position}</span>
           <span className="tyg-name">{a.name}</span>
           <span className="tyg-big"><span className="lbl">SEASON AVG</span>{fmtAvg(s.avg)}</span>
@@ -146,10 +147,10 @@ export function CoachMode({ onHome }: { onHome: () => void }) {
 
         {!locked ? (
           <div className="tyg-footrow">
-            <button type="button" className="tyg-btn" onClick={lockIn} disabled={!pick}>
+            <button type="button" className={"tyg-btn" + (pick ? " tyg-glow" : "")} onClick={lockIn} disabled={!pick}>
               {pick ? "LOCK IT IN ▶" : "SELECT A PLAYER"}
             </button>
-            <span className="tyg-small">Box scores only. No peeking at the mental side.</span>
+            <span className="tyg-small">1. TAP A CARD · 2. LOCK IT IN — box scores only, no peeking at the mental side.</span>
           </div>
         ) : (
           <>

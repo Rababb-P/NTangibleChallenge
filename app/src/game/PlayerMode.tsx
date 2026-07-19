@@ -6,7 +6,8 @@
 // 3. YOUR TRAINING PLAN: your weakest mental domain, the drills that train it,
 //    and the weekly pace of the athletes whose scores actually climbed.
 import { useState, type CSSProperties } from "react";
-import { TRIOS, type TrioCard } from "./playerRounds";
+import { TRIOS, takeawaysFor, type TrioCard } from "./playerRounds";
+import { PlayScene } from "./PlayScene";
 import {
   ATHLETES, athleteById, fmtAvg, fmtDelta, STATS,
   domainsOf, weakestDomain, drillsForAxis,
@@ -34,6 +35,7 @@ function SignalCard({ c, picked, locked, onPick }: {
       <div className="tyg-card-inner">
         {/* FRONT — signals only. The raw Clutch Factor stays hidden. */}
         <div className="tyg-face front">
+          {picked && !locked && <span className="tyg-badge bet">YOUR BET</span>}
           <span className="tyg-jersey">#{a.jersey} · {a.position} · HER MOMENT: {fmtDate(c.moment.date)}</span>
           <span className="tyg-name">{a.name}</span>
           <div className="tyg-mrow"><span className="k">3-MO TRAJECTORY</span><span className={"v " + (c.trend >= 0 ? "up" : "down")}>{fmtDelta(c.trend)}</span></div>
@@ -63,9 +65,13 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
   const [locked, setLocked] = useState(false);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
+  // Which athlete's outcome the scene is showing (defaults to your pick), and
+  // a counter that remounts the scene so the same animation can run again.
+  const [replay, setReplay] = useState<string | null>(null);
+  const [take, setTake] = useState(0);
 
   const exit = () => { window.location.hash = ""; };
-  const restart = () => { setMe(null); setIdx(0); setPick(null); setLocked(false); setScore(0); setDone(false); };
+  const restart = () => { setMe(null); setIdx(0); setPick(null); setLocked(false); setScore(0); setDone(false); setReplay(null); };
 
   // ── character select ──
   if (!me)
@@ -144,7 +150,7 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
               Yours so far: <span style={{ color: STATS[me].clutchDelta >= 150 ? "var(--green)" : "var(--amber)" }}>{fmtDelta(STATS[me].clutchDelta)}</span>.
             </p>
             <p className="tyg-p tyg-small">
-              Reps don't buy you the moment — round 3 proved that. They buy you the trajectory,
+              Reps don't buy you any single moment. They buy you the trajectory —
               and the trajectory is what keeps showing up when the game gets tight.
             </p>
           </div>
@@ -160,14 +166,17 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
 
   // ── trio rounds ──
   const round = TRIOS[idx];
+  const pickedCard = round.cards.find((c) => c.athlete.id === pick);
+  const sceneCard = round.cards.find((c) => c.athlete.id === replay) ?? pickedCard;
   const lockIn = () => {
     if (!pick) return;
     setLocked(true);
+    setReplay(pick);
     if (pick === round.winnerId) setScore((n) => n + 1);
   };
   const next = () => {
     if (idx + 1 >= TRIOS.length) { setDone(true); return; }
-    setIdx(idx + 1); setPick(null); setLocked(false);
+    setIdx(idx + 1); setPick(null); setLocked(false); setReplay(null);
   };
 
   return (
@@ -182,8 +191,40 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
 
         <div className="tyg-panel">
           <p className="tyg-p">{round.prompt}</p>
-          <p className="tyg-small" style={{ marginTop: 8 }}>Signals only — no scores. Read the trajectory, the reps, the reset.</p>
+          <p className="tyg-small" style={{ marginTop: 8 }}>
+            1. TAP A CARD TO PLACE YOUR BET &nbsp;·&nbsp; 2. LOCK IT IN — signals only, no scores.
+          </p>
         </div>
+
+        <PlayScene
+          key={idx + (locked ? "-live-" + replay + "-" + take : "-idle")}
+          playing={locked}
+          kind={sceneCard?.kind ?? "hit"}
+          flash={sceneCard?.flash ?? ""}
+          good={!!sceneCard?.delivered}
+          bases={round.bases}
+          accent={sceneCard?.athlete.color ?? "#e8e8ff"}
+        />
+
+        {/* instant replay booth: run any of the three outcomes, as often as you like */}
+        {locked && (
+          <div className="tyg-footrow" style={{ justifyContent: "center" }}>
+            {round.cards.map((c) => (
+              <button
+                key={c.athlete.id}
+                type="button"
+                className={"tyg-replay" + (replay === c.athlete.id ? " on" : "")}
+                style={{ "--accent": c.athlete.color } as CSSProperties}
+                onClick={() => { setReplay(c.athlete.id); setTake((n) => n + 1); }}
+              >
+                ▶ {c.athlete.name.split(" ")[0].toUpperCase()} · {c.flash}
+              </button>
+            ))}
+            <button type="button" className="tyg-replay" onClick={() => setTake((n) => n + 1)}>
+              REPLAY ▶▶
+            </button>
+          </div>
+        )}
 
         <div className="tyg-cards">
           {round.cards.map((c) => (
@@ -199,9 +240,10 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
 
         {!locked ? (
           <div className="tyg-footrow">
-            <button type="button" className="tyg-btn" onClick={lockIn} disabled={!pick}>
+            <button type="button" className={"tyg-btn" + (pick ? " tyg-glow" : "")} onClick={lockIn} disabled={!pick}>
               {pick ? "LOCK IT IN ▶" : "WHO DELIVERED?"}
             </button>
+            {pickedCard && <span className="tyg-small">BETTING ON {pickedCard.athlete.name.toUpperCase()}</span>}
           </div>
         ) : (
           <>
@@ -209,6 +251,24 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
               <h2 className="tyg-h2">{pick === round.winnerId ? "GOOD READ! +1" : "NOT THIS TIME"}</h2>
               <p className="tyg-p tyg-small">{round.lesson}</p>
             </div>
+            {(() => {
+              const t = takeawaysFor(me, round);
+              return (
+                <div className="tyg-panel">
+                  <h2 className="tyg-h2">YOUR TAKEAWAY, {my.name.split(" ")[0].toUpperCase()}</h2>
+                  {t.rows.map((r) => (
+                    <div key={r.label} className="tyg-mrow" style={{ padding: "5px 0" }}>
+                      <span className="k">{r.label}</span>
+                      <span className="v">
+                        HER {r.hers} · YOU {r.mine}
+                        <span className={"tyg-verdict " + (r.good ? "ok" : "warn")}>{r.good ? "MAINTAIN" : "TRAIN THIS"}</span>
+                      </span>
+                    </div>
+                  ))}
+                  <p className="tyg-small" style={{ marginTop: 8 }}>{t.note}</p>
+                </div>
+              );
+            })()}
             <div className="tyg-footrow">
               <button type="button" className="tyg-btn" onClick={next}>
                 {idx + 1 >= TRIOS.length ? "YOUR TRAINING PLAN ▶" : "NEXT ROUND ▶"}
