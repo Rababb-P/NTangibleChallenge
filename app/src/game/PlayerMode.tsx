@@ -1,27 +1,24 @@
 // Player mode — Build Your Game.
-// 1. CHARACTER SELECT: pick which athlete YOU are.
+// 1. ARCADE ATTRACT SCREEN, then character select: pick which athlete YOU are.
 // 2. Five trio rounds: three teammates faced the same kind of pressure in
-//    their own games. You see signals (trajectory, reps, reset, her words) —
+//    their own games. You see signals (trajectory, reps, her words) —
 //    never the raw score — and bet on who delivered. Reveal teaches the lesson.
-// 3. YOUR TRAINING PLAN: your weakest mental domain, the drills that train it,
-//    and the weekly pace of the athletes whose scores actually climbed.
+// 3. YOUR TRAINING PLAN: the domain where the clutch group outpaces you,
+//    and drills that train that exact area.
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { TRIOS, takeawaysFor, basesLabel, type TrioCard, type TrioRound } from "./playerRounds";
 import { PlayScene } from "./PlayScene";
 import { callOutcome, callPreRound, callReplay, isCommentaryOn, setCommentaryOn, stop } from "./announcer";
 import { CaptionBar, CommentaryToggle } from "./Commentary";
+import { RoundLongView } from "./SeasonStories";
 import type { SpeechLine } from "./speech";
 import {
-  ATHLETES, athleteById, fmtAvg, fmtDelta, STATS,
-  domainsOf, weakestDomain, drillsForAxis,
-  growersPace, growersDelta, myPace, GROWERS,
+  ATHLETES, athleteById, fmtAvg, fmtDelta,
+  domainsOf, drillsForAxis,
 } from "./stats";
 
 const fmtDate = (iso: string) =>
   new Date(iso + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
-
-// 0–100 domain score as a 10-block pixel meter.
-const blocks = (score: number) => "▮".repeat(Math.round(score / 10)) + "▯".repeat(10 - Math.round(score / 10));
 
 function SignalCard({ c, picked, locked, onPick }: {
   c: TrioCard; picked: boolean; locked: boolean; onPick: () => void;
@@ -45,20 +42,10 @@ function SignalCard({ c, picked, locked, onPick }: {
           {/* her spot: where and when — the stakes are pre-known, never the result */}
           <span className="tyg-small">VS {c.game.opponent.toUpperCase()} · INN {c.moment.inning} · {c.game.home_away === "H" ? "HOME" : "AWAY"}</span>
           <div className="tyg-mrow"><span className="k">LEVERAGE</span><span className="v">{"▮".repeat(c.moment.leverage)}{"▯".repeat(5 - c.moment.leverage)}</span></div>
-          <div className="tyg-mrow"><span className="k">3-MO TRAJECTORY</span><span className={"v " + (c.trend >= 0 ? "up" : "down")}>{fmtDelta(c.trend)}</span></div>
+          <div className="tyg-mrow"><span className="k">CLUTCH FACTOR · 3-MO CHANGE</span><span className={"v " + (c.trend >= 0 ? "up" : "down")}>{fmtDelta(c.trend)}</span></div>
           <div className="tyg-mrow"><span className="k">REPS, LAST 30D</span><span className="v">{c.reps30}</span></div>
-          <div className="tyg-mrow"><span className="k">RESET SPEED</span><span className="v">{c.stats.resetAvg ? c.stats.resetAvg.toFixed(1) + " pitches" : "—"}</span></div>
-          {/* what she's resetting FROM — her last big spot before this one */}
-          <div className="tyg-mrow"><span className="k">COMING OFF</span>
-            <span className={"v " + (c.prev ? (c.prev.delivered ? "up" : "down") : "")}>
-              {c.prev
-                ? c.prev.delivered
-                  ? `DELIVERED · ${c.prev.daysBefore}D AGO`
-                  : `MISS · RESET ${c.prev.reset} · ${c.prev.daysBefore}D AGO`
-                : "FIRST BIG SPOT"}
-            </span>
-          </div>
-          <div className="tyg-mrow"><span className="k">SEASON AVG</span><span className="v">{fmtAvg(c.stats.avg)}</span></div>
+          <div className="tyg-mrow"><span className="k">RESET PITCHES</span><span className="v">{c.stats.resetAvg?.toFixed(1) ?? "—"} AVG</span></div>
+          <div className="tyg-mrow"><span className="k">SEASON BATTING AVG</span><span className="v">{fmtAvg(c.stats.avg)}</span></div>
           <span className="tyg-small" style={{ marginTop: "auto" }}>“{a.quote}”</span>
         </div>
         {/* BACK — her outcome, and the score she carried into it */}
@@ -99,7 +86,8 @@ function SituationBoard({ round }: { round: TrioRound }) {
   );
 }
 
-export function PlayerMode({ onHome }: { onHome: () => void }) {
+export function PlayerMode() {
+  const [started, setStarted] = useState(false);
   const [me, setMe] = useState<string | null>(null);
   const [idx, setIdx] = useState(0);
   const [pick, setPick] = useState<string | null>(null);
@@ -146,14 +134,37 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
 
   const toggleCommentary = (on: boolean) => { setCommentaryOn(on); setCommentary(on); };
 
-  const exit = () => { window.location.hash = ""; };
   const restart = () => { setMe(null); setIdx(0); setPick(null); setLocked(false); setScore(0); setDone(false); setReplay(null); announcedLockIdx.current = -1; };
+
+  if (!started)
+    return (
+      <div className="tyg tyg-attract">
+        <div className="tyg-marquee">NTANGIBLE ARCADE</div>
+        <div className="tyg-cabinet">
+          <p className="tyg-small">PLAYER ONE // MENTAL GAME SIMULATOR</p>
+          <h1 className="tyg-h1">CLUTCH UP</h1>
+          <div className="tyg-pixel-ball" aria-hidden="true">◆</div>
+          <p className="tyg-p tyg-attract-copy">
+            The game is tight. The signals are live. Read the pressure, call who delivers,
+            then see how your mental game stacks up against the players who came through.
+          </p>
+          <div className="tyg-attract-stats">
+            <span>{TRIOS.length} PRESSURE MOMENTS</span>
+            <span>3 PLAYERS PER ROUND</span>
+            <span>1 TRAINING PLAN</span>
+          </div>
+          <button type="button" className="tyg-btn tyg-start tyg-blink" onClick={() => setStarted(true)}>
+            INSERT COIN ▶
+          </button>
+          <p className="tyg-small">READ THE SIGNALS // TRUST THE WORK</p>
+        </div>
+      </div>
+    );
 
   // ── character select ──
   if (!me)
     return (
       <div className="tyg">
-        <button type="button" className="tyg-exit" onClick={exit}>✕ BACK TO APP</button>
         <CommentaryToggle on={commentary} onToggle={toggleCommentary} />
         <div className="tyg-wrap" style={{ textAlign: "center" }}>
           <p className="tyg-small">PLAYER MODE</p>
@@ -174,7 +185,6 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
               </button>
             ))}
           </div>
-          <button type="button" className="tyg-btn tyg-btn--ghost" onClick={onHome}>ARCADE MENU</button>
         </div>
       </div>
     );
@@ -183,13 +193,18 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
 
   // ── training plan (the ending) ──
   if (done) {
-    const weak = weakestDomain(me);
-    const drills = drillsForAxis(weak.key);
-    const pace = myPace(me);
-    const target = growersPace();
+    const clutchCards = TRIOS.map((r) => r.cards.find((c) => c.athlete.id === r.winnerId)!).filter(Boolean);
+    const domainComparisons = domainsOf(me).map((mine) => {
+      const group = Math.round(clutchCards.reduce((sum, c) =>
+        sum + (domainsOf(c.athlete.id).find((d) => d.key === mine.key)?.score ?? 0), 0) / clutchCards.length);
+      return { ...mine, group, gap: group - mine.score };
+    }).sort((a, b) => b.gap - a.gap);
+    const groupGap = domainComparisons.find((d) => d.gap > 0);
+    const focus = groupGap ?? [...domainComparisons].sort((a, b) => a.score - b.score)[0];
+    const drills = focus ? drillsForAxis(focus.key) : [];
     return (
       <div className="tyg">
-        <button type="button" className="tyg-exit" onClick={exit}>✕ BACK TO APP</button>
+        <button type="button" className="tyg-exit" onClick={restart}>↺ SELECT PLAYER</button>
         <div className="tyg-wrap">
           <div style={{ textAlign: "center" }}>
             <p className="tyg-small">YOU READ {score}/{TRIOS.length} MOMENTS RIGHT</p>
@@ -197,44 +212,48 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
           </div>
 
           <div className="tyg-panel">
-            <h2 className="tyg-h2">YOUR MENTAL SCOUTING REPORT</h2>
-            {domainsOf(me).map((d) => (
-              <div className="tyg-mrow" key={d.key} style={{ padding: "4px 0" }}>
-                <span className="k">{d.name.toUpperCase()}{d.key === weak.key ? " — TRAIN THIS" : ""}</span>
-                <span className={"v " + (d.key === weak.key ? "down" : "")}>{blocks(d.score)} {d.score}</span>
+            <h2 className="tyg-h2">THE PLAYERS WHO CLUTCHED UP</h2>
+            <p className="tyg-small">The five outcomes you just watched—and who delivered each one.</p>
+            {clutchCards.map((c, i) => (
+              <div className="tyg-receipt" key={c.moment.moment_id}>
+                <span>R{i + 1} // {c.athlete.name.toUpperCase()}<br /><span className="tyg-small">{c.moment.action.toUpperCase()}</span></span>
+                <span className="n">CLUTCHED UP</span>
               </div>
             ))}
-            <p className="tyg-small" style={{ marginTop: 10 }}>{weak.summary}</p>
           </div>
 
-          <div className="tyg-panel">
-            <h2 className="tyg-h2">YOUR DRILLS — {weak.name.toUpperCase()} REPS</h2>
+          <div className="tyg-panel tyg-matchup">
+            <h2 className="tyg-h2">YOU VS. THE PLAYERS WHO DELIVERED</h2>
+            {focus && <>
+              <p className="tyg-p">{groupGap
+                ? <>Your clearest upgrade is <span className="data">{focus.name.toUpperCase()}</span>—the largest area where the players who delivered scored above you.</>
+                : <>You beat this clutch group’s average in every domain. Your next development area is still <span className="data">{focus.name.toUpperCase()}</span> because it is your lowest personal score—not because the group scored higher.</>}</p>
+              <div className="tyg-matchup-head"><span>YOUR GAME</span><span>CLUTCH GROUP</span></div>
+              <div className="tyg-matchup-row">
+                <span><b>{focus.score}</b><small>{focus.name}</small></span>
+                <em>VS</em>
+                <span><b>{focus.group}</b><small>Group average</small></span>
+              </div>
+              <p className="tyg-small" style={{ marginTop: 12 }}>{focus.summary}</p>
+            </>}
+          </div>
+
+          {focus && <div className="tyg-panel">
+            <h2 className="tyg-h2">YOUR DRILLS — {focus.name.toUpperCase()} REPS</h2>
             {drills.map((d) => (
-              <div key={d.id} className="tyg-receipt">
-                <span>{d.title.toUpperCase()} <span className="tyg-small">({d.duration_min} MIN)</span><br />
-                  <span className="tyg-small">{d.description}</span></span>
-              </div>
+              <details key={d.id} className="tyg-drill">
+                <summary>{d.title.toUpperCase()} <span>{d.duration_min} MIN</span></summary>
+                <div className="tyg-drill-body">
+                  <p>{d.description}</p>
+                  {d.steps.length > 0 && <ol>{d.steps.map((step) => <li key={step}>{step}</li>)}</ol>}
+                  {d.video_url && <a className="tyg-video" href={d.video_url} target="_blank" rel="noreferrer">WATCH ON YOUTUBE ▶</a>}
+                </div>
+              </details>
             ))}
-          </div>
-
-          <div className="tyg-panel">
-            <h2 className="tyg-h2">THE PACE THAT WORKS</h2>
-            <p className="tyg-p tyg-small">
-              The {GROWERS.length} athletes whose Clutch Factor climbed 150+ points this cycle averaged{" "}
-              <span style={{ color: "var(--green)" }}>{target.toFixed(1)} sessions a week</span>. Your current pace:{" "}
-              <span style={{ color: pace >= target ? "var(--green)" : "var(--amber)" }}>{pace.toFixed(1)}/week</span>.
-              Their average climb: <span style={{ color: "var(--green)" }}>+{Math.round(growersDelta())}</span>.
-              Yours so far: <span style={{ color: STATS[me].clutchDelta >= 150 ? "var(--green)" : "var(--amber)" }}>{fmtDelta(STATS[me].clutchDelta)}</span>.
-            </p>
-            <p className="tyg-p tyg-small">
-              Reps don't buy you any single moment. They buy you the trajectory —
-              and the trajectory is what keeps showing up when the game gets tight.
-            </p>
-          </div>
+          </div>}
 
           <div className="tyg-footrow" style={{ justifyContent: "center" }}>
             <button type="button" className="tyg-btn" onClick={restart}>▶ PLAY AS SOMEONE ELSE</button>
-            <button type="button" className="tyg-btn tyg-btn--ghost" onClick={onHome}>ARCADE MENU</button>
           </div>
         </div>
       </div>
@@ -258,7 +277,7 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
 
   return (
     <div className="tyg">
-      <button type="button" className="tyg-exit" onClick={exit}>✕ BACK TO APP</button>
+      <button type="button" className="tyg-exit" onClick={restart}>↺ SELECT PLAYER</button>
       <CommentaryToggle on={commentary} onToggle={toggleCommentary} />
       <div className="tyg-wrap">
         <div className="tyg-panel tyg-score">
@@ -327,6 +346,20 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
             <div className="tyg-panel tyg-reveal">
               <h2 className="tyg-h2">{pick === round.winnerId ? "GOOD READ! +1" : "NOT THIS TIME"}</h2>
               <p className="tyg-p tyg-small">{round.lesson}</p>
+              <p className="tyg-small">HOW TO READ IT: CF 3-MO is the change in Clutch Factor over the prior three months. Batting AVG is the season batting average. Higher values and more reps can be favorable; fewer reset pitches is favorable. They are correlations—not guarantees.</p>
+              <div className="tyg-round-compare">
+                <div className="tyg-round-compare-head"><span>PLAYER</span><span>CF 3-MO</span><span>REPS</span><span>RESET</span><span>BATTING AVG</span><span>RESULT</span></div>
+                {[...round.cards].sort((a, b) => Number(b.delivered) - Number(a.delivered)).map((c) => (
+                  <div className={"tyg-round-compare-row" + (c.delivered ? " winner" : "")} key={c.athlete.id}>
+                    <span>{c.athlete.name.split(" ")[0].toUpperCase()}</span>
+                    <span>{fmtDelta(c.trend)}</span>
+                    <span>{c.reps30}</span>
+                    <span>{c.stats.resetAvg?.toFixed(1) ?? "—"}</span>
+                    <span>{fmtAvg(c.stats.avg)}</span>
+                    <span>{c.delivered ? "DELIVERED" : "MISS"}</span>
+                  </div>
+                ))}
+              </div>
             </div>
             {(() => {
               const t = takeawaysFor(me, round);
@@ -346,6 +379,7 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
                 </div>
               );
             })()}
+            <RoundLongView roundIndex={idx} />
             <div className="tyg-footrow">
               <button type="button" className="tyg-btn" onClick={next}>
                 {idx + 1 >= TRIOS.length ? "YOUR TRAINING PLAN ▶" : "NEXT ROUND ▶"}

@@ -1,87 +1,83 @@
-// Trust Your Gut — tiny Web Speech API wrapper for the booth announcer.
-// Zero React. One short utterance per line (Chrome stalls out on long ones),
-// chained by onend plus optional delays so a call can sync with the 8-bit
-// replay animation. speak() always interrupts whatever is playing.
-
+// Browser speech and caption timing for the announcer.
 export const speechAvailable = () =>
   typeof window !== "undefined" && "speechSynthesis" in window;
 
 export interface SpeechLine {
-  text: string;            // sentence case — all-caps makes some voices spell letters
+  text: string;
   rate?: number;
   pitch?: number;
-  delayMsBefore?: number;  // pause after the previous line ends
-  atMs?: number;           // never start before this many ms into the call
+  delayMsBefore?: number;
+  atMs?: number;
 }
 
-// Best available male announcer voice. The API exposes no gender, so match
-// the male voice names Windows/Edge/Chrome actually ship (\bmale\b also
-// catches "Google UK English Male" without matching "Female"). Voices load
-// async in Chrome; the voiceschanged refresh upgrades later lines.
-const MALE = /\b(guy|davis|andrew|brian|christopher|eric|jacob|roger|steffan|tony|david|mark|male)\b/i;
+const MALE_VOICE = /\b(guy|davis|andrew|brian|christopher|eric|jacob|roger|steffan|tony|david|mark|male)\b/i;
 let voice: SpeechSynthesisVoice | null = null;
+
 function pickVoice() {
-  const vs = speechSynthesis.getVoices();
-  const en = (v: SpeechSynthesisVoice) => v.lang.toLowerCase().startsWith("en");
-  const us = (v: SpeechSynthesisVoice) => /en[-_]US/i.test(v.lang);
+  const voices = speechSynthesis.getVoices();
+  const english = (v: SpeechSynthesisVoice) => v.lang.toLowerCase().startsWith("en");
+  const american = (v: SpeechSynthesisVoice) => /en[-_]US/i.test(v.lang);
   voice =
-    vs.find((v) => us(v) && /natural/i.test(v.name) && MALE.test(v.name)) ??
-    vs.find((v) => us(v) && MALE.test(v.name)) ??
-    vs.find((v) => en(v) && MALE.test(v.name)) ??
-    vs.find((v) => us(v) && /natural/i.test(v.name)) ??
-    vs.find(us) ??
-    vs.find(en) ??
+    voices.find((v) => american(v) && /natural/i.test(v.name) && MALE_VOICE.test(v.name)) ??
+    voices.find((v) => american(v) && MALE_VOICE.test(v.name)) ??
+    voices.find((v) => english(v) && MALE_VOICE.test(v.name)) ??
+    voices.find(american) ??
+    voices.find(english) ??
     null;
 }
+
 if (speechAvailable()) {
   pickVoice();
   speechSynthesis.addEventListener("voiceschanged", pickVoice);
 }
 
-// A session id captured in every closure lets stopSpeech()/a newer speak()
-// kill an in-flight chain without racing its onend callbacks.
 let session = 0;
 let timers: number[] = [];
 const clearTimers = () => {
-  for (const t of timers) clearTimeout(t);
+  timers.forEach(clearTimeout);
   timers = [];
 };
 
-export function speak(lines: SpeechLine[], onLineStart?: (i: number) => void): void {
-  if (!speechAvailable() || lines.length === 0) return;
+export function speak(lines: SpeechLine[], onLineStart?: (i: number) => void) {
+  if (lines.length === 0 || typeof window === "undefined") return;
   const id = ++session;
   clearTimers();
-  speechSynthesis.cancel();
-  const t0 = performance.now();
+  if (speechAvailable()) speechSynthesis.cancel();
+  const startedAt = performance.now();
 
-  const sayFrom = (i: number) => {
-    if (id !== session || i >= lines.length) return;
-    const line = lines[i];
+  const say = (index: number) => {
+    if (id !== session || index >= lines.length) return;
+    const line = lines[index];
+    const next = () => say(index + 1);
     const start = () => {
       if (id !== session) return;
-      const u = new SpeechSynthesisUtterance(line.text);
-      if (voice) u.voice = voice; // else browser default until voices load
-      u.rate = line.rate ?? 1.05;
-      u.pitch = line.pitch ?? 0.95; // male announcer register
-      u.onstart = () => { if (id === session) onLineStart?.(i); };
-      let advanced = false; // some browsers fire both onend and onerror
-      const nextOnce = () => { if (!advanced) { advanced = true; sayFrom(i + 1); } };
-      u.onend = nextOnce;
-      u.onerror = nextOnce; // fires on cancel too; the session guard stops the chain
-      speechSynthesis.speak(u);
+      if (!speechAvailable()) {
+        onLineStart?.(index);
+        timers.push(window.setTimeout(next, 400 + line.text.length * 55));
+        return;
+      }
+      const utterance = new SpeechSynthesisUtterance(line.text);
+      if (voice) utterance.voice = voice;
+      utterance.rate = line.rate ?? 1.05;
+      utterance.pitch = line.pitch ?? 0.95;
+      utterance.onstart = () => onLineStart?.(index);
+      utterance.onend = next;
+      utterance.onerror = next;
+      speechSynthesis.speak(utterance);
     };
     const wait = Math.max(
       line.delayMsBefore ?? 0,
-      line.atMs != null ? line.atMs - (performance.now() - t0) : 0,
-      i === 0 ? 60 : 0, // Chrome drops utterances queued synchronously after cancel()
+      line.atMs == null ? 0 : line.atMs - (performance.now() - startedAt),
+      index === 0 ? 60 : 0,
     );
     if (wait > 0) timers.push(window.setTimeout(start, wait));
     else start();
   };
-  sayFrom(0);
+
+  say(0);
 }
 
-export function stopSpeech(): void {
+export function stopSpeech() {
   session++;
   clearTimers();
   if (speechAvailable()) speechSynthesis.cancel();

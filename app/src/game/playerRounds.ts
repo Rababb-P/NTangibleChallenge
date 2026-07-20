@@ -19,7 +19,7 @@ import {
 // direction the action names so the ball leaves on the right vector.
 export type PlayKind = "hit" | "k" | "kswing" | "pop" | "glove" | "error" | "wild";
 export type HitDir = "left" | "middle";
-export function classify(m: Moment): { kind: PlayKind; flash: string; dir?: HitDir } {
+function classify(m: Moment): { kind: PlayKind; flash: string; dir?: HitDir } {
   const a = m.action.toLowerCase();
   const dir: HitDir | undefined =
     a.includes("left side") ? "left" : a.includes("up the middle") ? "middle" : undefined;
@@ -37,7 +37,7 @@ export function classify(m: Moment): { kind: PlayKind; flash: string; dir?: HitD
 }
 
 // Situation text → which bases to light up in the scene.
-export function basesFrom(situation: string): [boolean, boolean, boolean] {
+function basesFrom(situation: string): [boolean, boolean, boolean] {
   const s = situation.toLowerCase();
   if (s.includes("bases loaded")) return [true, true, true];
   if (s.includes("two on")) return [true, true, false];
@@ -51,7 +51,7 @@ export function basesFrom(situation: string): [boolean, boolean, boolean] {
 // The same parsers feed the situation chips, the card fronts, and the booth
 // announcer's scene-setting call.
 
-export function outsFrom(situation: string): number | null {
+function outsFrom(situation: string): number | null {
   const s = situation.toLowerCase();
   if (s.includes("two out")) return 2;
   if (s.includes("one out")) return 1;
@@ -59,7 +59,7 @@ export function outsFrom(situation: string): number | null {
   return null;
 }
 
-export function countFrom(situation: string): string | null {
+function countFrom(situation: string): string | null {
   const s = situation.toLowerCase();
   if (s.includes("full count")) return "3-2";
   const m = s.match(/down (\d)-(\d) in the count/);
@@ -67,7 +67,7 @@ export function countFrom(situation: string): string | null {
 }
 
 // The emotional stakes of the situation, as short scoreboard chips.
-export function stakesFrom(situation: string): string[] {
+function stakesFrom(situation: string): string[] {
   const s = situation.toLowerCase();
   const chips: string[] = [];
   if (s.includes("bottom of the seventh")) chips.push("BOTTOM 7");
@@ -90,7 +90,7 @@ function roleKindOf(situation: string): "circle" | "field" | "plate" {
   if (s.includes("defensive")) return "field";
   return "plate";
 }
-export function roleFrom(situation: string, position: string): string {
+function roleFrom(situation: string, position: string): string {
   const rk = roleKindOf(situation);
   return rk === "circle" ? "IN THE CIRCLE" : rk === "field" ? "IN THE FIELD AT " + position : "AT THE PLATE";
 }
@@ -104,7 +104,7 @@ const COHERENT_KINDS: Record<ReturnType<typeof roleKindOf>, PlayKind[]> = {
   field: ["glove", "error"],
   plate: ["hit", "k", "kswing", "pop"],
 };
-export const coherent = (m: Moment): boolean =>
+const coherent = (m: Moment): boolean =>
   COHERENT_KINDS[roleKindOf(m.situation)].includes(classify(m).kind);
 
 export function basesLabel(b: [boolean, boolean, boolean]): string {
@@ -137,10 +137,6 @@ export interface TrioCard {
   flash: string;
   dir?: HitDir;    // where a hit leaves the bat, when the action says
   role: string;    // what she's doing in the play — safe to show pre-bet
-  // Her most recent clutch moment BEFORE this one — the context that makes
-  // reset speed mean something. Past relative to the bet, so spoiler-safe
-  // (no date or situation shown, only how it went and how long ago).
-  prev: { delivered: boolean; reset: number; daysBefore: number } | null;
 }
 export interface TrioRound {
   theme: string; prompt: string; lesson: string;
@@ -154,9 +150,6 @@ export interface TrioRound {
 }
 
 const toCard = (moment: Moment): TrioCard => {
-  const prior = MOMENTS
-    .filter((m) => m.athlete_id === moment.athlete_id && m.date < moment.date)
-    .sort((a, b) => b.date.localeCompare(a.date))[0];
   return {
     athlete: athleteById[moment.athlete_id],
     stats: STATS[moment.athlete_id],
@@ -167,13 +160,6 @@ const toCard = (moment: Moment): TrioCard => {
     reps30: repsBefore(moment.athlete_id, moment.date, 30),
     delivered: moment.outcome === "positive",
     role: roleFrom(moment.situation, athleteById[moment.athlete_id].position),
-    prev: prior
-      ? {
-          delivered: prior.outcome === "positive",
-          reset: prior.reset_pitches,
-          daysBefore: Math.round((new Date(moment.date).getTime() - new Date(prior.date).getTime()) / 864e5),
-        }
-      : null,
     ...classify(moment),
   };
 };
@@ -187,15 +173,15 @@ function edgesOf(winner: TrioCard, losers: TrioCard[]): string[] {
     edges.push(`she logged ${winner.reps30} rep sessions in the prior 30 days — the most of the three`);
   const r = winner.stats.resetAvg;
   if (r != null && losers.every((l) => l.stats.resetAvg == null || l.stats.resetAvg > r))
-    edges.push(`she resets after mistakes in ${r.toFixed(1)} pitches — the fastest here`);
+    edges.push(`her ${r.toFixed(1)}-pitch reset average was the quickest of the three`);
   return edges;
 }
 
 function lessonFor(winner: TrioCard, edges: string[]): string {
   const first = winner.athlete.name.split(" ")[0];
   if (edges.length === 0)
-    return `${first} came through with none of the usual signals on her side. The signals move your odds — they never own the outcome. And neither does a slump.`;
-  return `${first} came through, and the signals said she might: ${edges.slice(0, 2).join(", and ")}. The work shows up before the result does.`;
+    return `None of the tracked stats clearly favored ${first}, but she still delivered. These signals can improve the odds, but they do not cause or guarantee one result.`;
+  return `What helped explain ${first}'s win: ${edges.join(", and ")}. Those advantages correlate with being prepared for pressure, but they do not guarantee the result.`;
 }
 
 function buildTrios(): TrioRound[] {
@@ -271,7 +257,7 @@ export const TRIOS: TrioRound[] = buildTrios();
 // it. "Hers" is what the winner carried into her moment; "you" is the chosen
 // athlete's current version of the same signal. All computed, no authored text.
 
-export interface TakeawayRow {
+interface TakeawayRow {
   label: string;
   hers: string;
   mine: string;
@@ -300,7 +286,7 @@ export function takeawaysFor(meId: string, round: TrioRound): { rows: TakeawayRo
 
   const rows: TakeawayRow[] = [
     { label: "REP HABIT", hers: herPace.toFixed(1) + "/WK", mine: yourPace.toFixed(1) + "/WK", good: paceGood },
-    { label: "TRAJECTORY (3-MO)", hers: fmtDelta(winner.trend), mine: fmtDelta(yourTrend), good: trendGood },
+    { label: "CLUTCH FACTOR (3-MO CHANGE)", hers: fmtDelta(winner.trend), mine: fmtDelta(yourTrend), good: trendGood },
     { label: "MINDSET · " + herTop.name.toUpperCase(), hers: String(herTop.score), mine: String(myScore), good: mindGood },
   ];
 
@@ -310,7 +296,7 @@ export function takeawaysFor(meId: string, round: TrioRound): { rows: TakeawayRo
   let note: string;
   if (thin.length && !paceGood) {
     const names = thin.map((l) => l.athlete.name.split(" ")[0]).join(" and ");
-    note = `${names} went into ${thin.length > 1 ? "their misses" : "her miss"} on thinner reps than ${wFirst} carried. Your current pace is closer to ${thin.length > 1 ? "theirs" : "hers"} — your training plan at the end targets exactly that.`;
+    note = `${names} went into ${thin.length > 1 ? "their misses" : "her miss"} on thinner reps than ${wFirst} carried. Your current habit is closer to ${thin.length > 1 ? "theirs" : "hers"} — that is a useful signal to carry into the next round.`;
   } else if (thin.length) {
     note = `The misses here came on thinner reps than ${wFirst}'s. Your habit already outruns that pattern — protect it.`;
   } else {

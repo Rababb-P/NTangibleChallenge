@@ -4,7 +4,7 @@ import { speechAvailable, type SpeechLine } from "./speech";
 
 // Lines appear as they're spoken (the active one lit amber), so the big
 // outcome call hits the captions at the same beat it hits your ears. When
-// there's no TTS engine, the whole call renders at once as a transcript.
+// there's no voice at all, the whole call renders at once as a transcript.
 export function CaptionBar({ lines, at }: { lines: SpeechLine[]; at: number }) {
   if (lines.length === 0) return null;
   const shown = speechAvailable() ? lines.slice(0, Math.max(at, 0) + 1) : lines;
