@@ -1,4 +1,4 @@
-# Trust Your Gut? — my challenge submission
+# Trust Your Gut?
 
 **A retro-arcade with two games built on the season's pressure moments** — one for coaches, one for the athletes themselves. Everything on screen is computed live from [`data/`](data/); only the story captions are authored.
 
