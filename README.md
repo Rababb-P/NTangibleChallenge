@@ -115,3 +115,7 @@ See [`data/DATA.md`](data/DATA.md) for the complete data dictionary.
 1. Use ElevenLabs to get a more exciting announcer. I used the Web Speech API to read the text, but ElevenLabs has much better voices. Unfortunately, to avoid rate limiting/costs and to allow anyone to clone this repo and try this out, I didn't go the ELevenLabs route.
 
 2. Have more reasoning involved in player recommendations. For each round, the suggestions are fairly static and restricted to a limited number of statistics. With an LLM API, we could find more patterns in the data for both individual moments and story long moments to compare to the current player.
+
+The reasons I didn't implement these extensions was because of costs/rate limiting and also to allow Elliot to clone the repo and run the project straight away without creating his own API keys. 
+
+The game is currently fully algorithmic and only uses 5 rounds it generated, but could easily be extended to many more rounds.
