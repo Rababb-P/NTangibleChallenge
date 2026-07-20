@@ -53,15 +53,19 @@ All pre-bet calculations use only data dated before that athlete's moment, preve
 
 ## Long-term stories
 
-After each round, the game presents one deliberately selected season story involving an athlete from that trio:
+After each round, the game analyzes the full histories of that round's three athletes and creates candidate stories. The rules look for:
 
-- Dani's Elite Clutch Factor versus low program alignment.
-- Harper's training volume and rise above the 750 Clutch line.
-- Adaeze's practice streak and Elite breakout.
-- Gabby's low current score but strong direction of improvement.
-- Marisol's late climb into the Clutch tier.
+- Elite Clutch Factor paired with low alignment.
+- Crossing the 750 Clutch threshold.
+- A training-frequency increase followed by score growth.
+- High total reps paired with long-term score growth.
+- A major decline or a dip followed by recovery.
+- Rapid recent improvement.
+- Pressure-game batting splits.
+- High resilience paired with fast reset pitches.
+- Large quarterly changes in a mental domain.
 
-This part is a hybrid: the story and athlete selection are authored, while every displayed score, rep count, alignment value, and change is calculated from the dataset.
+Each candidate receives an interest score based on the size and clarity of the pattern. The highest-scoring story from the trio is displayed. Its wording comes from a fixed template and every value is calculated from the current dataset. If no special pattern qualifies, the fallback is the athlete's largest 18-month Clutch Factor change.
 
 ## Personal ending
 
@@ -77,7 +81,7 @@ The selected athlete's five NTerpret mental domains are compared with the averag
 - `app/src/game/PlayerMode.tsx` — screens, game state, cards, results, and training plan.
 - `app/src/game/playerRounds.ts` — round-building algorithm, signal comparison, and outcome classification.
 - `app/src/game/stats.ts` — batting, Clutch Factor, rep, reset, and profile calculations.
-- `app/src/game/SeasonStories.tsx` — authored long-term stories with calculated values.
+- `app/src/game/SeasonStories.tsx` — long-term story detection, scoring, and templates.
 - `app/src/game/PlayScene.tsx` — SVG field and play animations.
 - `app/src/game/announcer.ts` — commentary text for each situation and result.
 - `app/src/game/speech.ts` — Web Speech API voice and caption timing.
@@ -104,12 +108,10 @@ See [`data/DATA.md`](data/DATA.md) for the complete data dictionary.
 - All athletes, games, and results are synthetic.
 - Correlation does not establish causation.
 - One pressure moment is noisy and cannot validate a training method by itself.
-- Round construction is algorithmic, but the five long-term story choices are currently authored for this dataset and round order.
+- Story templates use fixed wording so they remain explainable; the game does not use an LLM to write them.
 
 ## Expansions
 
 1. Use ElevenLabs to get a more exciting announcer. I used the Web Speech API to read the text, but ElevenLabs has much better voices. Unfortunately, to avoid rate limiting/costs and to allow anyone to clone this repo and try this out, I didn't go the ELevenLabs route.
 
-2. Use an algorithm for the season long stories. While they are currently hardcoded, using an LLM API or even a normal algorithm could create stories organically based on changing data. With more time, I'd definitely be able to do this.
-
-3. Have more reasoning involved in player recommendations. For each round, the suggestions are fairly static and restricted to a limited number of statistics. With an LLM API, we could
+2. Have more reasoning involved in player recommendations. For each round, the suggestions are fairly static and restricted to a limited number of statistics. With an LLM API, we could

@@ -379,7 +379,7 @@ export function PlayerMode() {
                 </div>
               );
             })()}
-            <RoundLongView roundIndex={idx} />
+            <RoundLongView athleteIds={round.cards.map((card) => card.athlete.id)} />
             <div className="tyg-footrow">
               <button type="button" className="tyg-btn" onClick={next}>
                 {idx + 1 >= TRIOS.length ? "YOUR TRAINING PLAN ▶" : "NEXT ROUND ▶"}
