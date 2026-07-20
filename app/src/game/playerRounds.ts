@@ -14,19 +14,26 @@ import {
 } from "./stats";
 
 // ── 8-bit scene classification: action text → animation + flash label ──
-export type PlayKind = "hit" | "k" | "pop" | "glove" | "error";
-export function classify(m: Moment): { kind: PlayKind; flash: string } {
+// "kswing" swings through the ball, "k" is a called third strike (bat never
+// moves), "wild" skips past the catcher to the backstop. Hits carry the
+// direction the action names so the ball leaves on the right vector.
+export type PlayKind = "hit" | "k" | "kswing" | "pop" | "glove" | "error" | "wild";
+export type HitDir = "left" | "middle";
+export function classify(m: Moment): { kind: PlayKind; flash: string; dir?: HitDir } {
   const a = m.action.toLowerCase();
-  if (a.includes("wild pitch")) return { kind: "error", flash: "WILD!" };
-  if (a.includes("error") || a.includes("bobbled")) return { kind: "error", flash: "E!" };
+  const dir: HitDir | undefined =
+    a.includes("left side") ? "left" : a.includes("up the middle") ? "middle" : undefined;
+  if (a.includes("wild pitch")) return { kind: "wild", flash: "WILD!" };
+  if (a.includes("error") || a.includes("bobbled")) return { kind: "error", flash: "ERROR!" };
   if (a.includes("popped up")) return { kind: "pop", flash: "OUT!" };
-  if (a.includes("strikeout") || a.includes("caught looking")) return { kind: "k", flash: "K!" };
+  if (a.includes("strikeout") && a.includes("swinging")) return { kind: "kswing", flash: "STRIKEOUT!" };
+  if (a.includes("strikeout") || a.includes("caught looking")) return { kind: "k", flash: "STRIKEOUT!" };
   if (a.includes("backhand") || a.includes("beats the runner")) return { kind: "glove", flash: "OUT!" };
-  if (a.includes("double")) return { kind: "hit", flash: "2B!" };
-  if (a.includes("walk-off")) return { kind: "hit", flash: "WALK-OFF!" };
-  if (a.includes("single") || a.includes("extra base")) return { kind: "hit", flash: "SAFE!" };
-  if (a.includes("sac fly") || a.includes("run scores")) return { kind: "hit", flash: "RUN!" };
-  return m.outcome === "positive" ? { kind: "hit", flash: "SAFE!" } : { kind: "k", flash: "K!" };
+  if (a.includes("double")) return { kind: "hit", flash: "DOUBLE!", dir };
+  if (a.includes("walk-off")) return { kind: "hit", flash: "WALK-OFF!", dir };
+  if (a.includes("single") || a.includes("extra base")) return { kind: "hit", flash: "SAFE!", dir };
+  if (a.includes("sac fly") || a.includes("run scores")) return { kind: "hit", flash: "RUN!", dir };
+  return m.outcome === "positive" ? { kind: "hit", flash: "SAFE!", dir } : { kind: "k", flash: "STRIKEOUT!" };
 }
 
 // Situation text → which bases to light up in the scene.
@@ -36,6 +43,75 @@ export function basesFrom(situation: string): [boolean, boolean, boolean] {
   if (s.includes("two on")) return [true, true, false];
   if (s.includes("scoring position")) return [false, true, true];
   return [/on first/.test(s), /on second/.test(s), /on third/.test(s)];
+}
+
+// ── pre-bet context parsers ──
+// Everything below reads only the situation text (and a position) — never the
+// action, outcome, or final score — so nothing here can leak who delivered.
+// The same parsers feed the situation chips, the card fronts, and the booth
+// announcer's scene-setting call.
+
+export function outsFrom(situation: string): number | null {
+  const s = situation.toLowerCase();
+  if (s.includes("two out")) return 2;
+  if (s.includes("one out")) return 1;
+  if (s.includes("nobody out")) return 0;
+  return null;
+}
+
+export function countFrom(situation: string): string | null {
+  const s = situation.toLowerCase();
+  if (s.includes("full count")) return "3-2";
+  const m = s.match(/down (\d)-(\d) in the count/);
+  return m ? `${m[1]}-${m[2]}` : null;
+}
+
+// The emotional stakes of the situation, as short scoreboard chips.
+export function stakesFrom(situation: string): string[] {
+  const s = situation.toLowerCase();
+  const chips: string[] = [];
+  if (s.includes("bottom of the seventh")) chips.push("BOTTOM 7");
+  if (s.includes("tie game")) chips.push("TIE GAME");
+  if (s.includes("down by one")) chips.push("DOWN BY ONE");
+  if (s.includes("go-ahead run on second")) chips.push("GO-AHEAD RUN ON 2ND");
+  if (s.includes("winning run on second")) chips.push("WINNING RUN ON 2ND");
+  if (s.includes("tying run on third")) chips.push("TYING RUN ON 3RD");
+  if (s.includes("game on the line")) chips.push("GAME ON THE LINE");
+  if (s.includes("rough game")) chips.push("AFTER A ROUGH GAME");
+  if (s.includes("after an error")) chips.push("AFTER AN ERROR");
+  if (s.includes("teammate's strikeout")) chips.push("AFTER A TEAMMATE'S K");
+  return chips;
+}
+
+// What the athlete is actually doing in her moment.
+function roleKindOf(situation: string): "circle" | "field" | "plate" {
+  const s = situation.toLowerCase();
+  if (s.startsWith("pitching")) return "circle";
+  if (s.includes("defensive")) return "field";
+  return "plate";
+}
+export function roleFrom(situation: string, position: string): string {
+  const rk = roleKindOf(situation);
+  return rk === "circle" ? "IN THE CIRCLE" : rk === "field" ? "IN THE FIELD AT " + position : "AT THE PLATE";
+}
+
+// The generated season occasionally pairs a situation with an action that
+// can't belong to it — a defensive moment whose action is "Caught looking",
+// a first at-bat that ends in a throwing error. Those would replay (and be
+// announced) as nonsense, so the round builder skips them.
+const COHERENT_KINDS: Record<ReturnType<typeof roleKindOf>, PlayKind[]> = {
+  circle: ["k", "kswing", "wild"],
+  field: ["glove", "error"],
+  plate: ["hit", "k", "kswing", "pop"],
+};
+export const coherent = (m: Moment): boolean =>
+  COHERENT_KINDS[roleKindOf(m.situation)].includes(classify(m).kind);
+
+export function basesLabel(b: [boolean, boolean, boolean]): string {
+  if (b[0] && b[1] && b[2]) return "BASES LOADED";
+  const on = [b[0] && "1ST", b[1] && "2ND", b[2] && "3RD"].filter(Boolean) as string[];
+  if (on.length === 0) return "BASES EMPTY";
+  return (on.length === 1 ? "RUNNER ON " : "RUNNERS ON ") + on.join(" & ");
 }
 
 // Situation text → short arcade round title.
@@ -59,26 +135,48 @@ export interface TrioCard {
   delivered: boolean;
   kind: PlayKind;
   flash: string;
+  dir?: HitDir;    // where a hit leaves the bat, when the action says
+  role: string;    // what she's doing in the play — safe to show pre-bet
+  // Her most recent clutch moment BEFORE this one — the context that makes
+  // reset speed mean something. Past relative to the bet, so spoiler-safe
+  // (no date or situation shown, only how it went and how long ago).
+  prev: { delivered: boolean; reset: number; daysBefore: number } | null;
 }
 export interface TrioRound {
   theme: string; prompt: string; lesson: string;
   cards: TrioCard[];
   winnerId: string;
   bases: [boolean, boolean, boolean];
+  outs: number | null;   // parsed from the situation; null = not stated
+  count: string | null;
+  stakes: string[];
   edges: number; // how many signals pointed at the winner (0 = humbling round)
 }
 
-const toCard = (moment: Moment): TrioCard => ({
-  athlete: athleteById[moment.athlete_id],
-  stats: STATS[moment.athlete_id],
-  moment,
-  game: gameById[moment.game_id],
-  cfAt: clutchAt(moment.athlete_id, moment.date),
-  trend: trendAt(moment.athlete_id, moment.date),
-  reps30: repsBefore(moment.athlete_id, moment.date, 30),
-  delivered: moment.outcome === "positive",
-  ...classify(moment),
-});
+const toCard = (moment: Moment): TrioCard => {
+  const prior = MOMENTS
+    .filter((m) => m.athlete_id === moment.athlete_id && m.date < moment.date)
+    .sort((a, b) => b.date.localeCompare(a.date))[0];
+  return {
+    athlete: athleteById[moment.athlete_id],
+    stats: STATS[moment.athlete_id],
+    moment,
+    game: gameById[moment.game_id],
+    cfAt: clutchAt(moment.athlete_id, moment.date),
+    trend: trendAt(moment.athlete_id, moment.date),
+    reps30: repsBefore(moment.athlete_id, moment.date, 30),
+    delivered: moment.outcome === "positive",
+    role: roleFrom(moment.situation, athleteById[moment.athlete_id].position),
+    prev: prior
+      ? {
+          delivered: prior.outcome === "positive",
+          reset: prior.reset_pitches,
+          daysBefore: Math.round((new Date(moment.date).getTime() - new Date(prior.date).getTime()) / 864e5),
+        }
+      : null,
+    ...classify(moment),
+  };
+};
 
 // Which of the winner's pre-moment signals genuinely beat both losers?
 function edgesOf(winner: TrioCard, losers: TrioCard[]): string[] {
@@ -101,9 +199,11 @@ function lessonFor(winner: TrioCard, edges: string[]): string {
 }
 
 function buildTrios(): TrioRound[] {
-  // 1. group every clutch moment by its situation (the "kind of pressure")
+  // 1. group every clutch moment by its situation (the "kind of pressure"),
+  //    dropping moments whose action doesn't fit the situation's role
   const bySituation = new Map<string, Moment[]>();
   for (const m of MOMENTS) {
+    if (!coherent(m)) continue;
     const list = bySituation.get(m.situation) ?? [];
     list.push(m);
     bySituation.set(m.situation, list);
@@ -137,6 +237,9 @@ function buildTrios(): TrioRound[] {
       cards,
       winnerId: winnerMoment.athlete_id,
       bases: basesFrom(situation),
+      outs: outsFrom(situation),
+      count: countFrom(situation),
+      stakes: stakesFrom(situation),
       edges: edges.length,
     });
   }

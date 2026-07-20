@@ -5,9 +5,12 @@
 //    never the raw score — and bet on who delivered. Reveal teaches the lesson.
 // 3. YOUR TRAINING PLAN: your weakest mental domain, the drills that train it,
 //    and the weekly pace of the athletes whose scores actually climbed.
-import { useState, type CSSProperties } from "react";
-import { TRIOS, takeawaysFor, type TrioCard } from "./playerRounds";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { TRIOS, takeawaysFor, basesLabel, type TrioCard, type TrioRound } from "./playerRounds";
 import { PlayScene } from "./PlayScene";
+import { callOutcome, callPreRound, callReplay, isCommentaryOn, setCommentaryOn, stop } from "./announcer";
+import { CaptionBar, CommentaryToggle } from "./Commentary";
+import type { SpeechLine } from "./speech";
 import {
   ATHLETES, athleteById, fmtAvg, fmtDelta, STATS,
   domainsOf, weakestDomain, drillsForAxis,
@@ -38,9 +41,23 @@ function SignalCard({ c, picked, locked, onPick }: {
           {picked && !locked && <span className="tyg-badge bet">YOUR BET</span>}
           <span className="tyg-jersey">#{a.jersey} · {a.position} · HER MOMENT: {fmtDate(c.moment.date)}</span>
           <span className="tyg-name">{a.name}</span>
+          <span className="tyg-role">{c.role}</span>
+          {/* her spot: where and when — the stakes are pre-known, never the result */}
+          <span className="tyg-small">VS {c.game.opponent.toUpperCase()} · INN {c.moment.inning} · {c.game.home_away === "H" ? "HOME" : "AWAY"}</span>
+          <div className="tyg-mrow"><span className="k">LEVERAGE</span><span className="v">{"▮".repeat(c.moment.leverage)}{"▯".repeat(5 - c.moment.leverage)}</span></div>
           <div className="tyg-mrow"><span className="k">3-MO TRAJECTORY</span><span className={"v " + (c.trend >= 0 ? "up" : "down")}>{fmtDelta(c.trend)}</span></div>
           <div className="tyg-mrow"><span className="k">REPS, LAST 30D</span><span className="v">{c.reps30}</span></div>
           <div className="tyg-mrow"><span className="k">RESET SPEED</span><span className="v">{c.stats.resetAvg ? c.stats.resetAvg.toFixed(1) + " pitches" : "—"}</span></div>
+          {/* what she's resetting FROM — her last big spot before this one */}
+          <div className="tyg-mrow"><span className="k">COMING OFF</span>
+            <span className={"v " + (c.prev ? (c.prev.delivered ? "up" : "down") : "")}>
+              {c.prev
+                ? c.prev.delivered
+                  ? `DELIVERED · ${c.prev.daysBefore}D AGO`
+                  : `MISS · RESET ${c.prev.reset} · ${c.prev.daysBefore}D AGO`
+                : "FIRST BIG SPOT"}
+            </span>
+          </div>
           <div className="tyg-mrow"><span className="k">SEASON AVG</span><span className="v">{fmtAvg(c.stats.avg)}</span></div>
           <span className="tyg-small" style={{ marginTop: "auto" }}>“{a.quote}”</span>
         </div>
@@ -58,6 +75,30 @@ function SignalCard({ c, picked, locked, onPick }: {
   );
 }
 
+// The pre-bet situation panel: the prompt plus scoreboard chips parsed from
+// the situation text — bases, outs, count, stakes. All spoiler-safe.
+function SituationBoard({ round }: { round: TrioRound }) {
+  const chips: { label: string; info?: boolean }[] = [
+    { label: basesLabel(round.bases) },
+    ...(round.outs != null ? [{ label: "OUTS: " + round.outs }] : []),
+    ...(round.count ? [{ label: "COUNT: " + round.count }] : []),
+    ...round.stakes.map((s) => ({ label: s, info: true })),
+  ];
+  return (
+    <div className="tyg-panel">
+      <p className="tyg-p">{round.prompt}</p>
+      <div className="tyg-sit-chips">
+        {chips.map((c) => (
+          <span key={c.label} className={"tyg-sit-chip" + (c.info ? " info" : "")}>{c.label}</span>
+        ))}
+      </div>
+      <p className="tyg-small" style={{ marginTop: 8 }}>
+        1. TAP A CARD TO PLACE YOUR BET &nbsp;·&nbsp; 2. LOCK IT IN — signals only, no scores.
+      </p>
+    </div>
+  );
+}
+
 export function PlayerMode({ onHome }: { onHome: () => void }) {
   const [me, setMe] = useState<string | null>(null);
   const [idx, setIdx] = useState(0);
@@ -69,15 +110,51 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
   // a counter that remounts the scene so the same animation can run again.
   const [replay, setReplay] = useState<string | null>(null);
   const [take, setTake] = useState(0);
+  // booth commentary: on/off, the current call for the captions, active line
+  const [commentary, setCommentary] = useState(isCommentaryOn());
+  const [caption, setCaption] = useState<SpeechLine[]>([]);
+  const [captionAt, setCaptionAt] = useState(-1);
+  const announcedLockIdx = useRef(-1); // outcome already called for this round?
+
+  // The exact string that remounts the scene animation — the announcer keys
+  // off it too, so voice and animation can never disagree.
+  const sceneKey = idx + (locked ? "-live-" + replay + "-" + take : "-idle");
+
+  useEffect(() => {
+    if (!me || done || !commentary) { stop(); setCaption([]); return; }
+    const round = TRIOS[idx];
+    const onLine = (i: number) => setCaptionAt(i);
+    let lines: SpeechLine[];
+    if (!locked) {
+      lines = callPreRound(round, onLine);
+    } else {
+      const card = round.cards.find((c) => c.athlete.id === replay);
+      if (!card) { setCaption([]); return; }
+      if (announcedLockIdx.current !== idx) {
+        announcedLockIdx.current = idx; // LOCK IT IN: the full outcome call
+        lines = callOutcome(card, pick === round.winnerId, onLine);
+      } else {
+        lines = callReplay(card, onLine); // booth re-run: short call, no verdict
+      }
+    }
+    setCaption(lines);
+    setCaptionAt(-1);
+    return () => stop();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- sceneKey covers idx/locked/replay/take; pick is frozen once locked
+  }, [sceneKey, me, done, commentary]);
+  useEffect(() => () => stop(), []); // never let speech outlive the arcade
+
+  const toggleCommentary = (on: boolean) => { setCommentaryOn(on); setCommentary(on); };
 
   const exit = () => { window.location.hash = ""; };
-  const restart = () => { setMe(null); setIdx(0); setPick(null); setLocked(false); setScore(0); setDone(false); setReplay(null); };
+  const restart = () => { setMe(null); setIdx(0); setPick(null); setLocked(false); setScore(0); setDone(false); setReplay(null); announcedLockIdx.current = -1; };
 
   // ── character select ──
   if (!me)
     return (
       <div className="tyg">
         <button type="button" className="tyg-exit" onClick={exit}>✕ BACK TO APP</button>
+        <CommentaryToggle on={commentary} onToggle={toggleCommentary} />
         <div className="tyg-wrap" style={{ textAlign: "center" }}>
           <p className="tyg-small">PLAYER MODE</p>
           <h1 className="tyg-h1" style={{ fontSize: 26 }}>SELECT YOUR PLAYER</h1>
@@ -182,6 +259,7 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
   return (
     <div className="tyg">
       <button type="button" className="tyg-exit" onClick={exit}>✕ BACK TO APP</button>
+      <CommentaryToggle on={commentary} onToggle={toggleCommentary} />
       <div className="tyg-wrap">
         <div className="tyg-panel tyg-score">
           <b>ROUND {idx + 1}/{TRIOS.length} · {round.theme}</b>
@@ -189,22 +267,21 @@ export function PlayerMode({ onHome }: { onHome: () => void }) {
           <b className="tyg-small">PLAYING AS {my.name.toUpperCase()}</b>
         </div>
 
-        <div className="tyg-panel">
-          <p className="tyg-p">{round.prompt}</p>
-          <p className="tyg-small" style={{ marginTop: 8 }}>
-            1. TAP A CARD TO PLACE YOUR BET &nbsp;·&nbsp; 2. LOCK IT IN — signals only, no scores.
-          </p>
-        </div>
+        <SituationBoard round={round} />
 
         <PlayScene
-          key={idx + (locked ? "-live-" + replay + "-" + take : "-idle")}
+          key={sceneKey}
           playing={locked}
           kind={sceneCard?.kind ?? "hit"}
           flash={sceneCard?.flash ?? ""}
           good={!!sceneCard?.delivered}
           bases={round.bases}
           accent={sceneCard?.athlete.color ?? "#e8e8ff"}
+          role={(sceneCard ?? round.cards[0])?.role ?? "AT THE PLATE"}
+          dir={sceneCard?.dir}
         />
+
+        {commentary && <CaptionBar lines={caption} at={captionAt} />}
 
         {/* instant replay booth: run any of the three outcomes, as often as you like */}
         {locked && (
