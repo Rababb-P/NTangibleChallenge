@@ -1,8 +1,13 @@
-# Trust Your Gut?
+# Clutch Up
 
-**A retro-arcade with two games built on the season's pressure moments** — one for coaches, one for the athletes themselves. Everything on screen is computed live from [`data/`](data/); only the story captions are authored.
+Clutch Up is a retro arcade game built from NTangible's synthetic softball dataset. The player studies pressure-moment signals, predicts which athlete delivered, sees the outcomes, how it relates to their own game and receives a personal mental-training plan.
 
-## Run it
+# Why I made it
+
+As an athlete who grew up playing AAA ball hockey, it was my whole life. I thought about previous games all the time, watched the Leafs play and thought about their roster, and also played sports videogames like NHL and loved making my own team. This game was made to mimic that feeling while focusing on teaching the athlete valuable lessons's on mental performance.
+
+
+## Run the project
 
 ```bash
 cd app
@@ -10,111 +15,101 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173 and click **🕹 GAME** in the pill at the bottom — or go straight to http://localhost:5173/#game. (The original three-persona app is untouched; the arcade is a fourth view alongside it.)
+Open `http://localhost:5173`.
 
-## The two modes
+## Game flow
 
-**COACH MODE — bet the box score against the mental data.** Five real high-leverage moments from the 9 games decided by ≤2 runs. You pick who you'd want at the plate using only traditional stat lines; the cards flip to the mental side (Clutch Factor™, tight-game vs. blowout splits, reset speed) and you see who actually delivered. The gut isn't dumb — it wins round 3 — but the box score is *incomplete*: the team's .371 hitter fades in tight games while a .290 hitter becomes the best on the roster exactly then. The end screen shows receipts computed over **all** delivered high-leverage moments: best season average calls it 2/11, best pressure-game average 4/11, highest Clutch Factor 5/11 — vs. a ~33% coin-flip baseline.
+1. Enter the arcade and select one of the 16 athletes. (Imagine yourself as them)
+2. Play five rounds. Each round compares three athletes who faced the same type of pressure situation in different games.
+3. Read the signals and predict who delivered.
+4. Lock in the bet to reveal the outcomes and play an animated field replay.
+5. Compare the three athletes and read which signals help explain the winner.
+6. Unlock a longer-term dataset story about one athlete in that round, that isn't shown with just one moment.
+7. Finish with a comparison between the selected athlete and the five round winners, followed by drills for the chosen development area.
 
-**PLAYER MODE — read the signals, then build your game.** You pick which of the 16 athletes YOU are (retro character select, each athlete's own color from the dataset). Then five trio rounds: three teammates each faced the *same kind* of pressure — a full count, a bases-loaded jam, the first at-bat back after a rough game — in their own games, and exactly one delivered. You see signals only (3-month trajectory, drill reps in the prior 30 days, reset speed, her own words — never the raw score), place your bet, and an **8-bit ballpark plays out your athlete's real outcome** (classified from the moment's action text — strikeout, double, error, walk-off). Every reveal ends with a personal takeaway: the winner's habits (rep pace, trajectory, strongest mental domain) side-by-side with *yours*, each stamped MAINTAIN or TRAIN THIS. The finale is **your training plan** — your weakest NTerpret™ domain, the drills that train that exact axis, and the weekly rep pace of the athletes whose scores actually climbed.
+## Signals shown
 
-**Nothing is hardwired.** Player-mode rounds are built by an algorithm at load: group the clutch-moment log by situation, find every "one delivered, two didn't" trio among distinct athletes, rank by leverage, keep five with distinct winners, and *generate* each round's lesson from whichever signals genuinely separated the winner from the misses (rounds where no signal did are sorted last, as the humbling finale). Regenerate the season with a new seed and you get new rounds, new lessons, new animations — for free.
+- **Clutch Factor 3-month change:** change in Clutch Factor over approximately the three months before the moment.
+- **Reps:** mental-training sessions completed during the 30 days before the moment.
+- **Reset pitches:** average pitches needed to recover after a mistake; lower is better.
+- **Season batting average:** hits divided by at-bats across the season.
+- **Leverage:** the importance of the game situation on a 1–5 scale.
 
-## The finding underneath player mode
+These statistics are treated as signals, not guarantees. The project shows correlations in synthetic data and does not claim that a drill directly causes a hit or adds Clutch Factor points.
 
-I validated the "do the reps work?" story before building on it, and the honest answer has two levels:
+## How rounds are generated
 
-- **Single moments are noisy.** Athletes who delivered in clutch moments had barely more recent training than those who didn't (10.4 vs. 9.4 sessions in the prior 30 days). The game never claims reps buy you a moment — round 3 is deliberately a round where every signal fails.
-- **Trajectories are not.** Total drill reps correlate with 18-month Clutch Factor growth at **r = 0.74**: every athlete with ~175+ logged sessions gained 160–211 points; every athlete under ~30 sessions stayed flat. The crescendo round makes it visible — the *lowest* score on the team, climbing 86 points a quarter behind her reps, delivers while the highest score, standing still, doesn't.
+The rounds are algorithmic, not hard coded:
 
-That's the lesson the game teaches and the training plan operationalizes: reps buy the trajectory, and the trajectory is what keeps showing up when the margin gets thin.
+1. Group clutch moments by situation.
+2. Find groups containing one positive outcome and two negative outcomes from different athletes.
+3. Rank the possible trios by total leverage.
+4. Prefer five rounds with different winners.
+5. Order clearer statistical results before rounds where the signals fail.
 
-## How it works
+The winner explanation is also generated. It checks whether the winner clearly led both other athletes in Clutch Factor trajectory, recent reps, or reset speed. If no signal clearly favored the winner, the game says so.
 
-Small modules in [`app/src/game/`](app/src/game/):
+All pre-bet calculations use only data dated before that athlete's moment, preventing future information from leaking into the prediction.
 
-- **`stats.ts`** — imports the season straight from `data/` (no copies) and computes everything in one pass: batting lines, pressure vs. blowout splits (`game_log` × `games.pressure`), reset speeds (`moments`), as-of-date Clutch Factor and 3-month trends (`clutch_history`), rep habits (`drill_log`), weakest NTerpret domain + matching drills (`nterpret` + `drills`), and the "growers" cohort that anchors the training-plan pace. As-of-date functions mean no round peeks at the future.
-- **`playerRounds.ts`** — the algorithmic round builder (situation grouping → trio search → leverage ranking → generated lessons), the action-text → animation classifier, and the personalized takeaway generator. **`rounds.ts`** — coach mode's featured moments; candidates and data picks are computed.
-- **`PlayScene.tsx`** — the 8-bit ballpark: pure SVG rects + CSS `steps()` keyframes, no libraries. Idle diamond with the situation's runners on base; on lock-in it plays the classified outcome and flashes the call.
-- **`Arcade.tsx`**, **`CoachMode.tsx`**, **`PlayerMode.tsx`**, **`game.css`** — the shell and the two games, sharing one retro skin (pixel font, CRT scanlines, card-flip reveals). Wired into the app via a `#game` hash route in `App.tsx`.
+## Long-term stories
 
-## What I'd do next
+After each round, the game presents one deliberately selected season story involving an athlete from that trio:
 
-- Pull `journals.json` into the reveals — the athletes *tell you* about these moments in their own voice, and mood tracks the numbers.
-- Extend the algorithmic builder to coach mode too (its candidates and receipts are computed, but its five featured moments are still hand-picked for narrative).
-- Export the training plan as a shareable "mental scouting card" image.
-- Sound: a little chiptune sting on the outcome flash.
+- Dani's Elite Clutch Factor versus low program alignment.
+- Harper's training volume and rise above the 750 Clutch line.
+- Adaeze's practice streak and Elite breakout.
+- Gabby's low current score but strong direction of improvement.
+- Marisol's late climb into the Clutch tier.
 
----
+This part is a hybrid: the story and athlete selection are authored, while every displayed score, rep count, alignment value, and change is calculated from the dataset.
 
-# HOWie Viz Challenge (original kit README)
+## Personal ending
 
-Welcome to the NTangible intern challenge. This repo contains a fully working copy of **HOWie** — our mental-performance app for youth sports — running entirely on a bundled synthetic season of data, plus that same season as plain JSON/CSV files for you to build with.
+The selected athlete's five NTerpret mental domains are compared with the average of the five athletes who delivered:
 
-**Your mission is in [CHALLENGE.md](CHALLENGE.md).** Short version: build an interactive way to experience this data. Any stack.
+- If the selected athlete trails the group, the game chooses the largest gap.
+- If the selected athlete beats every group average, the game chooses their lowest personal domain as the next development area.
+- The recommended drills come directly from the drill catalog by matching the drill's `axis` to that domain.
+- Drill rows expand to show the purpose, steps, duration, and a YouTube link when one exists in the source material.
 
-## Run the app (60 seconds)
+## Main files
 
-```bash
-git clone https://github.com/Elliot-Sones/howie-viz-challenge.git
-cd howie-viz-challenge/app
-npm install
-npm run dev
-```
+- `app/src/game/PlayerMode.tsx` — screens, game state, cards, results, and training plan.
+- `app/src/game/playerRounds.ts` — round-building algorithm, signal comparison, and outcome classification.
+- `app/src/game/stats.ts` — batting, Clutch Factor, rep, reset, and profile calculations.
+- `app/src/game/SeasonStories.tsx` — authored long-term stories with calculated values.
+- `app/src/game/PlayScene.tsx` — SVG field and play animations.
+- `app/src/game/announcer.ts` — commentary text for each situation and result.
+- `app/src/game/speech.ts` — Web Speech API voice and caption timing.
+- `app/src/game/game.css` — arcade styling and animations.
+- `data/` — the canonical synthetic season.
 
-Open http://localhost:5173. Use the pill at the bottom of the page to switch between the **Athlete**, **Parent**, and **Coach** experiences — same product, three audiences.
+## Data used
 
-> Howie (the in-app chat) answers with canned lines in this kit; the live product wires it to a real model.
+The game reads directly from:
 
-## The data
+- `athletes.json`
+- `games.json`
+- `game_log.json`
+- `moments.json`
+- `clutch_history.json`
+- `nterpret.json`
+- `drills.json`
+- `drill_log.json`
 
-Everything the app shows — and a lot more depth than it shows — lives in [`data/`](data/):
+See [`data/DATA.md`](data/DATA.md) for the complete data dictionary.
 
-| File | What it is |
-|---|---|
-| `team.json` | The team: Alliance Fastpitch — Thunder 16U, 2025–26 season |
-| `athletes.json` | 16 athletes: position, tier, current Clutch Factor (0–1000), alignment (0–100), plus bios — hometown, class, quote, fun fact, and a color each athlete owns |
-| `clutch_history.json` / `.csv` | 18 months of Clutch Factor per athlete (the app only shows 3 points!) |
-| `nterpret.json` / `nterpret_history.csv` | Each athlete's 5-domain mental profile + 6 quarterly snapshots |
-| `drills.json` | The 12-drill mental training catalog |
-| `drill_log.json` / `.csv` | ~1,800 real-ish drill completions across the season |
-| `games.json` / `.csv` | The 24-game season: results, margins, pressure games |
-| `game_log.json` / `.csv` | Per-athlete stat lines for every game — where the mental data meets the field |
-| `moments.json` / `.csv` | The clutch-moments log: situation, action, outcome, and how fast she reset |
-| `journals.json` / `.csv` | Six season journal entries per athlete, in her own voice |
-| `guides.json` | The in-app education library |
+## Limitations
 
-Full field-by-field dictionary: [`data/DATA.md`](data/DATA.md).
+- All athletes, games, and results are synthetic.
+- Correlation does not establish causation.
+- One pressure moment is noisy and cannot validate a training method by itself.
+- Round construction is algorithmic, but the five long-term story choices are currently authored for this dataset and round order.
 
-**Python:**
+## Expansions
 
-```python
-import pandas as pd
-log = pd.read_csv("data/drill_log.csv", parse_dates=["date"])
-hist = pd.read_csv("data/clutch_history.csv", parse_dates=["date"])
-```
+1. Use ElevenLabs to get a more exciting announcer. I used the Web Speech API to read the text, but ElevenLabs has much better voices. Unfortunately, to avoid rate limiting/costs and to allow anyone to clone this repo and try this out, I didn't go the ELevenLabs route.
 
-**JavaScript:**
+2. Use an algorithm for the season long stories. While they are currently hardcoded, using an LLM API or even a normal algorithm could create stories organically based on changing data. With more time, I'd definitely be able to do this.
 
-```js
-const athletes = await (await fetch("./data/athletes.json")).json();
-```
-
-Want a different season? The whole dataset is generated: edit the roster or story arcs in `scripts/generate-data.mjs` and re-run it (`node scripts/generate-data.mjs`). It's deterministic — same inputs, same season.
-
-## Repo map
-
-```
-app/        The HOWie app (Vite + React + TS) — your reference for the product and its look
-data/       The season, in analysis-friendly JSON + CSV — your raw material
-scripts/    Data generator + validator
-CHALLENGE.md  Your mission
-```
-
-The app is your reference. The data is your canvas.
-
-## A note on the data & this repo
-
-**Everything here is mock data.** Every athlete, score, game, and name is synthetic — generated for this challenge. No real athlete data is included anywhere.
-
-This kit exists for the NTangible intern challenge. The HOWie name, product design, and brand assets remain NTangible's — please don't reuse them outside the challenge.
+3. Have more reasoning involved in player recommendations. For each round, the suggestions are fairly static and restricted to a limited number of statistics. With an LLM API, we could
